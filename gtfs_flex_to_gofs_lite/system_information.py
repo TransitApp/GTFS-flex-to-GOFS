@@ -1,9 +1,12 @@
+from copy import deepcopy
+
 from .default_headers import get_default_headers
 from .save_file import *
 
-def create_system_information_file(gtfs, gofs_dir):
-    file = get_default_headers(gtfs)
-    
+
+def create_system_information_file(gtfs, gofs_dir, default_headers_template):
+    file = deepcopy(default_headers_template)
+
     agency = list(gtfs.agency.values())[0]
 
     file['data']['language'] = agency.agency_lang
