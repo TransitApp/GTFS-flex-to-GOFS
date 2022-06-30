@@ -23,7 +23,7 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
         info_url = booking_rule.info_url
         booking_url = booking_rule.booking_url
         phone_number = booking_rule.phone_number
-    
+
     file['data']['url'] = info_url
     file['data']['subscribe_url'] = booking_url
     file['data']['phone_number'] = phone_number
@@ -35,4 +35,4 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
     file['data']['email'] = ''
     file['data']['feed_contact_email'] = ''
 
-    save_file(gofs_dir / "system_information.json", file)
+    save_file(gofs_dir / 'system_information.json', file)

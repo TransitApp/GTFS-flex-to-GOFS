@@ -49,4 +49,4 @@ def create_calendar_file(gtfs, gofs_dir, default_headers_template, used_calendar
 
     file['data']['calendars'] = calendars
 
-    save_file(gofs_dir / "calendar.json", file)
+    save_file(gofs_dir / 'calendar.json', file)

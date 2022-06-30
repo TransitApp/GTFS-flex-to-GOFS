@@ -7,7 +7,7 @@ from .save_file import *
 def create_zones_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
-    zones = {"type": "FeatureCollection", "features": []}
+    zones = {'type': 'FeatureCollection', 'features': []}
 
     for zone in gtfs.locations['features']:
         new_zone = {
@@ -27,4 +27,4 @@ def create_zones_file(gtfs, gofs_dir, default_headers_template):
 
     file['data']['zones'] = zones
 
-    save_file(gofs_dir / "zones.json", file)
+    save_file(gofs_dir / 'zones.json', file)

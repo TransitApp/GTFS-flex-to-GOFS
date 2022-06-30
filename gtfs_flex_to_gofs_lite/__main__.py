@@ -19,31 +19,31 @@ DEFAULT_TTL = 86400
 def create_gofs_versions_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
-    save_file(gofs_dir / "gofs_versions.json", file)
+    save_file(gofs_dir / 'gofs_versions.json', file)
 
 
 def create_vehicle_types_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
-    save_file(gofs_dir / "vehicle_types.json", file)
+    save_file(gofs_dir / 'vehicle_types.json', file)
 
 
 def create_fares_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
-    save_file(gofs_dir / "fares.json", file)
+    save_file(gofs_dir / 'fares.json', file)
 
 
 def create_wait_times_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
-    save_file(gofs_dir / "wait_times.json", file)
+    save_file(gofs_dir / 'wait_times.json', file)
 
 
 def create_wait_time_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
-    save_file(gofs_dir / "wait_time.json", file)
+    save_file(gofs_dir / 'wait_time.json', file)
 
 
 def save_file(filepath, file):
@@ -63,7 +63,8 @@ def main(args):
 
     create_zones_file(gtfs, gofs_dir, default_headers_template)
 
-    gofs_data = create_operating_rules_file(gtfs, gofs_dir, default_headers_template)
+    gofs_data = create_operating_rules_file(
+        gtfs, gofs_dir, default_headers_template)
 
     create_gofs_file(gtfs, gofs_dir, default_headers_template)
 
@@ -71,7 +72,8 @@ def main(args):
 
     create_system_information_file(gtfs, gofs_dir, default_headers_template)
 
-    create_service_brands_file(gtfs, gofs_dir, default_headers_template, gofs_data.route_ids)
+    create_service_brands_file(
+        gtfs, gofs_dir, default_headers_template, gofs_data.route_ids)
 
     create_vehicle_types_file(gtfs, gofs_dir, default_headers_template)
 
@@ -85,7 +87,7 @@ def main(args):
     create_wait_time_file(gtfs, gofs_dir, default_headers_template)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Convert GTFS-flex on-demand format to GOFS-lite')
     parser.add_argument(
