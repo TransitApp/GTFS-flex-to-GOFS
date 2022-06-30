@@ -13,18 +13,26 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
     file['data']['timezone'] = agency.agency_timezone
     file['data']['name'] = agency.agency_name
 
+    info_url = ''
+    booking_url = ''
+    phone_number = ''
+
     booking_rules = list(gtfs.booking_rule.values())
     if len(booking_rules) > 0:
         booking_rule = booking_rules[0]
-        file['data']['url'] = booking_rule.info_url
-        file['data']['subscribe_url'] = booking_rule.booking_url
-        file['data']['phone_number'] = booking_rule.phone_number
+        info_url = booking_rule.info_url
+        booking_url = booking_rule.booking_url
+        phone_number = booking_rule.phone_number
+    
+    file['data']['url'] = info_url
+    file['data']['subscribe_url'] = booking_url
+    file['data']['phone_number'] = phone_number
 
-    # Unsupported field
-    # file['data']['short_name'] = ''
-    # file['data']['operator'] = ''
-    # file['data']['start_date'] = ''
-    # file['data']['email'] = ''
-    # file['data']['feed_contact_email'] = ''
+    # Fields not available in GTFS-Flex
+    file['data']['short_name'] = ''
+    file['data']['operator'] = ''
+    file['data']['start_date'] = ''
+    file['data']['email'] = ''
+    file['data']['feed_contact_email'] = ''
 
     save_file(gofs_dir / "system_information.json", file)

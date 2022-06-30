@@ -15,11 +15,10 @@ def create_zones_file(gtfs, gofs_dir, default_headers_template):
             'zone_id': zone['id'],
             'properties': {
                 'name': zone['properties'].get('stop_name', '')
-                # Unused field
+                # Unused GTFS-flex field
                 # zone['properties'].get('stop_desc', '')
-                # zone['properties'].get('zone_id', '') # -> Fare rules
+                # zone['properties'].get('zone_id', '')
                 # zone['properties'].get('stop_url', '')
-
             },
             'geometry': zone['geometry']
         }

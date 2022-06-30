@@ -4,6 +4,17 @@ from .default_headers import get_default_headers
 from .save_file import *
 
 
+class GofsData:
+    """
+    Contain the different ids of data extracted from the GTFS-Flex
+    Used to know what to extract in the other files
+    """
+
+    def __init__(self, used_route_ids, used_calendar_ids):
+        self.route_ids = used_route_ids
+        self.calendar_ids = used_calendar_ids
+
+
 def get_locations_group(gtfs):
     location_groups = {}  # groupe_id -> [zone_id...]
     for group_id, group in gtfs.location_groups.items():
@@ -23,6 +34,8 @@ def get_zone_ids_set(gtfs):
 
 def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
     used_calendar_ids = set()
+    used_route_ids = set()
+
     file = deepcopy(default_headers_template)
 
     operating_rules = []
@@ -33,7 +46,6 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
     for stop_times in gtfs.stop_times.values():
         trip_id = stop_times[0].trip_id
         trip = gtfs.trips[trip_id]
-        calendar_id = trip.service_id
 
         prev_stop_time = None
         for stop_time in stop_times:
@@ -46,12 +58,13 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
                         'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
                         'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
                         'end_dropoff_window': '',
-                        'calendars': [calendar_id],
-                        'brand_id': '',
+                        'calendars': [trip.service_id],
+                        'brand_id': trip.route_id,
                         'vehicle_type_id': 'large_van'
                     }
 
-                    used_calendar_ids.add(calendar_id)
+                    used_calendar_ids.add(trip.service_id)
+                    used_route_ids.add(trip.route_id)
                     operating_rules.append(operating_rule)
 
                 elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in zone_ids:
@@ -63,12 +76,13 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
                             'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
                             'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
                             'end_dropoff_window': '',
-                            'calendars': [calendar_id],
-                            'brand_id': '',
+                            'calendars': [trip.service_id],
+                            'brand_id': trip.route_id,
                             'vehicle_type_id': 'large_van'
                         }
 
-                        used_calendar_ids.add(calendar_id)
+                        used_calendar_ids.add(trip.service_id)
+                        used_route_ids.add(trip.route_id)
                         operating_rules.append(operating_rule)
 
                 elif prev_stop_time.stop_id in zone_ids and stop_time.stop_id in locations_group:
@@ -80,12 +94,13 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
                             'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
                             'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
                             'end_dropoff_window': '',
-                            'calendars': [calendar_id],
-                            'brand_id': '',
+                            'calendars': [trip.service_id],
+                            'brand_id': trip.route_id,
                             'vehicle_type_id': 'large_van'
                         }
 
-                        used_calendar_ids.add(calendar_id)
+                        used_calendar_ids.add(trip.service_id)
+                        used_route_ids.add(trip.route_id)
                         operating_rules.append(operating_rule)
 
                 elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in locations_group:
@@ -98,12 +113,13 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
                                 'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
                                 'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
                                 'end_dropoff_window': '',
-                                'calendars': [calendar_id],
-                                'brand_id': '',
+                                'calendars': [trip.service_id],
+                                'brand_id': trip.route_id,
                                 'vehicle_type_id': 'large_van'
                             }
 
-                            used_calendar_ids.add(calendar_id)
+                            used_calendar_ids.add(trip.service_id)
+                            used_route_ids.add(trip.route_id)
                             operating_rules.append(operating_rule)
 
             prev_stop_time = stop_time
@@ -112,4 +128,4 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
 
     save_file(gofs_dir / 'operating_rules.json', file)
 
-    return used_calendar_ids
+    return GofsData(used_route_ids, used_calendar_ids)

@@ -8,7 +8,8 @@ from pathlib import Path
 from .calendar import create_calendar_file
 from .default_headers import get_default_headers
 from .gofs import create_gofs_file
-from .operation_rules import create_operating_rules_file
+from .operation_rules import create_operating_rules_file, GofsData
+from .service_brands import create_service_brands_file
 from .system_information import create_system_information_file
 from .zones import create_zones_file
 
@@ -19,12 +20,6 @@ def create_gofs_versions_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
 
     save_file(gofs_dir / "gofs_versions.json", file)
-
-
-def create_service_brands_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
-
-    save_file(gofs_dir / "service_brands.json", file)
 
 
 def create_vehicle_types_file(gtfs, gofs_dir, default_headers_template):
@@ -66,23 +61,22 @@ def main(args):
 
     default_headers_template = get_default_headers(args.ttl)
 
+    create_zones_file(gtfs, gofs_dir, default_headers_template)
+
+    gofs_data = create_operating_rules_file(gtfs, gofs_dir, default_headers_template)
+
     create_gofs_file(gtfs, gofs_dir, default_headers_template)
 
     create_gofs_versions_file(gtfs, gofs_dir, default_headers_template)
 
     create_system_information_file(gtfs, gofs_dir, default_headers_template)
 
-    create_service_brands_file(gtfs, gofs_dir, default_headers_template)
+    create_service_brands_file(gtfs, gofs_dir, default_headers_template, gofs_data.route_ids)
 
     create_vehicle_types_file(gtfs, gofs_dir, default_headers_template)
 
-    create_zones_file(gtfs, gofs_dir, default_headers_template)
-
-    used_calendar_ids = create_operating_rules_file(
-        gtfs, gofs_dir, default_headers_template)
-
     create_calendar_file(
-        gtfs, gofs_dir, default_headers_template, used_calendar_ids)
+        gtfs, gofs_dir, default_headers_template, gofs_data.calendar_ids)
 
     create_fares_file(gtfs, gofs_dir, default_headers_template)
 
