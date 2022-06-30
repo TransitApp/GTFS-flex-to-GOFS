@@ -64,7 +64,7 @@ def main(args):
     if not gofs_dir.exists():
         os.mkdir(gofs_dir)
 
-    default_headers_template = get_default_headers(gtfs, args.ttl)
+    default_headers_template = get_default_headers(args.ttl)
 
     create_gofs_file(gtfs, gofs_dir, default_headers_template)
 

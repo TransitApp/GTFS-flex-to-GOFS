@@ -1,7 +1,7 @@
 import time
 
 
-def get_default_headers(gtfs, ttl):
+def get_default_headers(ttl):
     return {
         "last_updated": int(time.time()),
         "ttl": ttl,
