@@ -37,7 +37,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--gofs_dir', help='output gofs directory', metavar='Dir', required=True)
     parser.add_argument(
-        '--url', help='auto-discovery url. Base URL indicate for where each files will be uploaded (and downloadable)', required=False)
+        '--url', help='auto-discovery url. Base URL indicate for where each files will be uploaded (and downloadable)')
     parser.add_argument(
         '--ttl', help='time to live of the generated gofs files in seconds (default: 86400)', type=int, default=DEFAULT_TTL)
     parser.add_argument(
