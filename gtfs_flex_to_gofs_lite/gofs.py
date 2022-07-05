@@ -9,7 +9,7 @@ FILENAME = 'gofs.json'
 
 def create_gofs_file(gtfs, gofs_dir, default_headers_template, base_url, created_files):
     if base_url is None:
-        return None
+        return GofsFile(FILENAME, False)
 
     file = deepcopy(default_headers_template)
 
