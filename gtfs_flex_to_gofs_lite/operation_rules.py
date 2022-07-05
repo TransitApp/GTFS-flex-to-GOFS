@@ -45,6 +45,27 @@ def get_zone_ids_set(gtfs):
     return zone_ids
 
 
+def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, pickup_booking_rule_ids, used_calendar_ids, used_route_ids):
+    transfer = Transfer(from_stop_id, to_stop_id)
+
+    operating_rule = {
+        'from_zone_id': transfer.from_stop_id,
+        'to_zone_id': transfer.to_stop_id,
+        'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
+        'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
+        'end_dropoff_window': '',
+        'calendars': [trip.service_id],
+        'brand_id': trip.route_id,
+        'vehicle_type_id': 'large_van'
+    }
+
+    pickup_booking_rule_ids.setdefault(
+        prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
+    used_calendar_ids.add(trip.service_id)
+    used_route_ids.add(trip.route_id)
+    operating_rules.append(operating_rule)
+
+
 def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
     used_calendar_ids = set()
     used_route_ids = set()
@@ -65,93 +86,28 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
         for stop_time in stop_times:
             if prev_stop_time is not None:
                 if prev_stop_time.stop_id in zone_ids and stop_time.stop_id in zone_ids:
-                    # Simple Zone to Zone transfer
-                    transfer = Transfer(
-                        prev_stop_time.stop_id, stop_time.stop_id)
-
-                    operating_rule = {
-                        'from_zone_id': transfer.from_stop_id,
-                        'to_zone_id': transfer.to_stop_id,
-                        'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
-                        'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
-                        'end_dropoff_window': '',
-                        'calendars': [trip.service_id],
-                        'brand_id': trip.route_id,
-                        'vehicle_type_id': 'large_van'
-                    }
-
-                    pickup_booking_rule_ids.setdefault(
-                        prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
-                    used_calendar_ids.add(trip.service_id)
-                    used_route_ids.add(trip.route_id)
-                    operating_rules.append(operating_rule)
+                    # Single to single zone
+                    add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules,
+                                          pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
 
                 elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in zone_ids:
                     # Single zones to multiple zone
                     for from_stop_id in locations_group[prev_stop_time.stop_id]:
-                        transfer = Transfer(
-                            from_stop_id, stop_time.stop_id)
-
-                        operating_rule = {
-                            'from_zone_id': transfer.from_stop_id,
-                            'to_zone_id': transfer.to_stop_id,
-                            'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
-                            'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
-                            'end_dropoff_window': '',
-                            'calendars': [trip.service_id],
-                            'brand_id': trip.route_id,
-                            'vehicle_type_id': 'large_van'
-                        }
-
-                        pickup_booking_rule_ids.setdefault(
-                            prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
-                        used_calendar_ids.add(trip.service_id)
-                        used_route_ids.add(trip.route_id)
-                        operating_rules.append(operating_rule)
+                        add_zone_to_zone_rule(prev_stop_time, from_stop_id, stop_time.stop_id, trip, operating_rules,
+                                              pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
 
                 elif prev_stop_time.stop_id in zone_ids and stop_time.stop_id in locations_group:
                     # Multiple zones to single zone
                     for to_stop_id in locations_group[stop_time.stop_id]:
-                        transfer = Transfer(prev_stop_time.stop_id, to_stop_id)
-                        operating_rule = {
-                            'from_zone_id': transfer.from_stop_id,
-                            'to_zone_id': transfer.to_stop_id,
-                            'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
-                            'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
-                            'end_dropoff_window': '',
-                            'calendars': [trip.service_id],
-                            'brand_id': trip.route_id,
-                            'vehicle_type_id': 'large_van'
-                        }
-
-                        pickup_booking_rule_ids.setdefault(
-                            prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
-                        used_calendar_ids.add(trip.service_id)
-                        used_route_ids.add(trip.route_id)
-                        operating_rules.append(operating_rule)
+                        add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, to_stop_id, trip, operating_rules,
+                                              pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
 
                 elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in locations_group:
                     # Multiple zones to multiple zones
                     for from_stop_id in locations_group[prev_stop_time.stop_id]:
                         for to_stop_id in locations_group[stop_time.stop_id]:
-                            transfer = Transfer(from_stop_id, to_stop_id)
-
-                            operating_rule = {
-                                'from_zone_id': transfer.from_stop_id,
-                                'to_zone_id': transfer.to_stop_id,
-                                'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
-                                'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
-                                'end_dropoff_window': '',
-                                'calendars': [trip.service_id],
-                                'brand_id': trip.route_id,
-                                'vehicle_type_id': 'large_van'
-                            }
-
-                            pickup_booking_rule_ids.setdefault(
-                                prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
-                            used_calendar_ids.add(trip.service_id)
-                            used_route_ids.add(trip.route_id)
-                            operating_rules.append(operating_rule)
+                            add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules,
+                                                  pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
 
             prev_stop_time = stop_time
 

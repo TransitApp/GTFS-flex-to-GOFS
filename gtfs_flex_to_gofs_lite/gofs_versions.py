@@ -8,7 +8,7 @@ FILENAME = 'gofs_versions.json'
 
 def create_gofs_versions_file(gtfs, gofs_dir, default_headers_template, base_url):
     if base_url is None:
-        return 
+        return GofsFile(FILENAME, False)
 
     file = deepcopy(default_headers_template)
 
