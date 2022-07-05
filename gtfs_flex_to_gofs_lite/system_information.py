@@ -3,6 +3,7 @@ from copy import deepcopy
 from .default_headers import get_default_headers
 from .save_file import *
 
+FILENAME = 'system_information.json'
 
 def create_system_information_file(gtfs, gofs_dir, default_headers_template):
     file = deepcopy(default_headers_template)
@@ -35,4 +36,5 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
     file['data']['email'] = ''
     file['data']['feed_contact_email'] = ''
 
-    save_file(gofs_dir / 'system_information.json', file)
+    save_file(gofs_dir / FILENAME, file)
+    return FILENAME

@@ -1,7 +1,8 @@
 from copy import deepcopy
 
-from .default_headers import get_default_headers
 from .save_file import *
+
+FILENAME = 'service_brands.json'
 
 
 def create_service_brands_file(gtfs, gofs_dir, default_headers_template, route_ids):
@@ -21,4 +22,5 @@ def create_service_brands_file(gtfs, gofs_dir, default_headers_template, route_i
 
     file['data']['service_brands'] = service_brands
 
-    save_file(gofs_dir / 'service_brands.json', file)
+    save_file(gofs_dir / FILENAME, file)
+    return FILENAME

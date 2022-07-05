@@ -3,6 +3,7 @@ from copy import deepcopy
 from .default_headers import get_default_headers
 from .save_file import *
 
+FILENAME = 'operating_rules.json'
 
 class GofsData:
     """
@@ -126,6 +127,6 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
 
     file['data']['operating_rules'] = operating_rules
 
-    save_file(gofs_dir / 'operating_rules.json', file)
+    save_file(gofs_dir / FILENAME, file)
 
-    return GofsData(used_route_ids, used_calendar_ids)
+    return FILENAME, GofsData(used_route_ids, used_calendar_ids)

@@ -1,90 +1,32 @@
 import argparse
-from copy import deepcopy
 import gtfs_loader
-import json
 import os
 from pathlib import Path
 
-from .calendar import create_calendar_file
-from .default_headers import get_default_headers
-from .gofs import create_gofs_file
-from .operation_rules import create_operating_rules_file, GofsData
-from .service_brands import create_service_brands_file
-from .system_information import create_system_information_file
-from .zones import create_zones_file
+from .gofs_lite_converter import convert_to_gofs_lite
 
 DEFAULT_TTL = 86400
-
-
-def create_gofs_versions_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
-
-    save_file(gofs_dir / 'gofs_versions.json', file)
-
-
-def create_vehicle_types_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
-
-    save_file(gofs_dir / 'vehicle_types.json', file)
-
-
-def create_fares_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
-
-    save_file(gofs_dir / 'fares.json', file)
-
-
-def create_wait_times_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
-
-    save_file(gofs_dir / 'wait_times.json', file)
-
-
-def create_wait_time_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
-
-    save_file(gofs_dir / 'wait_time.json', file)
-
-
-def save_file(filepath, file):
-    with open(filepath, 'w', encoding='utf-8-sig') as f:
-        f.write(json.dumps(file, indent=4))
+YELLOW_STRING = '\033[93m{}\033[00m'
 
 
 def main(args):
     gtfs = gtfs_loader.load(args.gtfs_dir)
     gofs_dir = Path(args.gofs_dir)
-    ttl = args.ttl
 
     if not gofs_dir.exists():
         os.mkdir(gofs_dir)
 
-    default_headers_template = get_default_headers(args.ttl)
+    convert_to_gofs_lite(gtfs, gofs_dir, args.ttl, args.url)
 
-    create_zones_file(gtfs, gofs_dir, default_headers_template)
 
-    gofs_data = create_operating_rules_file(
-        gtfs, gofs_dir, default_headers_template)
+def print_args_warnings(args):
+    if args.url is None:
+        print(YELLOW_STRING.format(
+            "[WARNING]") + ' No url given. \'gofs.json\' and \'gofs_versions.json\' will not be created. Consider adding a url with the --url parameter')
 
-    create_gofs_file(gtfs, gofs_dir, default_headers_template)
-
-    create_gofs_versions_file(gtfs, gofs_dir, default_headers_template)
-
-    create_system_information_file(gtfs, gofs_dir, default_headers_template)
-
-    create_service_brands_file(
-        gtfs, gofs_dir, default_headers_template, gofs_data.route_ids)
-
-    create_vehicle_types_file(gtfs, gofs_dir, default_headers_template)
-
-    create_calendar_file(
-        gtfs, gofs_dir, default_headers_template, gofs_data.calendar_ids)
-
-    create_fares_file(gtfs, gofs_dir, default_headers_template)
-
-    create_wait_times_file(gtfs, gofs_dir, default_headers_template)
-
-    create_wait_time_file(gtfs, gofs_dir, default_headers_template)
+    if args.ttl == DEFAULT_TTL:
+        print(YELLOW_STRING.format(
+            "[WARNING]") + ' No ttl given. Will be using the default value of {}'.format(DEFAULT_TTL))
 
 
 if __name__ == '__main__':
@@ -95,8 +37,15 @@ if __name__ == '__main__':
     parser.add_argument(
         '--gofs_dir', help='output gofs directory', metavar='Dir', required=True)
     parser.add_argument(
+        '--url', help='auto-discovery url. Base URL indicate for where each files will be uploaded (and downloadable)', required=False)
+    parser.add_argument(
         '--ttl', help='time to live of the generated gofs files in seconds (default: 86400)', type=int, default=DEFAULT_TTL)
+    parser.add_argument(
+        '--no_warning', help='Silence warnings', action='store_true')
 
     args = parser.parse_args()
+
+    if not args.no_warning:
+        print_args_warnings(args)
 
     main(args)
