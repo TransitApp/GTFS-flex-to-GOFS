@@ -6,6 +6,9 @@ from .utils import GofsFile
 
 FILENAME = 'wait_times.json'
 
+MINUTE = 60
+HOUR = 60 * MINUTE
+DAY = 24 * HOUR
 
 def convert_to_wait_time(booking_rule):
     if booking_rule is None:
@@ -15,10 +18,10 @@ def convert_to_wait_time(booking_rule):
         return 0
 
     if booking_rule.booking_type == BookingType.SAME_DAY:
-        return booking_rule.prior_notice_duration_min * 60
+        return booking_rule.prior_notice_duration_min * MINUTE
 
     if booking_rule.booking_type == BookingType.UP_TO_PRIOR_DAYS:
-        return booking_rule.prior_notice_last_day * 24 * 60 * 60
+        return booking_rule.prior_notice_last_day * DAY
 
 
 def create_wait_times_file(gtfs, gofs_dir, default_headers_template, pickup_booking_rule_ids):
@@ -31,7 +34,7 @@ def create_wait_times_file(gtfs, gofs_dir, default_headers_template, pickup_book
                 gtfs.booking_rules[pickup_booking_rule_id])
             wait_times.append({
                 'zone_ids': [transfer.from_stop_id],
-                'destinations': [transfer.to_stop_id],
+                'to_zone_ids': [transfer.to_stop_id],
                 'wait_time': wait_time
             })
 
