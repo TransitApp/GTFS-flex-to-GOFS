@@ -1,6 +1,7 @@
 from copy import deepcopy
 
 from .save_file import *
+from .utils import GofsFile
 
 FILENAME = 'service_brands.json'
 
@@ -23,4 +24,4 @@ def create_service_brands_file(gtfs, gofs_dir, default_headers_template, route_i
     file['data']['service_brands'] = service_brands
 
     save_file(gofs_dir / FILENAME, file)
-    return FILENAME
+    return GofsFile(FILENAME, True)

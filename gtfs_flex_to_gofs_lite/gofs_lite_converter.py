@@ -12,56 +12,56 @@ from .wait_times import create_wait_times_file
 from .zones import create_zones_file
 
 
+def register_created_file(files_created, file):
+    if not file.created :
+        print('Skipped {}'.format(file.filename))
+        return
+
+    print('Created {}'.format(file.filename))
+    files_created.append(file)
+
+
 def convert_to_gofs_lite(gtfs, gofs_dir, ttl, base_url):
     default_headers_template = get_default_headers(ttl)
 
     files_created = []
 
-    filename = create_zones_file(gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    file = create_zones_file(gtfs, gofs_dir, default_headers_template)
+    register_created_file(files_created, file)
 
-    filename, gofs_data = create_operating_rules_file(
+    file, gofs_data = create_operating_rules_file(
         gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    register_created_file(files_created, file)
 
-    filename = create_system_information_file(
+    file = create_system_information_file(
         gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    register_created_file(files_created, file)
 
-    filename = create_service_brands_file(
+    file = create_service_brands_file(
         gtfs, gofs_dir, default_headers_template, gofs_data.route_ids)
-    if filename is not None:
-        files_created.append(filename)
+    register_created_file(files_created, file)
 
-    filename = create_vehicle_types_file(
+    file = create_vehicle_types_file(
         gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    register_created_file(files_created, file)
 
-    filename = create_calendar_file(
+    file = create_calendar_file(
         gtfs, gofs_dir, default_headers_template, gofs_data.calendar_ids)
-    if filename is not None:
-        files_created.append(filename)
+    register_created_file(files_created, file)
 
-    filename = create_fares_file(gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    file = create_fares_file(gtfs, gofs_dir, default_headers_template)
+    register_created_file(files_created, file)
 
-    filename = create_wait_times_file(gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    file = create_wait_times_file(
+        gtfs, gofs_dir, default_headers_template, gofs_data.pickup_booking_rule_ids)
+    register_created_file(files_created, file)
 
-    filename = create_wait_time_file(gtfs, gofs_dir, default_headers_template)
-    if filename is not None:
-        files_created.append(filename)
+    file = create_wait_time_file(gtfs, gofs_dir, default_headers_template)
+    register_created_file(files_created, file)
 
-    filename = create_gofs_versions_file(
+    file = create_gofs_versions_file(
         gtfs, gofs_dir, default_headers_template, base_url)
-    if filename is not None:
-        files_created.append(filename)
+    register_created_file(files_created, file)
 
     create_gofs_file(gtfs, gofs_dir, default_headers_template,
                      base_url, files_created)

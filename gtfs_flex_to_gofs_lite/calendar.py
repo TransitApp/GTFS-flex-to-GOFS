@@ -2,8 +2,10 @@ from copy import deepcopy
 from gtfs_loader import schema
 
 from .default_headers import get_default_headers
+from .utils import GofsFile
 from .save_file import *
 
+FILENAME = 'calendar.json'
 
 def create_calendar_file(gtfs, gofs_dir, default_headers_template, used_calendar_ids):
     file = deepcopy(default_headers_template)
@@ -49,4 +51,5 @@ def create_calendar_file(gtfs, gofs_dir, default_headers_template, used_calendar
 
     file['data']['calendars'] = calendars
 
-    save_file(gofs_dir / 'calendar.json', file)
+    save_file(gofs_dir / FILENAME, file)
+    return GofsFile(FILENAME, True)

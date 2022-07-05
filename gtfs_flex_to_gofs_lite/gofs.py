@@ -2,7 +2,7 @@ from copy import deepcopy
 import re
 
 from .save_file import *
-from .utils import concat_url
+from .utils import concat_url, GofsFile
 
 FILENAME = 'gofs.json'
 
@@ -21,8 +21,8 @@ def create_gofs_file(gtfs, gofs_dir, default_headers_template, base_url, created
     for created_file in created_files:
         urls.append(
             {
-                'name': created_file,
-                'url': concat_url(base_url, lang, created_file)
+                'name': created_file.filename,
+                'url': concat_url(base_url, lang, created_file.filename)
             }
         )
 
@@ -30,4 +30,4 @@ def create_gofs_file(gtfs, gofs_dir, default_headers_template, base_url, created
     file['data'][lang]['feeds'] = urls
 
     save_file(gofs_dir / FILENAME, file)
-    return FILENAME
+    return GofsFile(FILENAME, True)

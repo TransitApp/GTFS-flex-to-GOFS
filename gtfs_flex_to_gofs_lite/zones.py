@@ -2,6 +2,7 @@ from copy import deepcopy
 
 from .default_headers import get_default_headers
 from .save_file import *
+from .utils import GofsFile
 
 FILENAME = 'zones.json'
 
@@ -29,4 +30,4 @@ def create_zones_file(gtfs, gofs_dir, default_headers_template):
     file['data']['zones'] = zones
 
     save_file(gofs_dir / FILENAME, file)
-    return FILENAME
+    return GofsFile(FILENAME, True)

@@ -2,6 +2,7 @@ from copy import deepcopy
 
 from .default_headers import get_default_headers
 from .save_file import *
+from .utils import GofsFile
 
 FILENAME = 'system_information.json'
 
@@ -18,7 +19,7 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
     booking_url = ''
     phone_number = ''
 
-    booking_rules = list(gtfs.booking_rule.values())
+    booking_rules = list(gtfs.booking_rules.values())
     if len(booking_rules) > 0:
         booking_rule = booking_rules[0]
         info_url = booking_rule.info_url
@@ -37,4 +38,4 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
     file['data']['feed_contact_email'] = ''
 
     save_file(gofs_dir / FILENAME, file)
-    return FILENAME
+    return GofsFile(FILENAME, True)
