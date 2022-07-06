@@ -1,14 +1,12 @@
 from copy import deepcopy
 
 from .default_headers import get_default_headers
-from .save_file import *
-from .utils import GofsFile
+from .gofs_file import GofsFile
 
-FILENAME = 'zones.json'
+FILENAME = 'zones'
 
-def create_zones_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
 
+def create_zones_file(gtfs):
     zones = {'type': 'FeatureCollection', 'features': []}
 
     for zone in gtfs.locations['features']:
@@ -27,7 +25,4 @@ def create_zones_file(gtfs, gofs_dir, default_headers_template):
 
         zones['features'].append(new_zone)
 
-    file['data']['zones'] = zones
-
-    save_file(gofs_dir / FILENAME, file)
-    return GofsFile(FILENAME, True)
+    return GofsFile(FILENAME, True, zones)

@@ -1,10 +1,9 @@
 from copy import deepcopy
 
 from .default_headers import get_default_headers
-from .save_file import *
-from .utils import GofsFile
+from .gofs_file import GofsFile
 
-FILENAME = 'operating_rules.json'
+FILENAME = 'operating_rules'
 
 
 class Transfer:
@@ -66,13 +65,10 @@ def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operat
     operating_rules.append(operating_rule)
 
 
-def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
+def create_operating_rules_file(gtfs):
     used_calendar_ids = set()
     used_route_ids = set()
     pickup_booking_rule_ids = {}
-
-    file = deepcopy(default_headers_template)
-
     operating_rules = []
 
     zone_ids = get_zone_ids_set(gtfs)
@@ -111,8 +107,4 @@ def create_operating_rules_file(gtfs, gofs_dir, default_headers_template):
 
             prev_stop_time = stop_time
 
-    file['data']['operating_rules'] = operating_rules
-
-    save_file(gofs_dir / FILENAME, file)
-
-    return GofsFile(FILENAME, True), GofsData(pickup_booking_rule_ids, used_route_ids, used_calendar_ids)
+    return GofsFile(FILENAME, True, operating_rules), GofsData(pickup_booking_rule_ids, used_route_ids, used_calendar_ids)

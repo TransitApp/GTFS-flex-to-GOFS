@@ -4,9 +4,9 @@ import os
 from pathlib import Path
 
 from .gofs_lite_converter import convert_to_gofs_lite
+from .utils import YELLOW_STRING
 
 DEFAULT_TTL = 86400
-YELLOW_STRING = '\033[93m{}\033[00m'
 
 
 def main(args):

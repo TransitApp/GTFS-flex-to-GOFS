@@ -1,10 +1,8 @@
 import re
 
-
-class GofsFile:
-    def __init__(self, filename, created):
-        self.filename = filename
-        self.created = created
+RED_STRING = '\033[91m{}\033[00m'
+GREEN_STRING = '\033[92m{}\033[00m'
+YELLOW_STRING = '\033[93m{}\033[00m'
 
 
 def concat_url(*args):

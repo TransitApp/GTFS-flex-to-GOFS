@@ -1,14 +1,10 @@
 from copy import deepcopy
 
-from .save_file import *
-from .utils import GofsFile
+from .gofs_file import GofsFile
 
-FILENAME = 'vehicle_types.json'
+FILENAME = 'vehicle_types'
 
 
-def create_vehicle_types_file(gtfs, gofs_dir, default_headers_template):
-    # Uncomment to support this file
-    # file = deepcopy(default_headers_template)
-    # save_file(gofs_dir / FILENAME, file)
-
+def create_vehicle_types_file(gtfs):
+    # Implement to support this file
     return GofsFile(FILENAME, False)

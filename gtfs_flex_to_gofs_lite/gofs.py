@@ -1,21 +1,18 @@
 from copy import deepcopy
 import re
 
-from .save_file import *
-from .utils import concat_url, GofsFile
+from .gofs_file import GofsFile
+from .utils import concat_url
 
-FILENAME = 'gofs.json'
+FILENAME = 'gofs'
 
 
-def create_gofs_file(gtfs, gofs_dir, default_headers_template, base_url, created_files):
+def create_gofs_file(gtfs, base_url, created_files):
     if base_url is None:
         return GofsFile(FILENAME, False)
 
-    file = deepcopy(default_headers_template)
-
     agency = list(gtfs.agency.values())[0]
     lang = agency.agency_lang
-
     urls = []
 
     for created_file in created_files:
@@ -26,8 +23,5 @@ def create_gofs_file(gtfs, gofs_dir, default_headers_template, base_url, created
             }
         )
 
-    file['data'][lang] = {}
-    file['data'][lang]['feeds'] = urls
-
-    save_file(gofs_dir / FILENAME, file)
-    return GofsFile(FILENAME, True)
+    data = {lang: urls}
+    return GofsFile(FILENAME, True, data)

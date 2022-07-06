@@ -1,14 +1,11 @@
 from copy import deepcopy
 
-from .save_file import *
-from .utils import GofsFile
+from .gofs_file import GofsFile
 
-FILENAME = 'service_brands.json'
+FILENAME = 'service_brands'
 
 
-def create_service_brands_file(gtfs, gofs_dir, default_headers_template, route_ids):
-    file = deepcopy(default_headers_template)
-
+def create_service_brands_file(gtfs, route_ids):
     service_brands = []
 
     for route_id in route_ids:
@@ -21,7 +18,4 @@ def create_service_brands_file(gtfs, gofs_dir, default_headers_template, route_i
         }
         service_brands.append(service_brand)
 
-    file['data']['service_brands'] = service_brands
-
-    save_file(gofs_dir / FILENAME, file)
-    return GofsFile(FILENAME, True)
+    return GofsFile(FILENAME, True, service_brand)

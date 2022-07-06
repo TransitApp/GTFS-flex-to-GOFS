@@ -1,19 +1,18 @@
 from copy import deepcopy
 
 from .default_headers import get_default_headers
-from .save_file import *
-from .utils import GofsFile
+from .gofs_file import GofsFile
 
-FILENAME = 'system_information.json'
+FILENAME = 'system_information'
 
-def create_system_information_file(gtfs, gofs_dir, default_headers_template):
-    file = deepcopy(default_headers_template)
 
+def create_system_information_file(gtfs):
     agency = list(gtfs.agency.values())[0]
 
-    file['data']['language'] = agency.agency_lang
-    file['data']['timezone'] = agency.agency_timezone
-    file['data']['name'] = agency.agency_name
+    data = {}
+    data['language'] = agency.agency_lang
+    data['timezone'] = agency.agency_timezone
+    data['name'] = agency.agency_name
 
     info_url = ''
     booking_url = ''
@@ -26,16 +25,15 @@ def create_system_information_file(gtfs, gofs_dir, default_headers_template):
         booking_url = booking_rule.booking_url
         phone_number = booking_rule.phone_number
 
-    file['data']['url'] = info_url
-    file['data']['subscribe_url'] = booking_url
-    file['data']['phone_number'] = phone_number
+    data['url'] = info_url
+    data['subscribe_url'] = booking_url
+    data['phone_number'] = phone_number
 
     # Fields not available in GTFS-Flex
-    file['data']['short_name'] = ''
-    file['data']['operator'] = ''
-    file['data']['start_date'] = ''
-    file['data']['email'] = ''
-    file['data']['feed_contact_email'] = ''
+    data['short_name'] = ''
+    data['operator'] = ''
+    data['start_date'] = ''
+    data['email'] = ''
+    data['feed_contact_email'] = ''
 
-    save_file(gofs_dir / FILENAME, file)
-    return GofsFile(FILENAME, True)
+    return GofsFile(FILENAME, True, data)
