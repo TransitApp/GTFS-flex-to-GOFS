@@ -1,10 +1,7 @@
-import time
-
-
-def get_default_headers(ttl):
+def get_default_headers(ttl, version, timestamp):
     return {
-        'last_updated': int(time.time()),
+        'last_updated': timestamp,
         'ttl': ttl,
-        'version': '1.0',
+        'version': version,
         'data': {}
     }

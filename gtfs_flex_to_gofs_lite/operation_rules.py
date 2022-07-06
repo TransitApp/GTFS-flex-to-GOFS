@@ -1,9 +1,21 @@
-from copy import deepcopy
+from dataclasses import dataclass
+from typing import List
 
-from .default_headers import get_default_headers
 from .gofs_file import GofsFile
 
 FILENAME = 'operating_rules'
+
+
+@dataclass
+class OperationRule:
+    from_zone_id: str
+    to_zone_id: str
+    start_pickup_window: int
+    end_pickup_window: int
+    end_dropoff_window: int
+    calendars: List[str]
+    brand_id: str
+    vehicle_type_id: str
 
 
 class Transfer:
@@ -47,16 +59,16 @@ def get_zone_ids_set(gtfs):
 def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, pickup_booking_rule_ids, used_calendar_ids, used_route_ids):
     transfer = Transfer(from_stop_id, to_stop_id)
 
-    operating_rule = {
-        'from_zone_id': transfer.from_stop_id,
-        'to_zone_id': transfer.to_stop_id,
-        'start_pickup_window': prev_stop_time.start_pickup_dropoff_window,
-        'end_pickup_window': prev_stop_time.end_pickup_dropoff_window,
-        'end_dropoff_window': '',
-        'calendars': [trip.service_id],
-        'brand_id': trip.route_id,
-        'vehicle_type_id': 'large_van'
-    }
+    operating_rule = OperationRule(
+        from_zone_id=transfer.from_stop_id,
+        to_zone_id=transfer.to_stop_id,
+        start_pickup_window=prev_stop_time.start_pickup_dropoff_window,
+        end_pickup_window=prev_stop_time.end_pickup_dropoff_window,
+        end_dropoff_window=-1,
+        calendars=[trip.service_id],
+        brand_id=trip.route_id,
+        vehicle_type_id='large_van'
+    )
 
     pickup_booking_rule_ids.setdefault(
         prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
@@ -107,4 +119,4 @@ def create_operating_rules_file(gtfs):
 
             prev_stop_time = stop_time
 
-    return GofsFile(FILENAME, True, operating_rules), GofsData(pickup_booking_rule_ids, used_route_ids, used_calendar_ids)
+    return GofsFile(FILENAME, created=True, data=operating_rules), GofsData(pickup_booking_rule_ids, used_route_ids, used_calendar_ids)

@@ -1,5 +1,6 @@
-from copy import deepcopy
+from dataclasses import dataclass
 from gtfs_loader.schema import BookingType
+from typing import List
 
 from .gofs_file import GofsFile
 
@@ -8,6 +9,13 @@ FILENAME = 'wait_times'
 MINUTE = 60
 HOUR = 60 * MINUTE
 DAY = 24 * HOUR
+
+
+@dataclass
+class WaitTimes:
+    zone_ids: List[str]
+    to_zone_ids: List[str]
+    wait_time: int
 
 
 def convert_to_wait_time(booking_rule):
@@ -30,10 +38,10 @@ def create_wait_times_file(gtfs, pickup_booking_rule_ids):
         for transfer in transfers:
             wait_time = convert_to_wait_time(
                 gtfs.booking_rules[pickup_booking_rule_id])
-            wait_times.append({
-                'zone_ids': [transfer.from_stop_id],
-                'to_zone_ids': [transfer.to_stop_id], # Not part of specs yet 
-                'wait_time': wait_time
-            })
+            wait_times.append(WaitTimes(
+                zone_ids=[transfer.from_stop_id],
+                to_zone_ids=[transfer.to_stop_id],  # Not part of specs yet
+                wait_time=wait_time
+            ))
 
-    return GofsFile(FILENAME, True, wait_times)
+    return GofsFile(FILENAME, created=True, data=wait_times)

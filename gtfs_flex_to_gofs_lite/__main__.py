@@ -13,8 +13,7 @@ def main(args):
     gtfs = gtfs_loader.load(args.gtfs_dir)
     gofs_dir = Path(args.gofs_dir)
 
-    if not gofs_dir.exists():
-        os.mkdir(gofs_dir)
+    gofs_dir.mkdir(parents=True, exist_ok=True)
 
     convert_to_gofs_lite(gtfs, gofs_dir, args.ttl, args.url)
 
@@ -33,15 +32,15 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Convert GTFS-flex on-demand format to GOFS-lite')
     parser.add_argument(
-        '--gtfs_dir', help='input gtfs directory', metavar='Dir', required=True)
+        '--gtfs-dir', help='input gtfs directory', metavar='Dir', required=True)
     parser.add_argument(
-        '--gofs_dir', help='output gofs directory', metavar='Dir', required=True)
+        '--gofs-dir', help='output gofs directory', metavar='Dir', required=True)
     parser.add_argument(
         '--url', help='auto-discovery url. Base URL indicate for where each files will be uploaded (and downloadable)')
     parser.add_argument(
         '--ttl', help='time to live of the generated gofs files in seconds (default: 86400)', type=int, default=DEFAULT_TTL)
     parser.add_argument(
-        '--no_warning', help='Silence warnings', action='store_true')
+        '--no-warning', help='Silence warnings', action='store_true')
 
     args = parser.parse_args()
 

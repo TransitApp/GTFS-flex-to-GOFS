@@ -1,6 +1,7 @@
 import json
 from copy import deepcopy
 
+from .default_headers import get_default_headers
 
 class GofsFile:
     def __init__(self, filename, created, data=None):
@@ -13,8 +14,8 @@ class GofsFile:
     def get_filename_with_ext(self):
         return self.filename + self.extension
 
-    def save(self, filepath, headers):
-        file = deepcopy(headers)
+    def save(self, filepath, ttl, version, creation_timestamp):
+        file = get_default_headers(ttl, version, creation_timestamp)
         file['data'][self.filename] = self.data
 
         full_filepath = filepath / (self.filename + self.extension)

@@ -1,3 +1,5 @@
+import time
+
 from .calendars import create_calendars_file
 from .default_headers import get_default_headers
 from .fares import create_fares_file
@@ -13,9 +15,12 @@ from .wait_times import create_wait_times_file
 from .zones import create_zones_file
 
 
-def save_files(files, filepath, default_headers_template):
+VERSION = '1.0'
+
+
+def save_files(files, filepath, ttl, creation_timestamp):
     for file in files:
-        file.save(filepath, default_headers_template)
+        file.save(filepath, ttl, VERSION, creation_timestamp)
 
 
 def register_created_file(files_created, file):
@@ -29,7 +34,9 @@ def register_created_file(files_created, file):
 
 
 def convert_to_gofs_lite(gtfs, gofs_dir, ttl, base_url):
-    default_headers_template = get_default_headers(ttl)
+    creation_timestamp = int(time.time())
+    default_headers_template = get_default_headers(
+        ttl, VERSION, creation_timestamp)
 
     files_created = []
 
@@ -65,4 +72,4 @@ def convert_to_gofs_lite(gtfs, gofs_dir, ttl, base_url):
 
     create_gofs_file(gtfs, base_url, files_created)
 
-    save_files(files_created, gofs_dir, default_headers_template)
+    save_files(files_created, gofs_dir, ttl, creation_timestamp)
