@@ -10,7 +10,7 @@ class GofsFile:
 
         self.extension = '.json'
 
-    def get_full_filename(self):
+    def get_filename_with_ext(self):
         return self.filename + self.extension
 
     def save(self, filepath, headers):

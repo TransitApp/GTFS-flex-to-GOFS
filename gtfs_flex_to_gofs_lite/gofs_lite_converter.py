@@ -20,11 +20,11 @@ def save_files(files, filepath, default_headers_template):
 
 def register_created_file(files_created, file):
     if not file.created:
-        print('Skipped {}'.format(RED_STRING.format(file.get_full_filename())))
+        print('Skipped {}'.format(RED_STRING.format(file.get_filename_with_ext())))
         return
 
     print('{} successfully created'.format(
-        GREEN_STRING.format(file.get_full_filename())))
+        GREEN_STRING.format(file.get_filename_with_ext())))
     files_created.append(file)
 
 
