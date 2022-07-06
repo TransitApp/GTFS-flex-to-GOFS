@@ -8,7 +8,7 @@ from .gofs_versions import create_gofs_versions_file
 from .operation_rules import create_operating_rules_file
 from .service_brands import create_service_brands_file
 from .system_information import create_system_information_file
-from .utils import GREEN_STRING, RED_STRING
+from .utils import green_text, red_text
 from .vehicle_types import create_vehicle_types_file
 from .wait_time import create_wait_time_file
 from .wait_times import create_wait_times_file
@@ -25,15 +25,14 @@ def save_files(files, filepath, ttl, creation_timestamp):
 
 def register_created_file(files_created, file):
     if not file.created:
-        print('Skipped {}'.format(RED_STRING.format(file.get_filename_with_ext())))
+        print('Skipped', red_text(file.get_filename_with_ext()))
         return
 
-    print('{} successfully created'.format(
-        GREEN_STRING.format(file.get_filename_with_ext())))
+    print(green_text(file.get_filename_with_ext()), 'successfully created')
     files_created.append(file)
 
 
-def convert_to_gofs_lite(gtfs, gofs_dir, ttl, base_url):
+def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
     creation_timestamp = int(time.time())
     default_headers_template = get_default_headers(
         ttl, VERSION, creation_timestamp)
@@ -72,4 +71,4 @@ def convert_to_gofs_lite(gtfs, gofs_dir, ttl, base_url):
 
     create_gofs_file(gtfs, base_url, files_created)
 
-    save_files(files_created, gofs_dir, ttl, creation_timestamp)
+    save_files(files_created, gofs_lite_dir, ttl, creation_timestamp)
