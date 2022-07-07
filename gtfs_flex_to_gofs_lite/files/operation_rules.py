@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
 FILENAME = 'operating_rules'
 
@@ -39,45 +39,7 @@ class GofsData:
         self.calendar_ids = used_calendar_ids
 
 
-def get_locations_group(gtfs):
-    location_groups = {}  # groupe_id -> [zone_id...]
-    for group_id, group in gtfs.location_groups.items():
-        location_groups.setdefault(group_id, [])
-        for location in group:
-            location_groups[group_id].append(location['location_id'])
-
-    return location_groups
-
-
-def get_zone_ids_set(gtfs):
-    zone_ids = set()
-    for zone in gtfs.locations['features']:
-        zone_ids.add(zone['id'])
-    return zone_ids
-
-
-def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, pickup_booking_rule_ids, used_calendar_ids, used_route_ids):
-    transfer = Transfer(from_stop_id, to_stop_id)
-
-    operating_rule = OperationRule(
-        from_zone_id=transfer.from_stop_id,
-        to_zone_id=transfer.to_stop_id,
-        start_pickup_window=prev_stop_time.start_pickup_dropoff_window,
-        end_pickup_window=prev_stop_time.end_pickup_dropoff_window,
-        end_dropoff_window=-1,
-        calendars=[trip.service_id],
-        brand_id=trip.route_id,
-        vehicle_type_id='large_van'
-    )
-
-    pickup_booking_rule_ids.setdefault(
-        prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
-    used_calendar_ids.add(trip.service_id)
-    used_route_ids.add(trip.route_id)
-    operating_rules.append(operating_rule)
-
-
-def create_operating_rules_file(gtfs):
+def create(gtfs):
     used_calendar_ids = set()
     used_route_ids = set()
     pickup_booking_rule_ids = {}
@@ -86,10 +48,8 @@ def create_operating_rules_file(gtfs):
     zone_ids = get_zone_ids_set(gtfs)
     locations_group = get_locations_group(gtfs)
 
-    for stop_times in gtfs.stop_times.values():
-        trip_id = stop_times[0].trip_id
+    for trip_id, stop_times in gtfs.stop_times.items():
         trip = gtfs.trips[trip_id]
-
         prev_stop_time = None
         for stop_time in stop_times:
             if prev_stop_time is not None:
@@ -120,3 +80,41 @@ def create_operating_rules_file(gtfs):
             prev_stop_time = stop_time
 
     return GofsFile(FILENAME, created=True, data=operating_rules), GofsData(pickup_booking_rule_ids, used_route_ids, used_calendar_ids)
+
+
+def get_zone_ids_set(gtfs):
+    zone_ids = set()
+    for zone in gtfs.locations['features']:
+        zone_ids.add(zone['id'])
+    return zone_ids
+
+
+def get_locations_group(gtfs):
+    location_groups = {}  # groupe_id -> [zone_id...]
+    for group_id, group in gtfs.location_groups.items():
+        location_groups.setdefault(group_id, [])
+        for location in group:
+            location_groups[group_id].append(location['location_id'])
+
+    return location_groups
+
+
+def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, pickup_booking_rule_ids, used_calendar_ids, used_route_ids):
+    transfer = Transfer(from_stop_id, to_stop_id)
+
+    operating_rule = OperationRule(
+        from_zone_id=transfer.from_stop_id,
+        to_zone_id=transfer.to_stop_id,
+        start_pickup_window=prev_stop_time.start_pickup_dropoff_window,
+        end_pickup_window=prev_stop_time.end_pickup_dropoff_window,
+        end_dropoff_window=-1,
+        calendars=[trip.service_id],
+        brand_id=trip.route_id,
+        vehicle_type_id='large_van'
+    )
+
+    pickup_booking_rule_ids.setdefault(
+        prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
+    used_calendar_ids.add(trip.service_id)
+    used_route_ids.add(trip.route_id)
+    operating_rules.append(operating_rule)

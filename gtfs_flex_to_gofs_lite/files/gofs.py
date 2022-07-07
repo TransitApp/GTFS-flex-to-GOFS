@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import List
 
-from .gofs_file import GofsFile
-from .utils import concat_url
+from ..gofs_file import GofsFile
+from ..utils import concat_url
 
 FILENAME = 'gofs'
 
@@ -18,7 +18,7 @@ class URLS:
     urls: List[URL]
 
 
-def create_gofs_file(gtfs, base_url, created_files):
+def create(gtfs, base_url, created_files):
     if base_url is None:
         return GofsFile(FILENAME, False)
 

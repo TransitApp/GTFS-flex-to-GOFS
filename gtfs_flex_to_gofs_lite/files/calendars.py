@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from gtfs_loader import schema
 from typing import List
 
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
 FILENAME = 'calendars'
 
@@ -16,7 +16,7 @@ class Calendar:
     excepted_dates: List[str]
 
 
-def create_calendars_file(gtfs, used_calendar_ids):
+def create(gtfs, used_calendar_ids):
     calendars_data = []
     for calendar in gtfs.calendar.values():
         if not calendar.service_id in used_calendar_ids:
@@ -41,10 +41,12 @@ def create_calendars_file(gtfs, used_calendar_ids):
         excepted_dates = []
         if calendar.service_id in gtfs.calendar_dates:
             for calendar_date in gtfs.calendar_dates[calendar.service_id]:
-                if calendar_date.exception_type is not schema.ExceptionType.REMOVE:
-                    continue
-
-                excepted_dates.append(repr(calendar_date.date))
+                if calendar_date.exception_type is schema.ExceptionType.REMOVE:
+                    excepted_dates.append(repr(calendar_date.date))
+                
+                if calendar_date.exception_type is schema.ExceptionType.ADD:
+                    # TODO
+                    pass
 
         calendar_data = Calendar(calendar.service_id, repr(
             calendar.start_date), repr(calendar.end_date), days, excepted_dates)

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
 FILENAME = 'system_information'
 
@@ -20,7 +20,7 @@ class SystemInformation:
     feed_contact_email: str = ''
 
 
-def create_system_information_file(gtfs):
+def create(gtfs):
 
     info_url = ''
     booking_url = ''

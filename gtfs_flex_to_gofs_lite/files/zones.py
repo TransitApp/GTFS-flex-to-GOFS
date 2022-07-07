@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Any, List
 
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
 FILENAME = 'zones'
 
@@ -25,7 +25,7 @@ class Zones:
     type: str = 'FeatureCollection'
 
 
-def create_zones_file(gtfs):
+def create(gtfs):
     zones = []
     for zone in gtfs.locations['features']:
 

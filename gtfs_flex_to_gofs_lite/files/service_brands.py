@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
 FILENAME = 'service_brands'
 
@@ -13,7 +13,7 @@ class ServiceBrand:
     brand_text_color: str
 
 
-def create_service_brands_file(gtfs, route_ids):
+def create(gtfs, route_ids):
     service_brands = []
 
     for route_id in route_ids:

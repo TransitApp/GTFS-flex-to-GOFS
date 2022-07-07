@@ -1,9 +1,8 @@
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
-FILENAME = 'fares'
+FILENAME = 'vehicle_types'
 
 
-def create_fares_file(gtfs):
+def create(gtfs):
     # Implement to support this file
-
     return GofsFile(FILENAME, created=False)

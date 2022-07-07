@@ -1,19 +1,19 @@
 import time
 
-from .calendars import create_calendars_file
 from .default_headers import get_default_headers
-from .fares import create_fares_file
-from .gofs import create_gofs_file
-from .gofs_versions import create_gofs_versions_file
-from .operation_rules import create_operating_rules_file
-from .service_brands import create_service_brands_file
-from .system_information import create_system_information_file
 from .utils import green_text, red_text
-from .vehicle_types import create_vehicle_types_file
-from .wait_time import create_wait_time_file
-from .wait_times import create_wait_times_file
-from .zones import create_zones_file
 
+from .files import calendars
+from .files import fares
+from .files import gofs
+from .files import gofs_versions
+from .files import operation_rules
+from .files import service_brands
+from .files import system_information
+from .files import vehicle_types
+from .files import wait_time
+from .files import wait_times
+from .files import zones
 
 VERSION = '1.0'
 
@@ -39,36 +39,36 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
 
     files_created = []
 
-    file = create_zones_file(gtfs)
+    file = zones.create(gtfs)
     register_created_file(files_created, file)
 
-    file, gofs_data = create_operating_rules_file(gtfs)
+    file, gofs_data = operation_rules.create(gtfs)
     register_created_file(files_created, file)
 
-    file = create_system_information_file(gtfs)
+    file = system_information.create(gtfs)
     register_created_file(files_created, file)
 
-    file = create_service_brands_file(gtfs, gofs_data.route_ids)
+    file = service_brands.create(gtfs, gofs_data.route_ids)
     register_created_file(files_created, file)
 
-    file = create_vehicle_types_file(gtfs)
+    file = vehicle_types.create(gtfs)
     register_created_file(files_created, file)
 
-    file = create_calendars_file(gtfs, gofs_data.calendar_ids)
+    file = calendars.create(gtfs, gofs_data.calendar_ids)
     register_created_file(files_created, file)
 
-    file = create_fares_file(gtfs)
+    file = fares.create(gtfs)
     register_created_file(files_created, file)
 
-    file = create_wait_times_file(gtfs, gofs_data.pickup_booking_rule_ids)
+    file = wait_times.create(gtfs, gofs_data.pickup_booking_rule_ids)
     register_created_file(files_created, file)
 
-    file = create_wait_time_file(gtfs)
+    file = wait_time.create(gtfs)
     register_created_file(files_created, file)
 
-    file = create_gofs_versions_file(default_headers_template, base_url)
+    file = gofs_versions.create(default_headers_template, base_url)
     register_created_file(files_created, file)
 
-    create_gofs_file(gtfs, base_url, files_created)
+    gofs.create(gtfs, base_url, files_created)
 
     save_files(files_created, gofs_lite_dir, ttl, creation_timestamp)

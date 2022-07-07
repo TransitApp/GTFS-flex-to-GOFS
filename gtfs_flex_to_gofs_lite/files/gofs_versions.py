@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from .gofs_file import GofsFile
-from .utils import concat_url
+from ..gofs_file import GofsFile
+from ..utils import concat_url
 
 FILENAME = 'gofs_versions'
 
@@ -12,7 +12,7 @@ class Version:
     url: str
 
 
-def create_gofs_versions_file(default_headers_template, base_url):
+def create(default_headers_template, base_url):
     if base_url is None:
         return GofsFile(FILENAME, created=False)
 

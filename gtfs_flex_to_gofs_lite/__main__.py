@@ -1,6 +1,5 @@
 import argparse
 import gtfs_loader
-import os
 from pathlib import Path
 
 from .gofs_lite_converter import convert_to_gofs_lite

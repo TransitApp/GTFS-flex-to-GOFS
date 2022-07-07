@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from gtfs_loader.schema import BookingType
 from typing import List
 
-from .gofs_file import GofsFile
+from ..gofs_file import GofsFile
 
 FILENAME = 'wait_times'
 
@@ -18,21 +18,7 @@ class WaitTimes:
     wait_time: int
 
 
-def convert_to_wait_time(booking_rule):
-    if booking_rule is None:
-        return -1
-
-    if booking_rule.booking_type == BookingType.REAL_TIME:
-        return 0
-
-    if booking_rule.booking_type == BookingType.SAME_DAY:
-        return booking_rule.prior_notice_duration_min * MINUTE
-
-    if booking_rule.booking_type == BookingType.UP_TO_PRIOR_DAYS:
-        return booking_rule.prior_notice_last_day * DAY
-
-
-def create_wait_times_file(gtfs, pickup_booking_rule_ids):
+def create(gtfs, pickup_booking_rule_ids):
     wait_times = []
     for pickup_booking_rule_id, transfers in pickup_booking_rule_ids.items():
         for transfer in transfers:
@@ -45,3 +31,17 @@ def create_wait_times_file(gtfs, pickup_booking_rule_ids):
             ))
 
     return GofsFile(FILENAME, created=True, data=wait_times)
+
+
+def convert_to_wait_time(booking_rule):
+    if booking_rule is None:
+        return -1
+
+    if booking_rule.booking_type == BookingType.REAL_TIME:
+        return 0
+
+    if booking_rule.booking_type == BookingType.SAME_DAY:
+        return booking_rule.prior_notice_duration_min * MINUTE
+
+    if booking_rule.booking_type == BookingType.UP_TO_PRIOR_DAYS:
+        return booking_rule.prior_notice_last_day * DAY

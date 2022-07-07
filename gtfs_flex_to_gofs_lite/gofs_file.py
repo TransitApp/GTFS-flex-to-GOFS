@@ -1,5 +1,4 @@
 import json
-from copy import deepcopy
 
 from .default_headers import get_default_headers
 
