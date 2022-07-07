@@ -3,10 +3,11 @@ import json
 from .default_headers import get_default_headers
 
 class GofsFile:
-    def __init__(self, filename, created, data=None):
+    def __init__(self, filename, created, data=None, nest_data_under_filename=True):
         self.filename = filename
         self.created = created
         self.data = data
+        self.nest_data_under_filename = nest_data_under_filename
 
         self.extension = '.json'
 
@@ -15,7 +16,11 @@ class GofsFile:
 
     def save(self, filepath, ttl, version, creation_timestamp):
         file = get_default_headers(ttl, version, creation_timestamp)
-        file['data'][self.filename] = self.data
+        if self.nest_data_under_filename:
+            file['data'][self.filename] = self.data
+        else:
+            file['data'] = self.data
+
 
         full_filepath = filepath / (self.filename + self.extension)
 

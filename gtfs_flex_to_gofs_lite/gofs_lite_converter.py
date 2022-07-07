@@ -69,6 +69,7 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
     file = gofs_versions.create(default_headers_template, base_url)
     register_created_file(files_created, file)
 
-    gofs.create(gtfs, base_url, files_created)
+    file = gofs.create(gtfs, base_url, files_created)
+    register_created_file(files_created, file)
 
     save_files(files_created, gofs_lite_dir, ttl, creation_timestamp)
