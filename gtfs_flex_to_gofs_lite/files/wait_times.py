@@ -13,7 +13,7 @@ DAY = 24 * HOUR
 
 @dataclass
 class WaitTimes:
-    zone_ids: List[str]
+    from_zone_ids: List[str]
     to_zone_ids: List[str]
     wait_time: int
 
@@ -25,8 +25,8 @@ def create(gtfs, pickup_booking_rule_ids):
             wait_time = convert_to_wait_time(
                 gtfs.booking_rules[pickup_booking_rule_id])
             wait_times.append(WaitTimes(
-                zone_ids=[transfer.from_stop_id],
-                to_zone_ids=[transfer.to_stop_id],  # Not part of specs yet
+                from_zone_ids=[transfer.from_stop_id],
+                to_zone_ids=[transfer.to_stop_id],
                 wait_time=wait_time
             ))
 
