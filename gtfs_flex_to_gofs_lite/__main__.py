@@ -23,10 +23,13 @@ def main(args):
 
 def print_args_warnings(args):
     if args.url is None:
-        print(yellow_text("[WARNING]"), 'No url given. \'gofs.json\' and \'gofs_versions.json\' will not be created. Consider adding a url with the --url parameter')
+        print(yellow_text(
+            "[WARNING]"), 'No url given. \'gofs.json\' and \'gofs_versions.json\' will not be created. Consider adding a url with the --url parameter')
 
     if args.ttl == DEFAULT_TTL:
-        print(yellow_text('[WARNING]'), 'No ttl given. Will be using the default value of', DEFAULT_TTL)
+        print(yellow_text(
+            '[WARNING]'), 'No ttl given. Will be using the default value of', DEFAULT_TTL)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(

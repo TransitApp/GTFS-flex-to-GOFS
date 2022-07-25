@@ -2,6 +2,7 @@ import json
 
 from .default_headers import get_default_headers
 
+
 class GofsFile:
     def __init__(self, filename, created, data=None, nest_data_under_filename=True):
         self.filename = filename
@@ -20,7 +21,6 @@ class GofsFile:
             file['data'][self.filename] = self.data
         else:
             file['data'] = self.data
-
 
         full_filepath = filepath / (self.filename + self.extension)
 
