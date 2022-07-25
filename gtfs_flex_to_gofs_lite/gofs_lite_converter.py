@@ -15,12 +15,12 @@ from .files import wait_time
 from .files import wait_times
 from .files import zones
 
-VERSION = '1.0'
+GOFS_VERSION = '1.0'
 
 
 def save_files(files, filepath, ttl, creation_timestamp):
     for file in files:
-        file.save(filepath, ttl, VERSION, creation_timestamp)
+        file.save(filepath, ttl, GOFS_VERSION, creation_timestamp)
 
 
 def register_created_file(files_created, file):
@@ -35,7 +35,7 @@ def register_created_file(files_created, file):
 def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
     creation_timestamp = int(time.time())
     default_headers_template = get_default_headers(
-        ttl, VERSION, creation_timestamp)
+        ttl, GOFS_VERSION, creation_timestamp)
 
     files_created = []
 
@@ -73,3 +73,5 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
     register_created_file(files_created, file)
 
     save_files(files_created, gofs_lite_dir, ttl, creation_timestamp)
+
+    return gofs_data

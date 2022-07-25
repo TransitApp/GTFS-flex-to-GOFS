@@ -33,16 +33,31 @@ class GofsData:
     Used to know what to extract in the other files
     """
 
-    def __init__(self, pickup_booking_rule_ids, used_route_ids, used_calendar_ids):
-        self.pickup_booking_rule_ids = pickup_booking_rule_ids
-        self.route_ids = used_route_ids
-        self.calendar_ids = used_calendar_ids
+    def __init__(self):
+        self.stop_ids = set()
+        self.route_ids = set()
+        self.calendar_ids = set()
+        self.pickup_booking_rule_ids = {}
+
+    def register_stop_id(self, stop_id):
+        self.stop_ids.add(stop_id)
+
+    def register_route_id(self, route_id):
+        self.route_ids.add(route_id)
+
+    def register_calendar_id(self, used_calendar_id):
+        self.calendar_ids.add(used_calendar_id)
+
+    def register_pickup_booking_rule_id(self, pickup_booking_rule_id, transfer):
+        self.pickup_booking_rule_ids.setdefault(
+            pickup_booking_rule_id, set()).add(transfer)
+
+    def __repr__(self) -> str:
+        return f'stop_ids: {repr(self.stop_ids)}\nroute_ids: {repr(self.route_ids)}\ncalendar_ids: {repr(self.calendar_ids)}\npickup_booking_rule_ids: {repr(self.pickup_booking_rule_ids)}'
 
 
 def create(gtfs):
-    used_calendar_ids = set()
-    used_route_ids = set()
-    pickup_booking_rule_ids = {}
+    used_data = GofsData()
     operating_rules = []
 
     zone_ids = get_zone_ids_set(gtfs)
@@ -55,31 +70,31 @@ def create(gtfs):
             if prev_stop_time is not None:
                 if prev_stop_time.stop_id in zone_ids and stop_time.stop_id in zone_ids:
                     # Single to single zone
-                    add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules,
-                                          pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
+                    add_zone_to_zone_rule(
+                        prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, used_data)
 
                 elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in zone_ids:
-                    # Single zones to multiple zone
+                    # Multiple zones to single zone
                     for from_stop_id in locations_group[prev_stop_time.stop_id]:
-                        add_zone_to_zone_rule(prev_stop_time, from_stop_id, stop_time.stop_id, trip, operating_rules,
-                                              pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
+                        add_zone_to_zone_rule(
+                            prev_stop_time, from_stop_id, stop_time.stop_id, trip, operating_rules, used_data)
 
                 elif prev_stop_time.stop_id in zone_ids and stop_time.stop_id in locations_group:
-                    # Multiple zones to single zone
+                    # Single zone to multiple zones
                     for to_stop_id in locations_group[stop_time.stop_id]:
-                        add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, to_stop_id, trip, operating_rules,
-                                              pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
+                        add_zone_to_zone_rule(
+                            prev_stop_time, prev_stop_time.stop_id, to_stop_id, trip, operating_rules, used_data)
 
                 elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in locations_group:
                     # Multiple zones to multiple zones
                     for from_stop_id in locations_group[prev_stop_time.stop_id]:
                         for to_stop_id in locations_group[stop_time.stop_id]:
-                            add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules,
-                                                  pickup_booking_rule_ids, used_calendar_ids, used_route_ids)
+                            add_zone_to_zone_rule(
+                                prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, used_data)
 
             prev_stop_time = stop_time
 
-    return GofsFile(FILENAME, created=True, data=operating_rules), GofsData(pickup_booking_rule_ids, used_route_ids, used_calendar_ids)
+    return GofsFile(FILENAME, created=True, data=operating_rules), used_data
 
 
 def get_zone_ids_set(gtfs):
@@ -99,7 +114,7 @@ def get_locations_group(gtfs):
     return location_groups
 
 
-def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, pickup_booking_rule_ids, used_calendar_ids, used_route_ids):
+def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, used_data):
     transfer = Transfer(from_stop_id, to_stop_id)
 
     operating_rule = OperationRule(
@@ -113,8 +128,12 @@ def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, operat
         vehicle_type_id='large_van'
     )
 
-    pickup_booking_rule_ids.setdefault(
-        prev_stop_time.pickup_booking_rule_id, set()).add(transfer)
-    used_calendar_ids.add(trip.service_id)
-    used_route_ids.add(trip.route_id)
+    used_data.register_stop_id(transfer.from_stop_id)
+    used_data.register_stop_id(transfer.to_stop_id)
+    used_data.register_route_id(trip.route_id)
+    used_data.register_calendar_id(trip.service_id)
+
     operating_rules.append(operating_rule)
+
+    used_data.register_pickup_booking_rule_id(
+        prev_stop_time.pickup_booking_rule_id, transfer)
