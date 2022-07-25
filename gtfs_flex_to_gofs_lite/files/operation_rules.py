@@ -94,7 +94,6 @@ def create(gtfs):
 
             prev_stop_time = stop_time
 
-    print(repr(used_data))
     return GofsFile(FILENAME, created=True, data=operating_rules), used_data
 
 
