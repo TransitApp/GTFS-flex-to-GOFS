@@ -3,6 +3,7 @@ import gtfs_loader
 from pathlib import Path
 
 from .gofs_lite_converter import convert_to_gofs_lite
+from .patch_gtfs import patch_gtfs
 from .utils import yellow_text
 
 DEFAULT_TTL = 86400
@@ -14,7 +15,10 @@ def main(args):
 
     gofs_lite_dir.mkdir(parents=True, exist_ok=True)
 
-    convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url)
+    gofs_data = convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url)
+
+    if args.out_gtfs_dir:
+        patch_gtfs(args, gtfs, gofs_data)
 
 
 def print_args_warnings(args):
@@ -31,6 +35,8 @@ if __name__ == '__main__':
         '--gtfs-dir', help='input gtfs directory', metavar='Dir', required=True)
     parser.add_argument(
         '--gofs-lite-dir', help='output gofs directory', metavar='Dir', required=True)
+    parser.add_argument(
+        '--out-gtfs-dir', help='output directory of patched gtfs', metavar='Dir', required=False)
     parser.add_argument(
         '--url', help='auto-discovery url. Base URL indicate for where each files will be uploaded (and downloadable)')
     parser.add_argument(
