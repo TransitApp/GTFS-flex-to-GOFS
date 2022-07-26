@@ -15,6 +15,8 @@ from .files import wait_time
 from .files import wait_times
 from .files import zones
 
+from .gofs_data import GofsData
+
 GOFS_VERSION = '1.0'
 
 
@@ -32,7 +34,15 @@ def register_created_file(files_created, file):
     files_created.append(file)
 
 
+def has_convertable_data(gtfs):
+    """Check if a valid locations.geojson file was loaded."""
+    return gtfs.locations != {}
+
+
 def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
+    if not has_convertable_data(gtfs):
+        return GofsData()
+
     creation_timestamp = int(time.time())
     default_headers_template = get_default_headers(
         ttl, GOFS_VERSION, creation_timestamp)
