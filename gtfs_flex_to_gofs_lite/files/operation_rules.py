@@ -26,7 +26,7 @@ def create(gtfs):
 
     zone_ids = get_zone_ids_set(gtfs)
     locations_group = get_locations_group(gtfs)
-    print(locations_group.keys())
+
     for trip_id, stop_times in gtfs.stop_times.items():
         trip = gtfs.trips[trip_id]
 
@@ -40,7 +40,7 @@ def create(gtfs):
                 break
 
         if not is_microtransit_trip:
-            pass
+            continue
 
         prev_stop_time = None
         for stop_time in stop_times:
