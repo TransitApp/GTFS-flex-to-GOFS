@@ -10,9 +10,7 @@ def patch_gtfs(args, gtfs, gofs_data: GofsData):
 def clean_up_gtfs(gtfs, gofs_data: GofsData):
     # Clean up stop_times.txt
     for transfer in gofs_data.transfers:
-        gtfs.stop_times[transfer.trip_id] = [
-            stop_time for stop_time in gtfs.stop_times[transfer.trip_id] if keep_stop_time(transfer, stop_time)]
-
-
-def keep_stop_time(transfer, stop_time):
-    return transfer.from_stop_id != stop_time.stop_id and transfer.to_stop_id != stop_time.stop_id
+        # Multiple transfers can be extracted from the same trip
+        # Check if it hasn't been yet deleted
+        if transfer.trip_id in gtfs.stop_times:
+            del gtfs.stop_times[transfer.trip_id]

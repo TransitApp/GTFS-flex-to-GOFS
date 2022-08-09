@@ -27,11 +27,15 @@ class GofsData:
         return f'transfers: {repr(self.transfers)}\nroute_ids: {repr(self.route_ids)}\ncalendar_ids: {repr(self.calendar_ids)}\npickup_booking_rule_ids: {repr(self.pickup_booking_rule_ids)}'
 
 
-class Transfer:
+class GofsTransfer:
+    """ 
+    A single zone to zone microtransit-like transfer 
+    """
+
     def __init__(self, trip_id, from_stop_id, to_stop_id):
         self.trip_id = trip_id
         self.from_stop_id = from_stop_id
         self.to_stop_id = to_stop_id
 
     def __repr__(self):
-        return 'Transfer(from_stop_id: {}, to_stop_id: {})'.format(self.from_stop_id, self.to_stop_id)
+        return 'Transfer(from_stop_id: {}, to_stop_id: {}, trip_id:{})'.format(self.from_stop_id, self.to_stop_id, self.trip_id)
