@@ -8,9 +8,11 @@ def patch_gtfs(args, gtfs, gofs_data: GofsData):
 
 
 def clean_up_gtfs(gtfs, gofs_data: GofsData):
-    # Clean up stop_times.txt
     for transfer in gofs_data.transfers:
         # Multiple transfers can be extracted from the same trip
-        # Check if it hasn't been yet deleted
+        # Check if it hasn't been yet deleted for each gtfs file
         if transfer.trip_id in gtfs.stop_times:
             del gtfs.stop_times[transfer.trip_id]
+
+        if transfer.trip_id in gtfs.trips:
+            del gtfs.trips[transfer.trip_id]
