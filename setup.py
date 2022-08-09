@@ -9,5 +9,5 @@ setup(name='GTFS-flex-to-GOFS-lite',
       packages=find_packages(),
       zip_safe=False,
       install_requires=[
-          'py-gtfs-loader @ git+https://github.com/transitapp/py-gtfs-loader@v0.0.3'
+          'py-gtfs-loader @ git+https://github.com/transitapp/py-gtfs-loader@v0.1.0'
       ])
