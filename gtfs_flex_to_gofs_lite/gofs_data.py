@@ -5,13 +5,13 @@ class GofsData:
     """
 
     def __init__(self):
-        self.stop_ids = set()
+        self.transfers = set()
         self.route_ids = set()
         self.calendar_ids = set()
         self.pickup_booking_rule_ids = {}
 
-    def register_stop_id(self, stop_id):
-        self.stop_ids.add(stop_id)
+    def register_transfer(self, transfer):
+        self.transfers.add(transfer)
 
     def register_route_id(self, route_id):
         self.route_ids.add(route_id)
@@ -24,4 +24,18 @@ class GofsData:
             pickup_booking_rule_id, set()).add(transfer)
 
     def __repr__(self) -> str:
-        return f'stop_ids: {repr(self.stop_ids)}\nroute_ids: {repr(self.route_ids)}\ncalendar_ids: {repr(self.calendar_ids)}\npickup_booking_rule_ids: {repr(self.pickup_booking_rule_ids)}'
+        return f'transfers: {repr(self.transfers)}\nroute_ids: {repr(self.route_ids)}\ncalendar_ids: {repr(self.calendar_ids)}\npickup_booking_rule_ids: {repr(self.pickup_booking_rule_ids)}'
+
+
+class GofsTransfer:
+    """ 
+    A single zone to zone microtransit-like transfer 
+    """
+
+    def __init__(self, trip_id, from_stop_id, to_stop_id):
+        self.trip_id = trip_id
+        self.from_stop_id = from_stop_id
+        self.to_stop_id = to_stop_id
+
+    def __repr__(self):
+        return 'Transfer(from_stop_id: {}, to_stop_id: {}, trip_id:{})'.format(self.from_stop_id, self.to_stop_id, self.trip_id)
