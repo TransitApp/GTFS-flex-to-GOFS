@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import List
 
 from ..gofs_file import GofsFile
 from ..utils import concat_url
@@ -17,7 +16,7 @@ def create(gtfs, base_url, created_files):
     if base_url is None:
         return GofsFile(FILENAME, False)
 
-    agency = list(gtfs.agency.values())[0] # Only support one agency so far
+    agency = list(gtfs.agency.values())[0]  # Only support one agency so far
     lang = agency.agency_lang
     urls = []
 
