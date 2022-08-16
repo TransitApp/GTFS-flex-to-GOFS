@@ -1,0 +1,20 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "system_information": {
+            "language": "en",
+            "timezone": "America/New_York",
+            "name": "Brockton Area Transit Authority",
+            "url": "https://www.ridebat.com/dial-a-bat/",
+            "subscribe_url": "",
+            "phone_number": "508-584-5530",
+            "short_name": "",
+            "operator": "",
+            "start_date": "",
+            "email": "",
+            "feed_contact_email": ""
+        }
+    }
+}

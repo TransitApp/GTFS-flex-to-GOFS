@@ -1,0 +1,27 @@
+location_group_id,location_id,location_group_name
+2750375,area_435,Dial-a-Bat Senior Service
+2750375,area_249,Dial-a-Bat Senior Service
+2750375,area_258,Dial-a-Bat Senior Service
+2750375,area_256,Dial-a-Bat Senior Service
+2750375,area_257,Dial-a-Bat Senior Service
+2750375,area_255,Dial-a-Bat Senior Service
+2751426,area_409,New Freedoms Area
+2751426,area_250,New Freedoms Area
+2751426,area_259,New Freedoms Area
+2751430,area_255,ADA + Stoughton + Easton
+2751430,area_263,ADA + Stoughton + Easton
+2751430,area_408,ADA + Stoughton + Easton
+2751431,area_263,ADA + Stoughton
+2751431,area_408,ADA + Stoughton
+2751432,area_263,ADA + Easton
+2751432,area_255,ADA + Easton
+2752285,799180,BATcenterAreatoPoint
+2752324,area_249,DAB Senior + New Freedoms
+2752324,area_255,DAB Senior + New Freedoms
+2752324,area_256,DAB Senior + New Freedoms
+2752324,area_257,DAB Senior + New Freedoms
+2752324,area_258,DAB Senior + New Freedoms
+2752324,area_435,DAB Senior + New Freedoms
+2752324,area_250,DAB Senior + New Freedoms
+2752324,area_259,DAB Senior + New Freedoms
+2752324,area_409,DAB Senior + New Freedoms

@@ -1,0 +1,63 @@
+service_id,date,holiday_name,exception_type
+c_23181_b_none_d_0,20220503,Reading Day,1
+c_23181_b_none_d_0,20220418,Patriots Day,1
+c_23181_b_none_d_0,20220313,Return from Spring Break,1
+c_23181_b_none_d_0,20220221,Presidents Day,1
+c_23181_b_none_d_0,20220118,Return from Winter Break,1
+c_21163_b_29144_d_32,20220418,Patriots Day,1
+c_21163_b_29144_d_32,20220221,Presidents Day,1
+c_21163_b_29144_d_32,20220117,Martin Luther King Day,1
+c_21163_b_29144_d_32,20220101,New Year's Day,2
+c_21163_b_29144_d_32,20211225,Christmas Day,2
+c_21163_b_29144_d_31,20220530,Memorial Day,2
+c_21163_b_29144_d_31,20220418,Patriots Day,2
+c_21163_b_29144_d_31,20220221,Presidents Day,2
+c_21163_b_29144_d_31,20220117,Martin Luther King Day,2
+c_20991_b_none_d_0,20220510,Final Exams End,1
+c_20991_b_none_d_0,20220307,Spring Break Begins,1
+c_20991_b_none_d_0,20211216,Final Exams End,1
+c_1747_b_32262_d_31,20220510,Final Exams End,2
+c_1747_b_32262_d_31,20220503,Reading Day,2
+c_1747_b_32262_d_31,20220418,Patriots Day,2
+c_1747_b_32262_d_31,20220307,Spring Break Begins,2
+c_1747_b_32262_d_31,20220221,Presidents Day,2
+c_1747_b_32262_d_31,20220118,Return from Winter Break,2
+c_1747_b_32262_d_31,20211216,Final Exams End,2
+c_1747_b_32262_d_127,20220510,Final Exams End,2
+c_1747_b_32262_d_127,20220503,Reading Day,2
+c_1747_b_32262_d_127,20220418,Patriots Day,2
+c_1747_b_32262_d_127,20220313,Return from Spring Break,2
+c_1747_b_32262_d_127,20220307,Spring Break Begins,2
+c_1747_b_32262_d_127,20220221,Presidents Day,2
+c_1747_b_32262_d_127,20220118,Return from Winter Break,2
+c_1747_b_32262_d_127,20211216,Final Exams End,2
+c_1747_b_32261_d_31,20220510,Final Exams End,2
+c_1747_b_32261_d_31,20220503,Reading Day,2
+c_1747_b_32261_d_31,20220418,Patriots Day,2
+c_1747_b_32261_d_31,20220307,Spring Break Begins,2
+c_1747_b_32261_d_31,20220221,Presidents Day,2
+c_1747_b_32261_d_31,20220118,Return from Winter Break,2
+c_1747_b_32261_d_31,20211216,Final Exams End,2
+c_1747_b_32261_d_127,20220510,Final Exams End,2
+c_1747_b_32261_d_127,20220503,Reading Day,2
+c_1747_b_32261_d_127,20220418,Patriots Day,2
+c_1747_b_32261_d_127,20220313,Return from Spring Break,2
+c_1747_b_32261_d_127,20220307,Spring Break Begins,2
+c_1747_b_32261_d_127,20220221,Presidents Day,2
+c_1747_b_32261_d_127,20220118,Return from Winter Break,2
+c_1747_b_32261_d_127,20211216,Final Exams End,2
+c_1747_b_32260_d_31,20220510,Final Exams End,2
+c_1747_b_32260_d_31,20220503,Reading Day,2
+c_1747_b_32260_d_31,20220418,Patriots Day,2
+c_1747_b_32260_d_31,20220307,Spring Break Begins,2
+c_1747_b_32260_d_31,20220221,Presidents Day,2
+c_1747_b_32260_d_31,20220118,Return from Winter Break,2
+c_1747_b_32260_d_31,20211216,Final Exams End,2
+c_1747_b_32260_d_127,20220510,Final Exams End,2
+c_1747_b_32260_d_127,20220503,Reading Day,2
+c_1747_b_32260_d_127,20220418,Patriots Day,2
+c_1747_b_32260_d_127,20220313,Return from Spring Break,2
+c_1747_b_32260_d_127,20220307,Spring Break Begins,2
+c_1747_b_32260_d_127,20220221,Presidents Day,2
+c_1747_b_32260_d_127,20220118,Return from Winter Break,2
+c_1747_b_32260_d_127,20211216,Final Exams End,2

@@ -1,0 +1,21 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "service_brands": [
+            {
+                "brand_id": "19314",
+                "brand_name": "Dial-A-Bat ADA Service",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "19024",
+                "brand_name": "Dial-A-Bat Senior Service",
+                "brand_color": "",
+                "brand_text_color": ""
+            }
+        ]
+    }
+}
