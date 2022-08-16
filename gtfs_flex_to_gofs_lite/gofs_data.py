@@ -28,8 +28,8 @@ class GofsData:
 
 
 class GofsTransfer:
-    """ 
-    A single zone to zone microtransit-like transfer 
+    """
+    A single zone to zone microtransit-like transfer
     """
 
     def __init__(self, trip_id, from_stop_id, to_stop_id):

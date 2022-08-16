@@ -19,7 +19,7 @@ class Calendar:
 def create(gtfs, used_calendar_ids):
     calendars_data = []
     for calendar in gtfs.calendar.values():
-        if not calendar.service_id in used_calendar_ids:
+        if calendar.service_id not in used_calendar_ids:
             continue  # Only extract calender that are actually used by on demand services
 
         days = []
@@ -43,7 +43,7 @@ def create(gtfs, used_calendar_ids):
             for calendar_date in gtfs.calendar_dates[calendar.service_id]:
                 if calendar_date.exception_type is schema.ExceptionType.REMOVE:
                     excepted_dates.append(repr(calendar_date.date))
-                
+
                 if calendar_date.exception_type is schema.ExceptionType.ADD:
                     # TODO
                     pass
