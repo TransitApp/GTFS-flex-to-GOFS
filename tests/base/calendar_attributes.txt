@@ -1,0 +1,10 @@
+service_id,service_description
+c_21163_b_29144_d_64,Year Round Starting 3/1 (Sunday only)
+c_21163_b_29144_d_32,Year Round Starting 3/1 (Saturday only)
+c_21163_b_29144_d_31,Year Round Starting 3/1 (Weekday)
+c_1747_b_32262_d_31,BSU School Calendar (Weekday)
+c_1747_b_32262_d_127,BSU School Calendar (All days of week)
+c_1747_b_32261_d_31,BSU School Calendar (Weekday)
+c_1747_b_32261_d_127,BSU School Calendar (All days of week)
+c_1747_b_32260_d_31,BSU School Calendar (Weekday)
+c_1747_b_32260_d_127,BSU School Calendar (All days of week)

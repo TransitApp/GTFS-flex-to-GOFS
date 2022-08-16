@@ -1,0 +1,35 @@
+route_id,direction_id,direction
+19314,0,No direction
+19024,0,No direction
+18785,1,Inbound
+18785,0,Outbound
+3223,0,Loop
+3222,0,Loop
+3221,1,Inbound
+3221,0,Outbound
+3220,0,Loop
+3219,1,Inbound
+3219,0,Outbound
+2948,0,Loop
+2947,1,Inbound
+2947,0,Outbound
+2946,1,Inbound
+2946,0,Outbound
+2941,1,Inbound
+2941,0,Outbound
+2940,1,Inbound
+2940,0,Outbound
+2939,1,Inbound
+2939,0,Outbound
+2938,1,Inbound
+2938,0,Outbound
+2937,1,Inbound
+2937,0,Outbound
+2936,1,Inbound
+2936,0,Outbound
+2935,1,Inbound
+2935,0,Outbound
+2934,1,Inbound
+2934,0,Outbound
+2933,1,Inbound
+2933,0,Outbound

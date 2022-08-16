@@ -1,0 +1,10 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+c_21163_b_29144_d_64,Year Round Starting 3/1 (Sunday only),0,0,0,0,0,0,1,20210301,20221001
+c_21163_b_29144_d_32,Year Round Starting 3/1 (Saturday only),0,0,0,0,0,1,0,20210301,20221001
+c_21163_b_29144_d_31,Year Round Starting 3/1 (Weekday),1,1,1,1,1,0,0,20210301,20221001
+c_1747_b_32262_d_31,BSU School Calendar (Weekday),1,1,1,1,1,0,0,20220313,20220510
+c_1747_b_32262_d_127,BSU School Calendar (All days of week),1,1,1,1,1,1,1,20220313,20220510
+c_1747_b_32261_d_31,BSU School Calendar (Weekday),1,1,1,1,1,0,0,20220118,20220307
+c_1747_b_32261_d_127,BSU School Calendar (All days of week),1,1,1,1,1,1,1,20220118,20220307
+c_1747_b_32260_d_31,BSU School Calendar (Weekday),1,1,1,1,1,0,0,20211128,20211216
+c_1747_b_32260_d_127,BSU School Calendar (All days of week),1,1,1,1,1,1,1,20211128,20211216
