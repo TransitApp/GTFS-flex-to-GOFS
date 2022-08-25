@@ -9,6 +9,7 @@ class GofsData:
         self.route_ids = set()
         self.calendar_ids = set()
         self.pickup_booking_rule_ids = {}
+        self.zones_ids = set()
 
     def register_transfer(self, transfer):
         self.transfers.add(transfer)
@@ -22,6 +23,9 @@ class GofsData:
     def register_pickup_booking_rule_id(self, pickup_booking_rule_id, transfer):
         self.pickup_booking_rule_ids.setdefault(
             pickup_booking_rule_id, set()).add(transfer)
+
+    def register_zone_id(self, zone_id):
+        self.zones_ids.add(zone_id)
 
     def __repr__(self) -> str:
         return f'transfers: {repr(self.transfers)}\nroute_ids: {repr(self.route_ids)}\ncalendar_ids: {repr(self.calendar_ids)}\npickup_booking_rule_ids: {repr(self.pickup_booking_rule_ids)}'

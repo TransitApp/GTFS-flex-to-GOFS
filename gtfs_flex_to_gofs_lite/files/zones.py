@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import Any, List
 
+from gtfs_flex_to_gofs_lite.gofs_data import GofsData
+
 from ..gofs_file import GofsFile
 
 FILENAME = 'zones'
@@ -25,9 +27,13 @@ class Zones:
     type: str = 'FeatureCollection'
 
 
-def create(gtfs):
+def create(gtfs, gofs_data: GofsData):
     zones = []
+
     for zone in gtfs.locations['features']:
+
+        if zone['id'] not in gofs_data.zones_ids:
+            continue
 
         new_zone = Feature(
             zone_id=zone['id'],

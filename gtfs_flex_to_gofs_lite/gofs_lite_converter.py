@@ -49,10 +49,10 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
 
     files_created = []
 
-    file = zones.create(gtfs)
+    file, gofs_data = operation_rules.create(gtfs)
     register_created_file(files_created, file)
 
-    file, gofs_data = operation_rules.create(gtfs)
+    file = zones.create(gtfs, gofs_data)
     register_created_file(files_created, file)
 
     file = system_information.create(gtfs)
