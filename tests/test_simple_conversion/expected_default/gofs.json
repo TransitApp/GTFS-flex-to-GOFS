@@ -6,12 +6,12 @@
         "en": {
             "feeds": [
                 {
-                    "name": "zones",
-                    "url": "/en/zones"
-                },
-                {
                     "name": "operating_rules",
                     "url": "/en/operating_rules"
+                },
+                {
+                    "name": "zones",
+                    "url": "/en/zones"
                 },
                 {
                     "name": "system_information",
