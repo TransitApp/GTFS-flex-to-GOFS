@@ -6,10 +6,6 @@ from ..gofs_file import GofsFile
 
 FILENAME = 'booking_rules'
 
-MINUTE = 60
-HOUR = 60 * MINUTE
-DAY = 24 * HOUR
-
 
 @dataclass
 class BookingRules:
