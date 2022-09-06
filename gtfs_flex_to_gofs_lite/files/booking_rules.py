@@ -1,6 +1,5 @@
 from dataclasses import dataclass
-from gtfs_flex_to_gofs_lite.files import booking_rules
-from gtfs_loader.schema import BookingType
+from gtfs_loader.schema import BookingType, GTFSTime
 from typing import List
 
 from ..gofs_file import GofsFile
@@ -16,13 +15,13 @@ DAY = 24 * HOUR
 class BookingRules:
     from_zone_ids: List[str]
     to_zone_ids: List[str]
-    booking_type: int
+    booking_type: BookingType
     prior_notice_duration_min: int
     prior_notice_duration_max: int
     prior_notice_last_day: int
     prior_notice_last_time: int
     prior_notice_last_time: int
-    prior_notice_start_time: int
+    prior_notice_start_time: GTFSTime
     prior_notice_calendar_id: int
     message: str
     pickup_message: str

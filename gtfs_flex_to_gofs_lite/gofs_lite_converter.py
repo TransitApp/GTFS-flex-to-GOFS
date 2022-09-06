@@ -1,6 +1,5 @@
 import time
 
-from gtfs_flex_to_gofs_lite.files import booking_rules
 
 from .default_headers import get_default_headers
 from .utils import green_text, red_text
@@ -15,6 +14,7 @@ from .files import system_information
 from .files import vehicle_types
 from .files import wait_time
 from .files import wait_times
+from .files import booking_rules
 from .files import zones
 
 from .gofs_data import GofsData
