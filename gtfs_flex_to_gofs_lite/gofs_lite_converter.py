@@ -1,5 +1,6 @@
 import time
 
+
 from .default_headers import get_default_headers
 from .utils import green_text, red_text
 
@@ -13,6 +14,7 @@ from .files import system_information
 from .files import vehicle_types
 from .files import wait_time
 from .files import wait_times
+from .files import booking_rules
 from .files import zones
 
 from .gofs_data import GofsData
@@ -74,6 +76,9 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
     register_created_file(files_created, file)
 
     file = wait_time.create(gtfs)
+    register_created_file(files_created, file)
+
+    file = booking_rules.create(gtfs, gofs_data.pickup_booking_rule_ids)
     register_created_file(files_created, file)
 
     file = gofs_versions.create(default_headers_template, base_url)

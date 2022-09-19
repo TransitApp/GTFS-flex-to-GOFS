@@ -26,8 +26,8 @@
                     "url": "/en/calendars"
                 },
                 {
-                    "name": "wait_times",
-                    "url": "/en/wait_times"
+                    "name": "booking_rules",
+                    "url": "/en/booking_rules"
                 },
                 {
                     "name": "gofs_versions",
