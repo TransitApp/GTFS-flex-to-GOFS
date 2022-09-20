@@ -44,7 +44,7 @@ def create(gtfs, pickup_booking_rule_ids):
                 to_ids = [
                     location.location_id for location in gtfs.location_groups[transfer.to_stop_id]]
             else:
-                to_ids = transfer.to_stop_id
+                to_ids = [transfer.to_stop_id]
 
             booking_rules.append(BookingRules(
                 from_zone_ids=from_ids,
