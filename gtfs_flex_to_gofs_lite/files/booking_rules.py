@@ -29,13 +29,26 @@ class BookingRules:
 
 def create(gtfs, pickup_booking_rule_ids):
     booking_rules = []
+
     for pickup_booking_rule_id, transfers in pickup_booking_rule_ids.items():
         for transfer in transfers:
             gtfs_booking_rule = gtfs.booking_rules[pickup_booking_rule_id]
 
+            if transfer.from_stop_id in gtfs.location_groups:
+                from_ids = [
+                    location.location_id for location in gtfs.location_groups[transfer.from_stop_id]]
+            else:
+                from_ids = [transfer.from_stop_id]
+
+            if transfer.to_stop_id in gtfs.location_groups:
+                to_ids = [
+                    location.location_id for location in gtfs.location_groups[transfer.to_stop_id]]
+            else:
+                to_ids = transfer.to_stop_id
+
             booking_rules.append(BookingRules(
-                from_zone_ids=[transfer.from_stop_id],
-                to_zone_ids=[transfer.to_stop_id],
+                from_zone_ids=from_ids,
+                to_zone_ids=to_ids,
                 booking_type=gtfs_booking_rule.booking_type,
                 prior_notice_duration_min=gtfs_booking_rule.prior_notice_duration_min,
                 prior_notice_duration_max=gtfs_booking_rule.prior_notice_duration_max,
