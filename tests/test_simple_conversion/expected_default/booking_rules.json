@@ -6,10 +6,13 @@
         "booking_rules": [
             {
                 "from_zone_ids": [
-                    "2751431"
+                    "area_263",
+                    "area_408"
                 ],
                 "to_zone_ids": [
-                    "2751430"
+                    "area_255",
+                    "area_263",
+                    "area_408"
                 ],
                 "booking_type": 2,
                 "prior_notice_duration_min": 0,
@@ -27,10 +30,13 @@
             },
             {
                 "from_zone_ids": [
-                    "2751430"
+                    "area_255",
+                    "area_263",
+                    "area_408"
                 ],
                 "to_zone_ids": [
-                    "2751432"
+                    "area_263",
+                    "area_255"
                 ],
                 "booking_type": 2,
                 "prior_notice_duration_min": 0,
@@ -48,7 +54,8 @@
             },
             {
                 "from_zone_ids": [
-                    "2751432"
+                    "area_263",
+                    "area_255"
                 ],
                 "to_zone_ids": [
                     "area_263"
@@ -93,7 +100,8 @@
                     "area_408"
                 ],
                 "to_zone_ids": [
-                    "2751431"
+                    "area_263",
+                    "area_408"
                 ],
                 "booking_type": 2,
                 "prior_notice_duration_min": 0,
@@ -111,7 +119,8 @@
             },
             {
                 "from_zone_ids": [
-                    "2751431"
+                    "area_263",
+                    "area_408"
                 ],
                 "to_zone_ids": [
                     "area_263"
@@ -132,10 +141,20 @@
             },
             {
                 "from_zone_ids": [
-                    "2751426"
+                    "area_409",
+                    "area_250",
+                    "area_259"
                 ],
                 "to_zone_ids": [
-                    "2752324"
+                    "area_249",
+                    "area_255",
+                    "area_256",
+                    "area_257",
+                    "area_258",
+                    "area_435",
+                    "area_250",
+                    "area_259",
+                    "area_409"
                 ],
                 "booking_type": 2,
                 "prior_notice_duration_min": 0,
@@ -153,10 +172,20 @@
             },
             {
                 "from_zone_ids": [
-                    "2752324"
+                    "area_249",
+                    "area_255",
+                    "area_256",
+                    "area_257",
+                    "area_258",
+                    "area_435",
+                    "area_250",
+                    "area_259",
+                    "area_409"
                 ],
                 "to_zone_ids": [
-                    "2751426"
+                    "area_409",
+                    "area_250",
+                    "area_259"
                 ],
                 "booking_type": 2,
                 "prior_notice_duration_min": 0,
