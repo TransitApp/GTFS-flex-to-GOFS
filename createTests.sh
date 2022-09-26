@@ -1,0 +1,1 @@
+python3 -m gtfs_flex_to_gofs_lite --gtfs-dir ./tests/test_simple_conversion/input  --gofs-lite-dir ./tests/test_simple_conversion/expected_default --out-gtfs-dir ./out-gtfs-dir --url "" --timestamp 0
