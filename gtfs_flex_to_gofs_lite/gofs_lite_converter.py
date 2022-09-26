@@ -41,11 +41,15 @@ def has_convertable_data(gtfs):
     return gtfs.locations != {}
 
 
-def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url):
+def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, timestamp=None):
     if not has_convertable_data(gtfs):
         return GofsData()
 
-    creation_timestamp = int(time.time())
+    if timestamp is not None:
+        creation_timestamp = timestamp
+    else:
+        creation_timestamp = int(time.time())
+
     default_headers_template = get_default_headers(
         ttl, GOFS_VERSION, creation_timestamp)
 
