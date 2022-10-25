@@ -50,9 +50,9 @@ def create(gtfs, pickup_booking_rule_ids):
                 from_zone_ids=from_ids,
                 to_zone_ids=to_ids,
                 booking_type=gtfs_booking_rule.booking_type,
-                prior_notice_duration_min=gtfs_booking_rule.prior_notice_duration_min,
-                prior_notice_duration_max=gtfs_booking_rule.prior_notice_duration_max,
-                prior_notice_last_day=gtfs_booking_rule.prior_notice_last_day,
+                prior_notice_duration_min=get_value_or_default(gtfs_booking_rule.prior_notice_duration_min, -1),
+                prior_notice_duration_max=get_value_or_default(gtfs_booking_rule.prior_notice_duration_max, -1),
+                prior_notice_last_day=get_value_or_default(gtfs_booking_rule.prior_notice_last_day, -1),
                 prior_notice_last_time=gtfs_booking_rule.prior_notice_last_time,
                 prior_notice_start_time=gtfs_booking_rule.prior_notice_start_time,
                 prior_notice_calendar_id=gtfs_booking_rule.prior_notice_service_id,
@@ -65,3 +65,10 @@ def create(gtfs, pickup_booking_rule_ids):
             ))
 
     return GofsFile(FILENAME, created=True, data=booking_rules)
+
+
+def get_value_or_default(value, default=None):
+    if value is None:
+        return default
+
+    return value
