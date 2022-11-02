@@ -1,4 +1,4 @@
-trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type,drop_off_type,shape_dist_traveled,timepoint,continuous_pickup,continuous_drop_off,pickup_booking_rule_id,drop_off_booking_rule_id,start_pickup_dropoff_window,end_pickup_dropoff_window,mean_duration_factor,mean_duration_offset,safe_duration_factor,safe_duration_offset,tts_stop_headsign
+trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type,drop_off_type,shape_dist_traveled,timepoint,continuous_pickup,continuous_drop_off,pickup_booking_rule_id,drop_off_booking_rule_id,start_pickup_drop_off_window,end_pickup_drop_off_window,mean_duration_factor,mean_duration_offset,safe_duration_factor,safe_duration_offset,tts_stop_headsign
 t_1132293_b_32260_tn_0,07:00:00,07:00:00,807049,1,,0,0,0,1,1,1,,,,,,,,,
 t_1132293_b_32260_tn_0,07:17:51,07:17:51,807064,2,,3,3,7508.686343546,0,1,1,,,,,,,,,
 t_1132293_b_32260_tn_0,07:30:00,07:30:00,799180,3,Bridgewater State University,0,0,12611.16170722,1,1,1,,,,,,,,,
