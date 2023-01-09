@@ -36,10 +36,11 @@ class GofsTransfer:
     A single zone to zone microtransit-like transfer
     """
 
-    def __init__(self, trip_id, from_stop_id, to_stop_id):
+    def __init__(self, trip_id, from_stop_id, to_stop_id, is_pure_microtransit_trip):
         self.trip_id = trip_id
         self.from_stop_id = from_stop_id
         self.to_stop_id = to_stop_id
+        self.is_pure_microtransit_trip = is_pure_microtransit_trip
 
     def __repr__(self):
-        return 'Transfer(from_stop_id: {}, to_stop_id: {}, trip_id:{})'.format(self.from_stop_id, self.to_stop_id, self.trip_id)
+        return 'Transfer(from_stop_id: {}, to_stop_id: {}, trip_id:{}, is_pure_microtransit_trip:{})'.format(self.from_stop_id, self.to_stop_id, self.trip_id, self.is_pure_microtransit_trip)

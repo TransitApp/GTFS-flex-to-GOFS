@@ -34,14 +34,11 @@ def create(gtfs):
         # Check if trip only has zones stop
         # If so, it's a microtransit-like trip
         # Otherwise, it's a regular trip with zone deviations
-        is_microtransit_trip = True
+        is_pure_microtransit_trip = True
         for stop_time in stop_times:
             if stop_time.stop_id not in zone_ids and stop_time.stop_id not in locations_group:
-                is_microtransit_trip = False
+                is_pure_microtransit_trip = False
                 break
-
-        if not is_microtransit_trip:
-            continue
 
         prev_stop_time = None
         for stop_time in stop_times:
@@ -58,7 +55,7 @@ def create(gtfs):
                 add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id,
                                       stop_time.stop_id, trip, operating_rules, gofs_feed)
 
-                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id),
+                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip),
                               trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
 
             elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in zone_ids:
@@ -67,16 +64,15 @@ def create(gtfs):
                     add_zone_to_zone_rule(
                         prev_stop_time, from_stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
 
-                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id),
+                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip),
                               trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
 
             elif prev_stop_time.stop_id in zone_ids and stop_time.stop_id in locations_group:
                 # Single zone to multiple zones
                 for to_stop_id in locations_group[stop_time.stop_id]:
-                    add_zone_to_zone_rule(
-                        prev_stop_time, prev_stop_time.stop_id, to_stop_id, trip, operating_rules, gofs_feed)
+                    add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, to_stop_id, trip, operating_rules, gofs_feed)
 
-                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id),
+                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip),
                               trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
 
             elif prev_stop_time.stop_id in locations_group and stop_time.stop_id in locations_group:
@@ -86,7 +82,7 @@ def create(gtfs):
                         add_zone_to_zone_rule(
                             prev_stop_time, from_stop_id, to_stop_id, trip, operating_rules, gofs_feed)
 
-                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id),
+                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip),
                               trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
 
             prev_stop_time = stop_time
