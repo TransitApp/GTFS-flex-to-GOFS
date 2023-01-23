@@ -15,7 +15,7 @@ def main(args):
 
     gofs_lite_dir.mkdir(parents=True, exist_ok=True)
 
-    gofs_data = convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.timestamp)
+    gofs_data = convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.split_by_route, args.timestamp)
 
     if args.out_gtfs_dir:
         patch_gtfs(args, gtfs, gofs_data)
@@ -49,6 +49,8 @@ if __name__ == '__main__':
         '--no-warning', help='Silence warnings', action='store_true')
     parser.add_argument(
         '--timestamp', help='timestamp for files creation', type=int, default=None)
+    parser.add_argument(
+        '--split-by-route', help='Split gofs by route', action='store_true')
 
     args = parser.parse_args()
 
