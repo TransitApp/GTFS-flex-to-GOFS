@@ -65,7 +65,7 @@ def has_convertable_data(gtfs):
     return gtfs.locations != {}
 
 
-def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route, timestamp=None):
+def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=False, timestamp=None):
     if not has_convertable_data(gtfs):
         return GofsData()
 
