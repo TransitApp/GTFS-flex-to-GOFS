@@ -1,19 +1,21 @@
 import json
+import dataclasses
+from dataclasses import dataclass
 
 from .default_headers import get_default_headers
 
 
+@dataclass
 class GofsFile:
-    def __init__(self, filename, created, data=None, nest_data_under_filename=True):
-        self.filename = filename
-        self.created = created
-        self.data = data
-        self.nest_data_under_filename = nest_data_under_filename
+    EXTENSION = 'json'
 
-        self.extension = '.json'
+    filename: str
+    created: bool 
+    data: any 
+    nest_data_under_filename: bool = True
 
     def get_filename_with_ext(self):
-        return self.filename + self.extension
+        return self.filename + GofsFile.EXTENSION
 
     def save(self, filepath, ttl, version, creation_timestamp):
         file = get_default_headers(ttl, version, creation_timestamp)
@@ -22,8 +24,10 @@ class GofsFile:
         else:
             file['data'] = self.data
 
-        full_filepath = filepath / (self.filename + self.extension)
+        full_filepath = filepath / self.get_filename_with_ext() 
 
         print('Saving {}'.format(full_filepath))
-        with open(filepath / (self.filename + self.extension), 'w', encoding='utf-8') as f:
+        with open(full_filepath, 'w', encoding='utf-8') as f:
             f.write(json.dumps(file, indent=4, default=vars))
+
+    copy_with = dataclasses.replace

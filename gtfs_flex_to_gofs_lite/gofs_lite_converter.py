@@ -1,6 +1,6 @@
 import time
 from pathlib import Path
-from copy import deepcopy
+from copy import copy
 
 from .default_headers import get_default_headers
 from .utils import green_text, red_text
@@ -54,13 +54,10 @@ def save_files_one_folder_per_route(files, filepath, ttl, creation_timestamp):
         for filename, file in files.items():
             if filename == 'operating_rules':
                 # Filter all rule that aren't part of the current route
-                file = deepcopy(file)
-                file.data = [
-                    operating_rule 
-                    for operating_rule in file.data 
-                    if operating_rule.brand_id == route_id
-                ]
-
+                file_copy = file.copy_with(data=[operating_rule for operating_rule in file.data if operating_rule.brand_id == route_id])
+                file_copy.save(route_folder, ttl, GOFS_VERSION, creation_timestamp)
+                continue
+            
             file.save(route_folder, ttl, GOFS_VERSION, creation_timestamp)
 
 
