@@ -11,7 +11,7 @@ class GofsFile:
 
     filename: str
     created: bool 
-    data: any 
+    data: any = None
     nest_data_under_filename: bool = True
 
     def get_filename_with_ext(self):
