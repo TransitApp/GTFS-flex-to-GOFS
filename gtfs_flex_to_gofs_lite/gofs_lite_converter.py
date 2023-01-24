@@ -1,5 +1,6 @@
 import time
-
+from pathlib import Path
+from copy import copy
 
 from .default_headers import get_default_headers
 from .utils import green_text, red_text
@@ -22,9 +23,42 @@ from .gofs_data import GofsData
 GOFS_VERSION = '1.0'
 
 
-def save_files(files, filepath, ttl, creation_timestamp):
-    for file in files:
+def save_files(files, filepath, ttl, creation_timestamp, split_by_route):
+    print(f'split_by_route:{split_by_route}')
+
+    if not split_by_route:
+        # Simple case where we just dumb everything as a single GOFS folder
+        save_files_single_folder(files, filepath, ttl, creation_timestamp)
+        return 
+
+    # At this point, we need to create one GOFS folder per route
+    save_files_one_folder_per_route(files, filepath, ttl, creation_timestamp)
+
+
+def save_files_single_folder(files, filepath, ttl, creation_timestamp):
+    for file in files.values():
         file.save(filepath, ttl, GOFS_VERSION, creation_timestamp)
+
+
+def save_files_one_folder_per_route(files, filepath, ttl, creation_timestamp):
+    # Grab unique route id
+    routes = set()
+    for rule in files['operating_rules'].data:
+        routes.add(rule.brand_id)
+
+    # For each route, save a gofs folder
+    for route_id in routes:
+        route_folder = Path(filepath / route_id)
+        route_folder.mkdir(parents=True, exist_ok=True)
+
+        for filename, file in files.items():
+            if filename == 'operating_rules':
+                # Filter all rule that aren't part of the current route
+                file_copy = file.copy_with(data=[operating_rule for operating_rule in file.data if operating_rule.brand_id == route_id])
+                file_copy.save(route_folder, ttl, GOFS_VERSION, creation_timestamp)
+                continue
+            
+            file.save(route_folder, ttl, GOFS_VERSION, creation_timestamp)
 
 
 def register_created_file(files_created, file):
@@ -33,7 +67,7 @@ def register_created_file(files_created, file):
         return
 
     print(green_text(file.get_filename_with_ext()), 'successfully created')
-    files_created.append(file)
+    files_created[file.filename] = file
 
 
 def has_convertable_data(gtfs):
@@ -41,7 +75,7 @@ def has_convertable_data(gtfs):
     return gtfs.locations != {}
 
 
-def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, timestamp=None):
+def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=False, timestamp=None):
     if not has_convertable_data(gtfs):
         return GofsData()
 
@@ -53,7 +87,7 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, timestamp=None):
     default_headers_template = get_default_headers(
         ttl, GOFS_VERSION, creation_timestamp)
 
-    files_created = []
+    files_created = {}
 
     file, gofs_data = operation_rules.create(gtfs)
     register_created_file(files_created, file)
@@ -91,6 +125,6 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, timestamp=None):
     file = gofs.create(gtfs, base_url, files_created)
     register_created_file(files_created, file)
 
-    save_files(files_created, gofs_lite_dir, ttl, creation_timestamp)
+    save_files(files_created, gofs_lite_dir, ttl, creation_timestamp, split_by_route)
 
     return gofs_data
