@@ -20,7 +20,7 @@ def create(gtfs, base_url, created_files):
     lang = agency.agency_lang
     urls = []
 
-    for _, created_file in created_files.items():
+    for created_file in created_files.values():
         urls.append(URL(name=created_file.filename, url=concat_url(
             base_url, lang, created_file.filename)))
 

@@ -28,11 +28,19 @@ def save_files(files, filepath, ttl, creation_timestamp, split_by_route):
 
     if not split_by_route:
         # Simple case where we just dumb everything as a single GOFS folder
-        for _, file in files.items():
-            file.save(filepath, ttl, GOFS_VERSION, creation_timestamp)
+        save_files_single_folder(files, filepath, ttl, creation_timestamp)
         return 
 
     # At this point, we need to create one GOFS folder per route
+    save_files_one_folder_per_route(files, filepath, ttl, creation_timestamp)
+
+
+def save_files_single_folder(files, filepath, ttl, creation_timestamp):
+    for file in files.values():
+        file.save(filepath, ttl, GOFS_VERSION, creation_timestamp)
+
+
+def save_files_one_folder_per_route(files, filepath, ttl, creation_timestamp):
     # Grab unique route id
     routes = set()
     for rule in files['operating_rules'].data:
@@ -40,16 +48,21 @@ def save_files(files, filepath, ttl, creation_timestamp, split_by_route):
 
     # For each route, save a gofs folder
     for route_id in routes:
-        route_folder = Path(filepath / f'{route_id}')
+        route_folder = Path(filepath / route_id)
         route_folder.mkdir(parents=True, exist_ok=True)
 
         for filename, file in files.items():
             if filename == 'operating_rules':
                 # Filter all rule that aren't part of the current route
                 file = deepcopy(file)
-                file.data = [operating_rule for operating_rule in file.data if operating_rule.brand_id == route_id]
+                file.data = [
+                    operating_rule 
+                    for operating_rule in file.data 
+                    if operating_rule.brand_id == route_id
+                ]
 
             file.save(route_folder, ttl, GOFS_VERSION, creation_timestamp)
+
 
 def register_created_file(files_created, file):
     if not file.created:
