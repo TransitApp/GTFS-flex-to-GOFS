@@ -7,7 +7,7 @@ from .default_headers import get_default_headers
 
 @dataclass
 class GofsFile:
-    EXTENSION = 'json'
+    EXTENSION = '.json'
 
     filename: str
     created: bool 
