@@ -1,1 +1,2 @@
 python3 -m gtfs_flex_to_gofs_lite --gtfs-dir ./tests/test_simple_conversion/input  --gofs-lite-dir ./tests/test_simple_conversion/expected_default --url "" --timestamp 0
+python3 -m gtfs_flex_to_gofs_lite --gtfs-dir ./tests/test_non_pure_microtransit_route/input  --gofs-lite-dir ./tests/test_non_pure_microtransit_route/expected_default --url "" --timestamp 0

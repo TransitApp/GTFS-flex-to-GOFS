@@ -1,0 +1,20 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "system_information": {
+            "language": "en",
+            "timezone": "America/Chicago",
+            "name": "Morris Transit",
+            "url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+            "subscribe_url": "",
+            "phone_number": "(320) 589-1000",
+            "short_name": "",
+            "operator": "",
+            "start_date": "",
+            "email": "",
+            "feed_contact_email": ""
+        }
+    }
+}

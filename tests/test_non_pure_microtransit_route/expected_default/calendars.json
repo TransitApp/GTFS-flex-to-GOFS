@@ -1,0 +1,48 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "calendars": [
+            {
+                "calendar_id": "c_67306_b_77510_d_64",
+                "start_date": "20221001",
+                "end_date": "20231001",
+                "days": [
+                    "sun"
+                ],
+                "excepted_dates": [
+                    "20230101",
+                    "20221225"
+                ]
+            },
+            {
+                "calendar_id": "c_67306_b_77510_d_32",
+                "start_date": "20221001",
+                "end_date": "20231001",
+                "days": [
+                    "sat"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "c_67306_b_77510_d_31",
+                "start_date": "20221001",
+                "end_date": "20231001",
+                "days": [
+                    "mon",
+                    "tue",
+                    "wed",
+                    "thu",
+                    "fri"
+                ],
+                "excepted_dates": [
+                    "20230904",
+                    "20230704",
+                    "20230529",
+                    "20221124"
+                ]
+            }
+        ]
+    }
+}
