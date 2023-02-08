@@ -1,0 +1,5 @@
+stop_id,stop_code,platform_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,position,direction,wheelchair_boarding,tts_stop_name
+4147692,,,Morris,,45.5879156493806,-95.9115121941358,,,0,,America/Chicago,,,0,
+4148390,,,Nature's Edge,,45.590264,-95.928841,,,0,,America/Chicago,,,0,
+4148391,,,Super Valu,,45.58937,-95.91528,,,0,,America/Chicago,,,0,
+4148392,,,UMM,,45.58924,-95.90159,,,0,,America/Chicago,,,0,

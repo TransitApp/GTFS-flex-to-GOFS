@@ -1,0 +1,639 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "booking_rules": [
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_719"
+                ],
+                "to_zone_ids": [
+                    "area_719"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 360,
+                "prior_notice_duration_max": 1080,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Morris Transit provides curb-to-curb Dial-a-Ride transportation to Morris residents. To request a ride, call 320-589-1000 at least 2 hours ahead of your trip. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(320) 589-1000",
+                "info_url": "https://www.ci.morris.mn.us/departments/morris-transit/",
+                "booking_url": ""
+            }
+        ]
+    }
+}

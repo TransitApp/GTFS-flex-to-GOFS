@@ -19,6 +19,6 @@ def clean_up_gtfs(gtfs, gofs_data: GofsData):
                      if stop_time.stop_id != transfer.from_stop_id and stop_time.stop_id != transfer.to_stop_id
                 ]
                 
-        if transfer.trip_id in gtfs.trips and not transfer.is_pure_microtransit_trip:
-            # Only delete trip if there's no stop_times.txt that still reference it, which only happen for non pure microtransit trip
+        if transfer.is_pure_microtransit_trip and transfer.trip_id in gtfs.trips:
+            # Only delete trip if there's no stop_times.txt that still reference it, which only happen for pure microtransit trip
             del gtfs.trips[transfer.trip_id]
