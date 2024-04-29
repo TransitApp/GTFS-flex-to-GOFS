@@ -21,6 +21,9 @@ class GofsData:
         self.calendar_ids.add(used_calendar_id)
 
     def register_pickup_booking_rule_id(self, pickup_booking_rule_id, transfer):
+        if pickup_booking_rule_id == None or pickup_booking_rule_id == '':
+            return
+    
         self.pickup_booking_rule_ids.setdefault(
             pickup_booking_rule_id, set()).add(transfer)
 
