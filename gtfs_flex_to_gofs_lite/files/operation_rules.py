@@ -6,6 +6,8 @@ from ..gofs_data import GofsData
 from ..gofs_data import GofsTransfer
 from gtfs_loader.schema import PickupType, DropOffType
 
+from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zone_ids_set
+
 FILENAME = 'operating_rules'
 
 
@@ -31,12 +33,10 @@ def create(gtfs):
     for trip_id, stop_times in gtfs.stop_times.items():
         trip = gtfs.trips[trip_id]
 
-        # Check if trip only has zones stop
-        # If so, it's a microtransit-like trip
-        # Otherwise, it's a regular trip with zone deviations
+        # Check if trip is a microtransit-like trip
         is_pure_microtransit_trip = True
         for stop_time in stop_times:
-            if stop_time.stop_id not in zone_ids and stop_time.stop_id not in locations_group:
+            if stop_time.start_pickup_drop_off_window == -1 or stop_time.end_pickup_drop_off_window == -1:
                 is_pure_microtransit_trip = False
                 break
 
@@ -50,6 +50,14 @@ def create(gtfs):
                 prev_stop_time = stop_time
                 continue
 
+            from_is_valid = prev_stop_time.start_pickup_drop_off_window != -1 and prev_stop_time.end_pickup_drop_off_window != -1
+            to_is_valid = stop_time.start_pickup_drop_off_window != -1 and stop_time.end_pickup_drop_off_window != -1
+
+            if from_is_valid and to_is_valid:
+                add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
+                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip), trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
+
+            continue
             if prev_stop_time.stop_id in zone_ids and stop_time.stop_id in zone_ids:
                 # Single to single zone
                 add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id,
@@ -88,23 +96,6 @@ def create(gtfs):
             prev_stop_time = stop_time
 
     return GofsFile(FILENAME, created=True, data=operating_rules), gofs_feed
-
-
-def get_zone_ids_set(gtfs):
-    zone_ids = set()
-    for zone in gtfs.locations['features']:
-        zone_ids.add(zone['id'])
-    return zone_ids
-
-
-def get_locations_group(gtfs):
-    location_groups = {}  # groupe_id -> [zone_id...]
-    for group_id, group in gtfs.location_groups.items():
-        location_groups.setdefault(group_id, [])
-        for location in group:
-            location_groups[group_id].append(location['location_id'])
-
-    return location_groups
 
 
 def register_data(transfer: GofsTransfer, trip, pickup_booking_rule_id, gofs_feed):
