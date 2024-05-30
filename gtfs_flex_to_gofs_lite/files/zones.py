@@ -156,9 +156,7 @@ class PolygonCreator:
         return get_circle_polygon(lat, lng, self.radius, self.num_vertices)
 
 
-def get_circle_polygon(
-    lat: float, lng: float, radius: float, numVertices: int
-) -> list:
+def get_circle_polygon(lat: float, lng: float, radius: float, numVertices: int):
     coordinates = []
 
     for idx in range(numVertices):
@@ -170,9 +168,7 @@ def get_circle_polygon(
     return coordinates
 
 
-def offset_circle_vertex(
-    lat: float, lng: float, distance: float, bearing: float
-) -> tuple[float, float]:
+def offset_circle_vertex(lat: float, lng: float, distance: float, bearing: float):
     EARTH_RADIUS = 6371009.0
     rad_lat_center = (lat * math.pi) / 180.0
     rad_lng_center = (lng * math.pi) / 180.0
