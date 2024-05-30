@@ -1,0 +1,3801 @@
+{
+    "last_updated": 1717082764,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "operating_rules": [
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__BOUY_MAIRIE",
+                "to_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "start_pickup_window": 23875,
+                "end_pickup_window": 24810,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "19",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 47190,
+                "end_pickup_window": 48113,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__BOUY_MAIRIE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__MOURMELON_LE_PETIT",
+                "to_zone_id": "ZONE__ST_HILAIRE_AU_TEMPLE",
+                "start_pickup_window": 68670,
+                "end_pickup_window": 69593,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "21",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__PARVIS_GARE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 84000,
+                "end_pickup_window": 84060,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "14",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__FG",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "11",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__FG",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 47700,
+                "end_pickup_window": 51300,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "11",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__A",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 45600,
+                "end_pickup_window": 48600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "16",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__D",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 45600,
+                "end_pickup_window": 48600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "16",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__B",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 45600,
+                "end_pickup_window": 48600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "16",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__E",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "17",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1570"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 46800,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__FG",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "11",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__FG",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 47700,
+                "end_pickup_window": 51300,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "11",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 29400,
+                "end_pickup_window": 32400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 43500,
+                "end_pickup_window": 46500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 64200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__A",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 45600,
+                "end_pickup_window": 48600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "16",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__D",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 45600,
+                "end_pickup_window": 48600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "16",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__B",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 45600,
+                "end_pickup_window": 48600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "16",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__E",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "17",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 32400,
+                "end_pickup_window": 43500,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 22800,
+                "end_pickup_window": 41400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 50400,
+                "end_pickup_window": 59400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 68400,
+                "end_pickup_window": 73800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1572"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1574"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1575"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 23400,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 23400,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 23400,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 23400,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 65100,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 65100,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 65100,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__C",
+                "start_pickup_window": 65100,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "6",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 25800,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 25800,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 25800,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 25800,
+                "end_pickup_window": 28800,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__ABDE",
+                "start_pickup_window": 61200,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1576"
+                ],
+                "brand_id": "2",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1577"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1578"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1579"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24600,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27000,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1580"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TPMR",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__TPMR",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__RUE_CAMILLE_COROT",
+                "start_pickup_window": 24900,
+                "end_pickup_window": 68400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "8",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 14700,
+                "end_pickup_window": 24900,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__6",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__6",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__3",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 72000,
+                "end_pickup_window": 80400,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "24",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__C",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "7",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__TISSIER",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__ABDE",
+                "to_zone_id": "ZONE__3",
+                "start_pickup_window": 49200,
+                "end_pickup_window": 52200,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "3",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "ZONE__TISSIER",
+                "to_zone_id": "ZONE__FG",
+                "start_pickup_window": 27300,
+                "end_pickup_window": 29700,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "1589"
+                ],
+                "brand_id": "9",
+                "vehicle_type_id": "large_van"
+            }
+        ]
+    }
+}
