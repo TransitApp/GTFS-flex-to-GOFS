@@ -1,0 +1,433 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "booking_rules": [
+            {
+                "from_zone_ids": [
+                    "area_755"
+                ],
+                "to_zone_ids": [
+                    "area_755"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Public Transit provides door-to-door Paratransit to persons with disabilities. To request a ride, call 507 387 8600 at least one day ahead of your trip before 6pm. Riders must apply for eligibility in advance - visit our website to download an application. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387-8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/paratransit",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_755"
+                ],
+                "to_zone_ids": [
+                    "area_755"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Public Transit provides door-to-door Paratransit to persons with disabilities. To request a ride, call 507 387 8600 at least one day ahead of your trip before 6pm. Riders must apply for eligibility in advance - visit our website to download an application. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387-8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/paratransit",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_755"
+                ],
+                "to_zone_ids": [
+                    "area_755"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Public Transit provides door-to-door Paratransit to persons with disabilities. To request a ride, call 507 387 8600 at least one day ahead of your trip before 6pm. Riders must apply for eligibility in advance - visit our website to download an application. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387-8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/paratransit",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_755"
+                ],
+                "to_zone_ids": [
+                    "area_755"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Public Transit provides door-to-door Paratransit to persons with disabilities. To request a ride, call 507 387 8600 at least one day ahead of your trip before 6pm. Riders must apply for eligibility in advance - visit our website to download an application. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387-8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/paratransit",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_755"
+                ],
+                "to_zone_ids": [
+                    "area_755"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Public Transit provides door-to-door Paratransit to persons with disabilities. To request a ride, call 507 387 8600 at least one day ahead of your trip before 6pm. Riders must apply for eligibility in advance - visit our website to download an application. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387-8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/paratransit",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_755"
+                ],
+                "to_zone_ids": [
+                    "area_755"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Public Transit provides door-to-door Paratransit to persons with disabilities. To request a ride, call 507 387 8600 at least one day ahead of your trip before 6pm. Riders must apply for eligibility in advance - visit our website to download an application. ",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387-8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/paratransit",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_804"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_804"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_753"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_804"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_804"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_804"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_753"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_804"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_804"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_753"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_753",
+                    "area_804"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_804"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_753"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751",
+                    "area_753",
+                    "area_804"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "to_zone_ids": [
+                    "area_750",
+                    "area_752",
+                    "area_751"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": 64800,
+                "prior_notice_start_time": 28800,
+                "prior_notice_calendar_id": "",
+                "message": "Greater Mankato Transit\u2019s Kato Flex service provides curb-to-curb Dial-a-Ride transportation to residents of Eagle Lake, Skyline, and select areas in Mankato. To request a ride, call (507) 387 8600 at least 1 day ahead of your trip by 6pm.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "(507) 387 8600",
+                "info_url": "https://www.mankatomn.gov/residents/mankato-transit-system/kato-flex",
+                "booking_url": ""
+            }
+        ]
+    }
+}

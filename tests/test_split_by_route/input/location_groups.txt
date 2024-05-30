@@ -1,0 +1,17 @@
+location_group_id,location_id,location_group_name
+4149464,area_750,Kato Flex Zones
+4149464,area_752,Kato Flex Zones
+4149464,area_751,Kato Flex Zones
+4160914,area_750,Kato Flex PLUS North Mankato
+4160914,area_752,Kato Flex PLUS North Mankato
+4160914,area_751,Kato Flex PLUS North Mankato
+4160914,area_753,Kato Flex PLUS North Mankato
+4160935,area_750,Kato Flex PLUS Main Service Area
+4160935,area_752,Kato Flex PLUS Main Service Area
+4160935,area_751,Kato Flex PLUS Main Service Area
+4160935,area_804,Kato Flex PLUS Main Service Area
+4160936,area_750,Kato Flex PLUS North Mankato + Main Service Area
+4160936,area_752,Kato Flex PLUS North Mankato + Main Service Area
+4160936,area_751,Kato Flex PLUS North Mankato + Main Service Area
+4160936,area_753,Kato Flex PLUS North Mankato + Main Service Area
+4160936,area_804,Kato Flex PLUS North Mankato + Main Service Area

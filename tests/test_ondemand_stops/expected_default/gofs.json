@@ -1,0 +1,39 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "fr": {
+            "feeds": [
+                {
+                    "name": "operating_rules",
+                    "url": "/fr/operating_rules"
+                },
+                {
+                    "name": "zones",
+                    "url": "/fr/zones"
+                },
+                {
+                    "name": "system_information",
+                    "url": "/fr/system_information"
+                },
+                {
+                    "name": "service_brands",
+                    "url": "/fr/service_brands"
+                },
+                {
+                    "name": "calendars",
+                    "url": "/fr/calendars"
+                },
+                {
+                    "name": "booking_rules",
+                    "url": "/fr/booking_rules"
+                },
+                {
+                    "name": "gofs_versions",
+                    "url": "/fr/gofs_versions"
+                }
+            ]
+        }
+    }
+}

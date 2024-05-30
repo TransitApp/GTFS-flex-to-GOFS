@@ -145,6 +145,10 @@ class PolygonCreator:
         return multi_polygon_geometry
 
     def _create_polygon_from_point_stop(self, stop_id):
+        if stop_id not in self.gtfs.stops:
+            print(f"[GTFS-Flex-To-GOFS-Lite] - Missing {stop_id} from stops.txt")
+            return # Might be old GTFS-Flex specs, not supported anymore
+        
         stop = self.gtfs.stops[stop_id]
         new_geometry = self._convert_point_to_circle(
             float(stop.raw_stop_lat), float(stop.raw_stop_lon)

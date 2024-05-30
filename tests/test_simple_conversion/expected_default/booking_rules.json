@@ -30,7 +30,6 @@
             },
             {
                 "from_zone_ids": [
-                    "area_255",
                     "area_263",
                     "area_408"
                 ],
@@ -55,7 +54,7 @@
             {
                 "from_zone_ids": [
                     "area_263",
-                    "area_255"
+                    "area_408"
                 ],
                 "to_zone_ids": [
                     "area_263"
@@ -119,7 +118,6 @@
             },
             {
                 "from_zone_ids": [
-                    "area_263",
                     "area_408"
                 ],
                 "to_zone_ids": [
@@ -172,15 +170,9 @@
             },
             {
                 "from_zone_ids": [
-                    "area_249",
-                    "area_255",
-                    "area_256",
-                    "area_257",
-                    "area_258",
-                    "area_435",
+                    "area_409",
                     "area_250",
-                    "area_259",
-                    "area_409"
+                    "area_259"
                 ],
                 "to_zone_ids": [
                     "area_409",
