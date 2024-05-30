@@ -6,6 +6,8 @@ from gtfs_flex_to_gofs_lite.gofs_data import GofsData
 from ..gofs_file import GofsFile
 from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zone_ids_set
 import math
+import shapely.ops
+import json 
 
 FILENAME = "zones"
 
@@ -117,13 +119,14 @@ class PolygonCreator:
             location_group_id
         )
 
-        # TODO : Merge overlapping elements of new_multipolygon together here
+        union_multipolygon = shapely.ops.unary_union(shapely.MultiPolygon(new_multipolygon))
+        geojson_data = json.loads(shapely.to_geojson(union_multipolygon))
 
         self.created_zones.append(
             create_zone(
                 location_group_id,
                 "",
-                {"type": "MultiPolygon", "coordinates": new_multipolygon},
+                geojson_data,
             )
         )
         self.handled_ids.add(location_group_id)
