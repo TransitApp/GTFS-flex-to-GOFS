@@ -1,2 +1,0 @@
-agency_id,agency_url,agency_lang,agency_name,agency_phone,agency_timezone,agency_fare_url,tts_agency_name
-4882,https://www.mankatomn.gov/residents/mankato-transit-system,en,Greater Mankato Public Transit,(507) 625-RIDE,America/Chicago,https://www.mankatomn.gov/residents/mankato-transit-system/rider-s-guide,
