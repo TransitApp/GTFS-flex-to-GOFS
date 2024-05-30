@@ -151,7 +151,7 @@ class PolygonCreator:
 
 def get_circle_polygon(
     lat: float, lng: float, radius: float, numVertices: int
-) -> List[tuple[float, float]]:
+) -> list[tuple[float, float]]:
     coordinates = []
 
     for idx in range(numVertices):
