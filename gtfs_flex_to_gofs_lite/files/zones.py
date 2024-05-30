@@ -7,7 +7,7 @@ from ..gofs_file import GofsFile
 from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zone_ids_set
 import math
 import shapely.ops
-import json 
+import json
 
 FILENAME = "zones"
 
@@ -34,7 +34,7 @@ class Zones:
 def create(gtfs, gofs_data: GofsData):
     zones = create_zones_from_geojson(gtfs, gofs_data)
     on_demand_stop_zones = PolygonCreator(
-        gtfs, gofs_data, radius=500, num_vertices=8
+        gtfs, gofs_data, radius=500, num_vertices=16
     ).create_zones_from_on_demand_stops()
 
     return GofsFile(FILENAME, created=True, data=Zones(zones + on_demand_stop_zones))
@@ -62,7 +62,9 @@ def create_zones_from_geojson(gtfs, gofs_data: GofsData):
             continue
 
         new_zone = create_zone(
-            zone["id"], zone["properties"].get("stop_name", ""), zone["geometry"]
+            new_zone_id=zone["id"],
+            new_zone_name=zone["properties"].get("stop_name", ""),
+            new_zone_geometry=zone["geometry"],
         )
         zones.append(new_zone)
 
@@ -119,14 +121,16 @@ class PolygonCreator:
             location_group_id
         )
 
-        union_multipolygon = shapely.ops.unary_union(shapely.MultiPolygon(new_multipolygon))
+        union_multipolygon = shapely.ops.unary_union(
+            shapely.MultiPolygon(new_multipolygon)
+        )
         geojson_data = json.loads(shapely.to_geojson(union_multipolygon))
 
         self.created_zones.append(
             create_zone(
-                location_group_id,
-                "",
-                geojson_data,
+                new_zone_id=location_group_id,
+                new_zone_name="",
+                new_zone_geometry=geojson_data,
             )
         )
         self.handled_ids.add(location_group_id)
@@ -154,7 +158,7 @@ class PolygonCreator:
 
 def get_circle_polygon(
     lat: float, lng: float, radius: float, numVertices: int
-) -> list[tuple[float, float]]:
+) -> List[tuple[float, float]]:
     coordinates = []
 
     for idx in range(numVertices):
