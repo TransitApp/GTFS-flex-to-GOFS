@@ -1,0 +1,54 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "booking_rules": [
+            {
+                "from_zone_ids": [
+                    "ZONE__MOURMELON_LE_PETIT",
+                    "ZONE__BOUY_MAIRIE",
+                    "ZONE__PARVIS_GARE",
+                    "ZONE__TISSIER",
+                    "ZONE__3",
+                    "ZONE__C",
+                    "ZONE__FG",
+                    "ZONE__ABDE",
+                    "ZONE__A",
+                    "ZONE__D",
+                    "ZONE__B",
+                    "ZONE__E",
+                    "ZONE__TPMR",
+                    "ZONE__RUE_CAMILLE_COROT",
+                    "ZONE__6"
+                ],
+                "to_zone_ids": [
+                    "ZONE__BOUY_MAIRIE",
+                    "ZONE__ST_HILAIRE_AU_TEMPLE",
+                    "ZONE__MOURMELON_LE_PETIT",
+                    "ZONE__3",
+                    "ZONE__ABDE",
+                    "ZONE__TISSIER",
+                    "ZONE__C",
+                    "ZONE__TPMR",
+                    "ZONE__RUE_CAMILLE_COROT",
+                    "ZONE__6",
+                    "ZONE__FG"
+                ],
+                "booking_type": 1,
+                "prior_notice_duration_min": 5,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": -1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "",
+                "info_url": "",
+                "booking_url": ""
+            }
+        ]
+    }
+}
