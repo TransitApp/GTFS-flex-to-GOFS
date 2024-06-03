@@ -24,5 +24,5 @@ def do_test(feed_dir):
     Path.mkdir(dest_dir)
 
     gtfs = gtfs_loader.load(work_dir)
-    gofs_lite_converter.convert_to_gofs_lite(gtfs, dest_dir, 24 * 60 * 60, '')
+    gofs_lite_converter.convert_to_gofs_lite(gtfs, dest_dir, 24 * 60 * 60, '', ("split_by_route" in str(feed_dir)))
     test_support.check_expected_output(feed_dir, dest_dir)

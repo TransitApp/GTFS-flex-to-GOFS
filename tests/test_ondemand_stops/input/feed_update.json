@@ -1,0 +1,24 @@
+{
+  "gtfs_sources": [
+    {
+      "source_id": "1",
+      "source_hash": "9c841c9e15f045bc833615afbfb77b6b",
+      "downloaded_at": "2024-05-13 14:00:45",
+      "start_date": "2024-05-06",
+      "end_date": "2024-05-18"
+    }
+  ],
+  "raw_data_downloaded_at": "2024-05-13 14:00:45",
+  "raw_data_start_at": "2024-05-06 04:05:00",
+  "raw_data_end_at": "2024-05-18 20:30:00",
+  "main_source_hash": "9c841c9e15f045bc833615afbfb77b6b",
+  "feed_id": 1802,
+  "feed_code": "SITACRFR",
+  "language": "fra",
+  "max_lat": -1000,
+  "min_lat": 1000,
+  "max_lon": -1000,
+  "min_lon": 1000,
+  "processed_data_start_at": null,
+  "processed_data_end_at": null
+}
