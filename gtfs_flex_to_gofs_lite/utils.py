@@ -24,11 +24,11 @@ def concat_url(*args):
     return url
 
 
-def get_zone_ids_set(gtfs):
-    zone_ids = set()
+def get_zones(gtfs):
+    zones = dict()
     for zone in gtfs.locations["features"]:
-        zone_ids.add(zone["id"])
-    return zone_ids
+        zones[zone["id"]] = zone
+    return zones
 
 
 def get_locations_group(gtfs):

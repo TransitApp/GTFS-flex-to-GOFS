@@ -6,7 +6,7 @@ from ..gofs_data import GofsData
 from ..gofs_data import GofsTransfer
 from gtfs_loader.schema import PickupType, DropOffType
 
-from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zone_ids_set
+from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zones
 
 FILENAME = 'operating_rules'
 
@@ -26,9 +26,6 @@ class OperationRule:
 def create(gtfs):
     gofs_feed = GofsData()
     operating_rules = []
-
-    zone_ids = get_zone_ids_set(gtfs)
-    locations_group = get_locations_group(gtfs)
 
     for trip_id, stop_times in gtfs.stop_times.items():
         trip = gtfs.trips[trip_id]

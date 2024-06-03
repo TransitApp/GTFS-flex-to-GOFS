@@ -4,7 +4,7 @@ from typing import Any, List
 from gtfs_flex_to_gofs_lite.gofs_data import GofsData
 
 from ..gofs_file import GofsFile
-from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zone_ids_set
+from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zones
 import math
 import shapely.ops
 import json
@@ -82,7 +82,7 @@ class PolygonCreator:
         self.radius = radius
         self.num_vertices = num_vertices
 
-        self.all_zones_ids = get_zone_ids_set(gtfs)
+        self.all_zones = get_zones(gtfs)
         self.all_location_groups = get_locations_group(gtfs)
 
     def create_zones_from_on_demand_stops(self):
@@ -96,7 +96,7 @@ class PolygonCreator:
         return self.created_zones
 
     def _handle_stop_id(self, stop_id):
-        if stop_id in self.handled_ids or stop_id in self.all_zones_ids:
+        if stop_id in self.handled_ids or stop_id in self.all_zones:
             return  # A polygon already exists
 
         if stop_id in self.all_location_groups:
@@ -106,10 +106,13 @@ class PolygonCreator:
 
     def _handle_stop(self, stop_id):
         new_geometry = self._create_polygon_from_point_stop(stop_id)
+        if new_geometry is None:
+            return 
+        
         self.created_zones.append(
             create_zone(
                 stop_id,
-                self.gtfs.stop[stop_id].stop_name,
+                self.gtfs.stops[stop_id].stop_name,
                 {"type": "Polygon", "coordinates": new_geometry},
             )
         )
@@ -145,9 +148,12 @@ class PolygonCreator:
         return multi_polygon_geometry
 
     def _create_polygon_from_point_stop(self, stop_id):
+        if stop_id in self.all_zones:
+            return self.all_zones[stop_id].geometry.coordinates[0]
+
         if stop_id not in self.gtfs.stops:
             print(f"[GTFS-Flex-To-GOFS-Lite] - Missing {stop_id} from stops.txt")
-            return # Might be old GTFS-Flex specs, not supported anymore
+            return None
         
         stop = self.gtfs.stops[stop_id]
         new_geometry = self._convert_point_to_circle(
