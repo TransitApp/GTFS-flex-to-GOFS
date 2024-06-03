@@ -193,6 +193,10 @@ def offset_circle_vertex(lat: float, lng: float, distance: float, bearing: float
         math.sin(bearing) * math.sin(dist_factor) * math.cos(rad_lat_center),
         math.cos(dist_factor) - math.sin(rad_lat_center) * math.sin(rad_lat),
     )
+
+    # The test framework needs the expected folder to exactly matche the generated one
+    # and, this algorithm produce slightly different results on different platform on the last 2 digits of a floating number. 
+    # Hence, we round them. Anyway, so much precision is useless : https://xkcd.com/2170/
     return (
         round(((rad_lng * 180.0) / math.pi), 10),
         round(((rad_lat * 180.0) / math.pi), 10),
