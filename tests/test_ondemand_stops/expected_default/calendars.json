@@ -1,0 +1,99 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "calendars": [
+            {
+                "calendar_id": "1589",
+                "start_date": "20240515",
+                "end_date": "20240515",
+                "days": [
+                    "wed"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1575",
+                "start_date": "20240507",
+                "end_date": "20240507",
+                "days": [
+                    "tue"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1576",
+                "start_date": "20240510",
+                "end_date": "20240510",
+                "days": [
+                    "fri"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1577",
+                "start_date": "20240513",
+                "end_date": "20240513",
+                "days": [
+                    "mon"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1570",
+                "start_date": "20240511",
+                "end_date": "20240511",
+                "days": [
+                    "sat"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1578",
+                "start_date": "20240514",
+                "end_date": "20240514",
+                "days": [
+                    "tue"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1572",
+                "start_date": "20240518",
+                "end_date": "20240518",
+                "days": [
+                    "sat"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1579",
+                "start_date": "20240516",
+                "end_date": "20240516",
+                "days": [
+                    "thu"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1580",
+                "start_date": "20240517",
+                "end_date": "20240517",
+                "days": [
+                    "fri"
+                ],
+                "excepted_dates": []
+            },
+            {
+                "calendar_id": "1574",
+                "start_date": "20240506",
+                "end_date": "20240506",
+                "days": [
+                    "mon"
+                ],
+                "excepted_dates": []
+            }
+        ]
+    }
+}

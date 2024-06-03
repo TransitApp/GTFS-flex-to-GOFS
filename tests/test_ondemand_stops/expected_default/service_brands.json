@@ -1,0 +1,87 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "service_brands": [
+            {
+                "brand_id": "21",
+                "brand_name": "Retour Hilaire Bouy Mourmelon",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "19",
+                "brand_name": "Aller Hilaire Bouy Mourmelon",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "14",
+                "brand_name": "Rabattement Gare",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "2",
+                "brand_name": "ABDE DO zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "7",
+                "brand_name": "C PU zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "11",
+                "brand_name": "FG PU zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "3",
+                "brand_name": "ABDE PU zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "6",
+                "brand_name": "C DO zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "16",
+                "brand_name": "ABD PU zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "17",
+                "brand_name": "E PU zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "8",
+                "brand_name": "Door-to-door",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "24",
+                "brand_name": "L6 LMCJV_nouvelle",
+                "brand_color": "",
+                "brand_text_color": ""
+            },
+            {
+                "brand_id": "9",
+                "brand_name": "FG DO zone",
+                "brand_color": "",
+                "brand_text_color": ""
+            }
+        ]
+    }
+}

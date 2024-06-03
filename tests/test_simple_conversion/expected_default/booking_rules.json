@@ -16,6 +16,136 @@
                     "2751430",
                     "2751432",
                     "area_263",
+<<<<<<< HEAD
+=======
+                    "area_408"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Brockton Area Transit's Dial-A-BAT service is available to riders aged 65+ or those who by reason of physical or developmental disability are unable to ride a regular BAT bus. To determine eligibility or to schedule a ride, call 508-584-5530. For communities outside of Brockton, please contact the Council on Aging of your town. Times may vary. Rides may be shared with other riders and must be scheduled 24 hours in advance.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "508-584-5530",
+                "info_url": "https://www.ridebat.com/dial-a-bat/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_263",
+                    "area_408"
+                ],
+                "to_zone_ids": [
+                    "area_263",
+                    "area_255"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Brockton Area Transit's Dial-A-BAT service is available to riders aged 65+ or those who by reason of physical or developmental disability are unable to ride a regular BAT bus. To determine eligibility or to schedule a ride, call 508-584-5530. For communities outside of Brockton, please contact the Council on Aging of your town. Times may vary. Rides may be shared with other riders and must be scheduled 24 hours in advance.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "508-584-5530",
+                "info_url": "https://www.ridebat.com/dial-a-bat/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_263",
+                    "area_408"
+                ],
+                "to_zone_ids": [
+                    "area_263"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Brockton Area Transit's Dial-A-BAT service is available to riders aged 65+ or those who by reason of physical or developmental disability are unable to ride a regular BAT bus. To determine eligibility or to schedule a ride, call 508-584-5530. For communities outside of Brockton, please contact the Council on Aging of your town. Times may vary. Rides may be shared with other riders and must be scheduled 24 hours in advance.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "508-584-5530",
+                "info_url": "https://www.ridebat.com/dial-a-bat/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_263"
+                ],
+                "to_zone_ids": [
+                    "area_409"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Brockton Area Transit's Dial-A-BAT service is available to riders aged 65+ or those who by reason of physical or developmental disability are unable to ride a regular BAT bus. To determine eligibility or to schedule a ride, call 508-584-5530. For communities outside of Brockton, please contact the Council on Aging of your town. Times may vary. Rides may be shared with other riders and must be scheduled 24 hours in advance.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "508-584-5530",
+                "info_url": "https://www.ridebat.com/dial-a-bat/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_408"
+                ],
+                "to_zone_ids": [
+                    "area_263",
+                    "area_408"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Brockton Area Transit's Dial-A-BAT service is available to riders aged 65+ or those who by reason of physical or developmental disability are unable to ride a regular BAT bus. To determine eligibility or to schedule a ride, call 508-584-5530. For communities outside of Brockton, please contact the Council on Aging of your town. Times may vary. Rides may be shared with other riders and must be scheduled 24 hours in advance.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "508-584-5530",
+                "info_url": "https://www.ridebat.com/dial-a-bat/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+                    "area_408"
+                ],
+                "to_zone_ids": [
+                    "area_263"
+                ],
+                "booking_type": 2,
+                "prior_notice_duration_min": -1,
+                "prior_notice_duration_max": -1,
+                "prior_notice_last_day": 1,
+                "prior_notice_last_time": -1,
+                "prior_notice_start_time": -1,
+                "prior_notice_calendar_id": "",
+                "message": "Brockton Area Transit's Dial-A-BAT service is available to riders aged 65+ or those who by reason of physical or developmental disability are unable to ride a regular BAT bus. To determine eligibility or to schedule a ride, call 508-584-5530. For communities outside of Brockton, please contact the Council on Aging of your town. Times may vary. Rides may be shared with other riders and must be scheduled 24 hours in advance.",
+                "pickup_message": "",
+                "drop_off_message": "",
+                "phone_number": "508-584-5530",
+                "info_url": "https://www.ridebat.com/dial-a-bat/",
+                "booking_url": ""
+            },
+            {
+                "from_zone_ids": [
+>>>>>>> 74f63bf7237a8685293f6fddadc164e4b10be27b
                     "area_409",
                     "2751431"
                 ],
@@ -35,8 +165,14 @@
             },
             {
                 "from_zone_ids": [
+<<<<<<< HEAD
                     "2751426",
                     "2752324"
+=======
+                    "area_409",
+                    "area_250",
+                    "area_259"
+>>>>>>> 74f63bf7237a8685293f6fddadc164e4b10be27b
                 ],
                 "to_zone_ids": [
                     "2752324",

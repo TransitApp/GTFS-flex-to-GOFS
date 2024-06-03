@@ -22,3 +22,20 @@ def concat_url(*args):
     url = '/'.join([*args])
     url = re.sub(r'(?<!:)//', r'/', url)
     return url
+
+
+def get_zones(gtfs):
+    zones = dict()
+    for zone in gtfs.locations["features"]:
+        zones[zone["id"]] = zone
+    return zones
+
+
+def get_locations_group(gtfs):
+    location_groups = {}  # groupe_id -> [zone_id...]
+    for group_id, group in gtfs.location_groups.items():
+        location_groups.setdefault(group_id, [])
+        for location in group:
+            location_groups[group_id].append(location["location_id"])
+
+    return location_groups
