@@ -12,16 +12,11 @@ on:
 jobs:
   build-and-test:
     runs-on: [ubuntu-latest]
-    strategy:
-      matrix:
-        python-version: [pypy3.10]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+    - name: Set up Python 
+      run: cd CI/ && sh installDependencies.sh
     - name: Install dependencies
       run: |
         sudo apt-get install libgeos-dev
