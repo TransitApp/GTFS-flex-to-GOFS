@@ -16,7 +16,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 
-      run: cd CI/ && sh installDependencies.sh
+      run: | 
+      cd ${GITHUB_WORKSPACE}/CI/ 
+      sh installDependencies.sh
     - name: Install dependencies
       run: |
         sudo apt-get install libgeos-dev
