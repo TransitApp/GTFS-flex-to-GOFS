@@ -34,7 +34,7 @@ class Zones:
 def create(gtfs, gofs_data: GofsData):
     zones = create_zones_from_geojson(gtfs, gofs_data)
     on_demand_stop_zones = PolygonCreator(
-        gtfs, gofs_data, radius=500, num_vertices=16
+        gtfs, gofs_data, radius=1000, num_vertices=16
     ).create_zones_from_on_demand_stops()
 
     return GofsFile(FILENAME, created=True, data=Zones(zones + on_demand_stop_zones))
