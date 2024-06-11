@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xeu pipefail
 
-. "create_venv.sh"
+. "./create_venv.sh"
 
 if [ -z ${GITHUB_ACTIONS+x} ]; then
     SUDO="echo"
