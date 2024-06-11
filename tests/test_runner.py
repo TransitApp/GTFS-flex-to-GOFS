@@ -19,6 +19,9 @@ def test_default(feed_dir):
 
 
 def do_test(feed_dir):
+    import sys
+    print(sys.version)  
+    
     work_dir = test_support.create_test_data(feed_dir)
     dest_dir = work_dir / "output"
     Path.mkdir(dest_dir)

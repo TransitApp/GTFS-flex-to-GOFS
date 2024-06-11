@@ -37,7 +37,12 @@ def create(gtfs, gofs_data: GofsData):
         gtfs, gofs_data, radius=500, num_vertices=16
     ).create_zones_from_on_demand_stops()
 
-    return GofsFile(FILENAME, created=True, data=Zones(zones + on_demand_stop_zones))
+    result_features = zones + on_demand_stop_zones
+    result_features.sort(key=lambda x: x.zone_id)
+
+    return GofsFile(
+        FILENAME, created=True, data=Zones(features=result_features)
+    )
 
 
 def create_zone(new_zone_id, new_zone_name, new_zone_geometry):
@@ -107,8 +112,8 @@ class PolygonCreator:
     def _handle_stop(self, stop_id):
         new_geometry = self._create_polygon_from_point_stop(stop_id)
         if new_geometry is None:
-            return 
-        
+            return
+
         self.created_zones.append(
             create_zone(
                 stop_id,
@@ -154,7 +159,7 @@ class PolygonCreator:
         if stop_id not in self.gtfs.stops:
             print(f"[GTFS-Flex-To-GOFS-Lite] - Missing {stop_id} from stops.txt")
             return None
-        
+
         stop = self.gtfs.stops[stop_id]
         new_geometry = self._convert_point_to_circle(
             float(stop.raw_stop_lat), float(stop.raw_stop_lon)
@@ -195,7 +200,7 @@ def offset_circle_vertex(lat: float, lng: float, distance: float, bearing: float
     )
 
     # The test framework needs the expected folder to exactly match the generated one
-    # and, this algorithm produce slightly different results on different platform on the last 2 digits of a floating number. 
+    # and, this algorithm produce slightly different results on different platform on the last 2 digits of a floating number.
     # Hence, we round them. Anyway, so much precision is useless : https://xkcd.com/2170/
     return (
         round(((rad_lng * 180.0) / math.pi), 10),
