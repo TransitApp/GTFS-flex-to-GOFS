@@ -1,5 +1,11 @@
 Tool to convert GTFS-Flex data to the GOFS-lite format
 
+To install:
+* `cd CI/`
+* `sh installDependencies.sh`
+
+This should takes care of everything. 
+
 ### man
 ```
 Convert GTFS-flex on-demand format to GOFS-lite
