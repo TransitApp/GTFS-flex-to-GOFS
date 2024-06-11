@@ -6,15 +6,15 @@
         "booking_rules": [
             {
                 "from_zone_ids": [
-                    "area_263",
                     "2751431",
+                    "area_263",
                     "area_408"
                 ],
                 "to_zone_ids": [
                     "2751430",
                     "2751431",
-                    "area_263",
                     "2751432",
+                    "area_263",
                     "area_409"
                 ],
                 "booking_type": 2,
