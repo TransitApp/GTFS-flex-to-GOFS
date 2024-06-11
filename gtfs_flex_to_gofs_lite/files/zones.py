@@ -10,7 +10,7 @@ import shapely.ops
 import json
 
 FILENAME = "zones"
-
+RADIUS_AROUND_STOP_IN_METERS = 1000
 
 @dataclass
 class Properties:
@@ -34,7 +34,7 @@ class Zones:
 def create(gtfs, gofs_data: GofsData):
     zones = create_zones_from_geojson(gtfs, gofs_data)
     on_demand_stop_zones = PolygonCreator(
-        gtfs, gofs_data, radius=1000, num_vertices=16
+        gtfs, gofs_data, radius=RADIUS_AROUND_STOP_IN_METERS, num_vertices=16
     ).create_zones_from_on_demand_stops()
 
     return GofsFile(FILENAME, created=True, data=Zones(zones + on_demand_stop_zones))
