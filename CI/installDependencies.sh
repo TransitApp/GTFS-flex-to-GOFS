@@ -1,5 +1,5 @@
 #!/bin/bash
-set -xeu pipefail
+set -xeuo pipefail
 
 . "./create_venv.sh"
 
