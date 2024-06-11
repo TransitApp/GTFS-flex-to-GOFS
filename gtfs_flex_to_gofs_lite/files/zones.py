@@ -37,7 +37,9 @@ def create(gtfs, gofs_data: GofsData):
         gtfs, gofs_data, radius=RADIUS_AROUND_STOP_IN_METERS, num_vertices=16
     ).create_zones_from_on_demand_stops()
 
-    return GofsFile(FILENAME, created=True, data=Zones(zones + on_demand_stop_zones))
+    result_features = zones + on_demand_stop_zones
+    result_features.sort(key=lambda x: x.zone_id)
+    return GofsFile(FILENAME, created=True, data=result_features)
 
 
 def create_zone(new_zone_id, new_zone_name, new_zone_geometry):
