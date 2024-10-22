@@ -8,6 +8,15 @@ To run test:
 
 You can use `createTests.sh` to regenerate the test.
 
+To deploy a new version, run:
+```
+rm -r dist/
+python setup.py sdist bdist_wheel
+TWINE_USERNAME=transit TWINE_REPOSITORY_URL=https://pypi.transitapp.com:443 TWINE_PASSWORD=[PASSWORD] twine upload dist/*
+```
+
+The twine password can be found in 1Password under the same `PyPI password`. 
+
 ### man
 ```
 Convert GTFS-flex on-demand format to GOFS-lite
