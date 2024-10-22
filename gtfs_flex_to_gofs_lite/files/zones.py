@@ -39,7 +39,7 @@ def create(gtfs, gofs_data: GofsData):
 
     result_features = zones + on_demand_stop_zones
     result_features.sort(key=lambda x: x.zone_id)
-    return GofsFile(FILENAME, created=True, data=result_features)
+    return GofsFile(FILENAME, created=True, data=Zones(result_features))
 
 
 def create_zone(new_zone_id, new_zone_name, new_zone_geometry):
