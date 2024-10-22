@@ -6,32 +6,31 @@
         "booking_rules": [
             {
                 "from_zone_ids": [
+                    "NODE__237",
+                    "NODE__36",
                     "ZONE__3",
                     "ZONE__6",
                     "ZONE__A",
                     "ZONE__ABDE",
                     "ZONE__B",
-                    "ZONE__BOUY_MAIRIE",
                     "ZONE__C",
                     "ZONE__D",
                     "ZONE__E",
                     "ZONE__FG",
-                    "ZONE__MOURMELON_LE_PETIT",
-                    "ZONE__PARVIS_GARE",
                     "ZONE__RUE_CAMILLE_COROT",
                     "ZONE__TISSIER",
                     "ZONE__TPMR"
                 ],
                 "to_zone_ids": [
+                    "NODE__237",
+                    "NODE__36",
+                    "NODE__374",
                     "ZONE__3",
                     "ZONE__6",
                     "ZONE__ABDE",
-                    "ZONE__BOUY_MAIRIE",
                     "ZONE__C",
                     "ZONE__FG",
-                    "ZONE__MOURMELON_LE_PETIT",
                     "ZONE__RUE_CAMILLE_COROT",
-                    "ZONE__ST_HILAIRE_AU_TEMPLE",
                     "ZONE__TISSIER",
                     "ZONE__TPMR"
                 ],
