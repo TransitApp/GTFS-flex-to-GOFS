@@ -144,14 +144,14 @@ class PolygonCreator:
         multi_polygon_geometry = []
         for stop_id in self.all_location_groups[location_group_id]:
             multi_polygon_geometry.append(
-                [self._create_polygon_from_point_stop(stop_id)]
+                self._create_polygon_from_point_stop(stop_id)
             )
 
         return multi_polygon_geometry
 
     def _create_polygon_from_point_stop(self, stop_id):
         if stop_id in self.all_zones:
-            return self.all_zones[stop_id].geometry.coordinates[0]
+            return [self.all_zones[stop_id].geometry.coordinates[0]]
 
         if stop_id not in self.gtfs.stops:
             print(f"[GTFS-Flex-To-GOFS-Lite] - Missing {stop_id} from stops.txt")
@@ -162,7 +162,7 @@ class PolygonCreator:
             float(stop.raw_stop_lat), float(stop.raw_stop_lon)
         )
 
-        return new_geometry
+        return [new_geometry]
 
     def _convert_point_to_circle(self, lat, lng):
         return get_circle_polygon(lat, lng, self.radius, self.num_vertices)
