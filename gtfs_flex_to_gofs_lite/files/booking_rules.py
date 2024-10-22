@@ -40,8 +40,8 @@ def create(gtfs, pickup_booking_rule_ids):
             to_ids.add(transfer.to_stop_id)
 
         booking_rules.append(BookingRules(
-            from_zone_ids=list(from_ids),
-            to_zone_ids=list(to_ids),
+            from_zone_ids=create_sorted_ids_list(from_ids),
+            to_zone_ids=create_sorted_ids_list(to_ids),
             booking_type=gtfs_booking_rule.booking_type,
             prior_notice_duration_min=get_value_or_default(gtfs_booking_rule.prior_notice_duration_min, -1),
             prior_notice_duration_max=get_value_or_default(gtfs_booking_rule.prior_notice_duration_max, -1),
@@ -58,6 +58,12 @@ def create(gtfs, pickup_booking_rule_ids):
         ))
 
     return GofsFile(FILENAME, created=True, data=booking_rules)
+
+
+def create_sorted_ids_list(ids:set):
+    result = list(ids)
+    result.sort()
+    return result
 
 
 def get_value_or_default(value, default=None):

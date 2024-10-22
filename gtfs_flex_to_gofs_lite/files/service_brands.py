@@ -27,4 +27,5 @@ def create(gtfs, route_ids):
         )
         service_brands.append(service_brand)
 
+    service_brands.sort(key=lambda x: x.brand_id)
     return GofsFile(FILENAME, created=True, data=service_brands)

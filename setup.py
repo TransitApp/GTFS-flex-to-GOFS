@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='GTFS-flex-to-GOFS-lite',
-      version='0.1.17',
+      version='0.1.18',
       description='Convert GTFS Flex to GOFS lite',
       url='https://github.com/TransitApp/GTFS-flex-to-GOFS-lite',
       author='Nicholas Paun, Jonathan Milot',
@@ -10,5 +10,6 @@ setup(name='GTFS-flex-to-GOFS-lite',
       zip_safe=False,
       install_requires=[
           'py-gtfs-loader @ git+https://github.com/transitapp/py-gtfs-loader@v0.1.10',
-          'shapely>=2.0.4'
+          'shapely>=2.0.4',
+          'pytest'
       ])
