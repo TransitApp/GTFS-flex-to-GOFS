@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": false,
+            "name": "Launch GTFS Flex to GOFS Lite Converter",
+            "cwd": "${workspaceFolder}",
+            "module": "gtfs_flex_to_gofs_lite",
+            "args": [
+                "--gtfs-dir",
+                "/Users/gcamp/Dev/UpdateStaticData/workspace/GTFSs/TCTCMN_1273/191_extended",
+                "--gofs-lite-dir",
+                "${workspaceFolder}/gtfs_flex_to_gofs_lite/output"
+            ]
+        }
+    ]
+}
