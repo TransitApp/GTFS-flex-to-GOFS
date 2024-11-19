@@ -27,6 +27,13 @@ class Calendar:
 
 
 def create(gtfs, used_calendar_ids):
+    used_calendar_ids = used_calendar_ids.copy() # Make a copy to avoid modifying the original list
+    calendars_data = extract_calendar(gtfs, used_calendar_ids)
+    calendars_data.append(extract_calendar_dates_only_calendar(gtfs, used_calendar_ids))
+
+    return GofsFile(FILENAME, created=True, data=calendars_data)
+
+def extract_calendar(gtfs, used_calendar_ids):
     calendars_data = []
     for calendar in gtfs.calendar.values():
         if calendar.service_id not in used_calendar_ids:
@@ -48,10 +55,13 @@ def create(gtfs, used_calendar_ids):
         used_calendar_ids.remove(calendar.service_id)
 
         calendars_data.append(calendar_data)
+    return calendars_data
 
+def extract_calendar_dates_only_calendar(gtfs, used_calendar_ids):
+    calendars_data = []
     for calendar_id in used_calendar_ids:
         # Remaining calendar ids should be from calendar_dates, otherwise they are just missing
-        if calendar.service_id in gtfs.calendar_dates:
+        if calendar_id in gtfs.calendar_dates:
             active_dates_calendar = []
             for calendar_date in gtfs.calendar_dates[calendar_id]:
                 if calendar_date.exception_type is schema.ExceptionType.ADD:
@@ -86,8 +96,7 @@ def create(gtfs, used_calendar_ids):
             days = list(DAYS_OF_WEEK.values())
             calendar_data = Calendar(calendar_id, start_date, end_date, days, excepted_dates)
             calendars_data.append(calendar_data)
-
-    return GofsFile(FILENAME, created=True, data=calendars_data)
+    return calendar_data
 
 def extract_service_days(calendar):
     days = []
