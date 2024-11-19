@@ -29,7 +29,7 @@ class Calendar:
 def create(gtfs, used_calendar_ids):
     used_calendar_ids = used_calendar_ids.copy() # Make a copy to avoid modifying the original list
     calendars = extract_calendar(gtfs, used_calendar_ids)
-    calendars.append(extract_calendar_dates_only_calendar(gtfs, used_calendar_ids))
+    calendars.extend(extract_calendar_dates_only_calendar(gtfs, used_calendar_ids))
 
     return GofsFile(FILENAME, created=True, data=calendars)
 
@@ -70,8 +70,6 @@ def extract_calendar_dates_only_calendar(gtfs, used_calendar_ids):
                 elif calendar_date.exception_type is schema.ExceptionType.REMOVE:
                     if repr(calendar_date.date) in active_dates_calendar:
                         active_dates_calendar.remove(repr(calendar_date.date))
-
-            print(f"Calendar {calendar_id} has no calendar, but has calendar_dates. Active dates: {active_dates_calendar}")
 
             # there's no support for a list of supported dates in GOFS-lite
             # instead, create a calendar from the start to the end date, then remove all the dates that are not in the active dates
