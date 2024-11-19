@@ -1,0 +1,15 @@
+{
+    "last_updated": 0,
+    "ttl": 86400,
+    "version": "1.0",
+    "data": {
+        "service_brands": [
+            {
+                "brand_id": "74459",
+                "brand_name": "Dial-A-Ride",
+                "brand_color": "00a7ce",
+                "brand_text_color": "000000"
+            }
+        ]
+    }
+}

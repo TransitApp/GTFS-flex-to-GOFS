@@ -1,0 +1,2 @@
+agency_id,rt_agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+4881,,Tri-Cap Transit Connection,https://tricap.org/transportation/how-to-ride/,America/Chicago,en,,https://tricap.org/transportation/how-to-ride/,

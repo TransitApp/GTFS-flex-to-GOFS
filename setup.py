@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='GTFS-flex-to-GOFS-lite',
-      version='0.1.20',
+      version='0.2.0',
       description='Convert GTFS Flex to GOFS lite',
       url='https://github.com/TransitApp/GTFS-flex-to-GOFS-lite',
       author='Nicholas Paun, Jonathan Milot',

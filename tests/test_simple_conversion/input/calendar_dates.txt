@@ -4,9 +4,6 @@ c_23181_b_none_d_0,20220418,Patriots Day,1
 c_23181_b_none_d_0,20220313,Return from Spring Break,1
 c_23181_b_none_d_0,20220221,Presidents Day,1
 c_23181_b_none_d_0,20220118,Return from Winter Break,1
-c_21163_b_29144_d_32,20220418,Patriots Day,1
-c_21163_b_29144_d_32,20220221,Presidents Day,1
-c_21163_b_29144_d_32,20220117,Martin Luther King Day,1
 c_21163_b_29144_d_32,20220101,New Year's Day,2
 c_21163_b_29144_d_32,20211225,Christmas Day,2
 c_21163_b_29144_d_31,20220530,Memorial Day,2

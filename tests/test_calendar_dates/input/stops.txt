@@ -1,0 +1,11 @@
+stop_id,parent_station,raw_stop_id,stop_desc,raw_stop_code,raw_stop_lat,raw_stop_lon,raw_stop_name,stop_code,stop_lat,stop_lon,wheelchair_boarding,stop_name,location_type,tts_stop_name,stop_disambiguation_key,stop_stable_id,stop_stable_key,rt_stop_data,rt_stop_id,location_id,extra_value_by_key
+area_765,,area_765,,,,,,,,,0,,101,,,,,,,area_765,
+area_766,,area_766,,,,,,,,,0,,101,,,,,,,area_766,
+area_767,,area_767,,,,,,,,,0,,101,,,,,,,area_767,
+area_768,,area_768,,,,,,,,,0,,101,,,,,,,area_768,
+area_772,,area_772,,,,,,,,,0,,101,,,,,,,area_772,
+area_1034,,area_1034,,,,,,,,,0,,101,,,,,,,area_1034,
+area_1035,,area_1035,,,,,,,,,0,,101,,,,,,,area_1035,
+area_1036,,area_1036,,,,,,,,,0,,101,,,,,,,area_1036,
+area_1103,,area_1103,,,,,,,,,0,,101,,,,,,,area_1103,
+area_1104,,area_1104,,,,,,,,,0,,101,,,,,,,area_1104,

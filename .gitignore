@@ -7,4 +7,5 @@
 .vscode/
 tests/.work/
 build/
+gtfs_flex_to_gofs_lite/output
 dist/
