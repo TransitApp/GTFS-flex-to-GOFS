@@ -113,9 +113,9 @@ class PolygonCreator:
         
         self.created_zones.append(
             create_zone(
-                stop_id,
-                self.gtfs.stops[stop_id].stop_name,
-                shapely.to_geojson(polygon_object),
+            stop_id,
+            self.gtfs.stops[stop_id].stop_name,
+            json.loads(shapely.to_geojson(polygon_object)),
             )
         )
 
