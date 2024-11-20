@@ -54,6 +54,8 @@ def create(gtfs):
                 add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
                 register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip), trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
 
+    operating_rules.sort(key=lambda x: (x.from_zone_id, x.to_zone_id, x.brand_id, x.vehicle_type_id, x.start_pickup_window, x.end_pickup_window, x.end_dropoff_window, x.calendars))
+
     return GofsFile(FILENAME, created=True, data=operating_rules), gofs_feed
 
 

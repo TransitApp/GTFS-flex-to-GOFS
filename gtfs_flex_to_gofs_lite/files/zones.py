@@ -107,27 +107,27 @@ class PolygonCreator:
             self._handle_stop(stop_id)
 
     def _handle_stop(self, stop_id):
-        new_geometry = self._create_polygon_from_point_stop(stop_id)
-        if new_geometry is None:
+        polygon_object = self._create_polygon_from_point_stop(stop_id)
+        if polygon_object is None:
             return 
         
         self.created_zones.append(
             create_zone(
-                stop_id,
-                self.gtfs.stops[stop_id].stop_name,
-                {"type": "Polygon", "coordinates": new_geometry},
+            stop_id,
+            self.gtfs.stops[stop_id].stop_name,
+            json.loads(shapely.to_geojson(polygon_object)),
             )
         )
 
         self.handled_ids.add(stop_id)
 
     def _handle_location_group(self, location_group_id):
-        new_multipolygon = self._create_multi_polygon_from_location_group(
+        feature_list = self._create_feature_list_from_location_group(
             location_group_id
         )
 
         union_multipolygon = shapely.ops.unary_union(
-            shapely.MultiPolygon(new_multipolygon)
+            feature_list
         )
         geojson_data = json.loads(shapely.to_geojson(union_multipolygon))
 
@@ -140,18 +140,27 @@ class PolygonCreator:
         )
         self.handled_ids.add(location_group_id)
 
-    def _create_multi_polygon_from_location_group(self, location_group_id):
-        multi_polygon_geometry = []
+    def _create_feature_list_from_location_group(self, location_group_id):
+        feature_list = []
         for stop_id in self.all_location_groups[location_group_id]:
-            multi_polygon_geometry.append(
+            feature_list.append(
                 self._create_polygon_from_point_stop(stop_id)
             )
 
-        return multi_polygon_geometry
+        return feature_list
 
     def _create_polygon_from_point_stop(self, stop_id):
         if stop_id in self.all_zones:
-            return [self.all_zones[stop_id].geometry.coordinates[0]]
+            polygon_object = shapely.from_geojson(geojson_from_feature_gtfs_object(self.all_zones[stop_id]))
+            if not polygon_object.is_valid:
+                # Intersecting polygon are not valid, fixing them by adding a buffer of 0. 
+                polygon_object = polygon_object.buffer(0)
+                if not polygon_object.is_valid: # couln't fix it
+                    raise ValueError(f"Invalid polygon for stop_id {stop_id}. Geojson data: {shapely.to_geojson(polygon_object)}")
+                else:
+                    print(f"Fixed intersecting invalid polygon for location group {stop_id} by buffering it")
+            
+            return polygon_object
 
         if stop_id not in self.gtfs.stops:
             print(f"[GTFS-Flex-To-GOFS-Lite] - Missing {stop_id} from stops.txt")
@@ -162,11 +171,25 @@ class PolygonCreator:
             float(stop.raw_stop_lat), float(stop.raw_stop_lon)
         )
 
-        return [new_geometry]
+        return shapely.geometry.Polygon(new_geometry)
 
     def _convert_point_to_circle(self, lat, lng):
         return get_circle_polygon(lat, lng, self.radius, self.num_vertices)
 
+def geojson_from_feature_gtfs_object(feature_object):
+    return json.dumps({
+        "type": "Feature",
+        "properties": {
+            "stop_desc": feature_object.properties.stop_desc,
+            "stop_name": feature_object.properties.stop_name,
+            "stop_url": feature_object.properties.stop_url,
+            "zone_id": feature_object.properties.zone_id,
+        },
+        "geometry": {
+            "type": feature_object.geometry.type,
+            "coordinates": feature_object.geometry.coordinates,
+        }
+    })
 
 def get_circle_polygon(lat: float, lng: float, radius: float, numVertices: int):
     coordinates = []
