@@ -19,6 +19,18 @@
             {
                 "from_zone_id": "area_719",
                 "to_zone_id": "area_719",
+                "start_pickup_window": 30600,
+                "end_pickup_window": 45000,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "c_67306_b_77510_d_64"
+                ],
+                "brand_id": "74373",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "area_719",
+                "to_zone_id": "area_719",
                 "start_pickup_window": 31200,
                 "end_pickup_window": 31800,
                 "end_dropoff_window": -1,
@@ -156,6 +168,18 @@
                 "end_dropoff_window": -1,
                 "calendars": [
                     "c_67306_b_77510_d_31"
+                ],
+                "brand_id": "74373",
+                "vehicle_type_id": "large_van"
+            },
+            {
+                "from_zone_id": "area_719",
+                "to_zone_id": "area_719",
+                "start_pickup_window": 43200,
+                "end_pickup_window": 57600,
+                "end_dropoff_window": -1,
+                "calendars": [
+                    "c_67306_b_77510_d_32"
                 ],
                 "brand_id": "74373",
                 "vehicle_type_id": "large_van"
@@ -336,30 +360,6 @@
                 "end_dropoff_window": -1,
                 "calendars": [
                     "c_67306_b_77510_d_31"
-                ],
-                "brand_id": "74373",
-                "vehicle_type_id": "large_van"
-            },
-            {
-                "from_zone_id": "area_719",
-                "to_zone_id": "area_719",
-                "start_pickup_window": 43200,
-                "end_pickup_window": 57600,
-                "end_dropoff_window": -1,
-                "calendars": [
-                    "c_67306_b_77510_d_32"
-                ],
-                "brand_id": "74373",
-                "vehicle_type_id": "large_van"
-            },
-            {
-                "from_zone_id": "area_719",
-                "to_zone_id": "area_719",
-                "start_pickup_window": 30600,
-                "end_pickup_window": 45000,
-                "end_dropoff_window": -1,
-                "calendars": [
-                    "c_67306_b_77510_d_64"
                 ],
                 "brand_id": "74373",
                 "vehicle_type_id": "large_van"
