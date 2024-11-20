@@ -107,15 +107,15 @@ class PolygonCreator:
             self._handle_stop(stop_id)
 
     def _handle_stop(self, stop_id):
-        new_geometry = self._create_polygon_from_point_stop(stop_id)
-        if new_geometry is None:
+        polygon_object = self._create_polygon_from_point_stop(stop_id)
+        if polygon_object is None:
             return 
         
         self.created_zones.append(
             create_zone(
                 stop_id,
                 self.gtfs.stops[stop_id].stop_name,
-                {"type": "Polygon", "coordinates": new_geometry},
+                shapely.to_geojson(polygon_object),
             )
         )
 
