@@ -1,0 +1,3 @@
+service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+c_69610_b_80848_d_96,0,0,0,0,0,1,1,20241120,20250601
+c_69610_b_80848_d_31,1,1,1,1,1,0,0,20241120,20250601

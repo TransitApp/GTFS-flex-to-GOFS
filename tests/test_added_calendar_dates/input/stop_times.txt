@@ -1,0 +1,5 @@
+trip_id,arrival_time,departure_time,start_pickup_drop_off_window,end_pickup_drop_off_window,stop_sequence,raw_stop_headsign,stop_id,pickup_type,drop_off_type,shape_dist_traveled,timepoint,stop_direction_id,rt_stop_headsign,stop_branch_code,stop_color,stop_text_color,stop_headsign,stop_direction_headsign,stop_merged_headsign,mean_duration_factor,mean_duration_offset,safe_duration_factor,safe_duration_offset,pickup_booking_rule_id,drop_off_booking_rule_id,config_value_by_key,temp_value_by_key,extra_value_by_key
+t_5647880_b_80848_tn_0,,,05:00:00,22:30:00,1,,area_1095,2,1,,,,,,,,,,,1,15.00,1,30.00,,,,,
+t_5647880_b_80848_tn_0,,,05:00:00,22:30:00,2,,area_1095,1,2,,,,,,,,,,,1,15.00,1,30.00,,,,,
+t_5647881_b_80848_tn_0,,,06:30:00,19:30:00,1,,area_1095,2,1,,,,,,,,,,,1,15.00,1,30.00,,,,,
+t_5647881_b_80848_tn_0,,,06:30:00,19:30:00,2,,area_1095,1,2,,,,,,,,,,,1,15.00,1,30.00,,,,,

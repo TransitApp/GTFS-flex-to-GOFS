@@ -1,0 +1,2 @@
+stop_id,parent_station,raw_stop_id,stop_desc,raw_stop_code,raw_stop_lat,raw_stop_lon,raw_stop_name,stop_code,stop_lat,stop_lon,wheelchair_boarding,stop_name,location_type,tts_stop_name,stop_disambiguation_key,stop_stable_id,stop_stable_key,rt_stop_data,rt_stop_id,location_id,extra_value_by_key
+area_1095,,area_1095,,,,,,,,,0,,101,,,,,,,area_1095,

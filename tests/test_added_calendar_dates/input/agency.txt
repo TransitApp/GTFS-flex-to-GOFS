@@ -1,0 +1,2 @@
+agency_id,rt_agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+4962,,Rochester Public Transit,https://www.rochestermn.gov/government/departments/public-transportation/zips-paratransit-service,America/Chicago,en,,,
