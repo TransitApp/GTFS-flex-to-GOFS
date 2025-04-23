@@ -1,5 +1,6 @@
 {
     "configurations": [
+
         {
             "type": "debugpy",
             "request": "launch",
@@ -9,7 +10,7 @@
             "module": "gtfs_flex_to_gofs_lite",
             "args": [
                 "--gtfs-dir",
-                "/Users/gcamp/Dev/GTFS-flex-to-GOFS-lite/tests/test_added_calendar_dates/input",
+                "/Users/gcamp/Dev/UpdateStaticData/workspace/GTFSs/SITACRFR/191_extended",
                 "--gofs-lite-dir",
                 "${workspaceFolder}/gtfs_flex_to_gofs_lite/output"
             ]

@@ -167,6 +167,10 @@ class PolygonCreator:
             return None
         
         stop = self.gtfs.stops[stop_id]
+        if stop.location_type == '101':
+            # Location type 101 is a polygon stop, which was already handled
+            return None
+
         new_geometry = self._convert_point_to_circle(
             float(stop.raw_stop_lat), float(stop.raw_stop_lon)
         )
