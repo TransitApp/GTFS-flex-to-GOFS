@@ -27,9 +27,9 @@ class Calendar:
 
 
 def create(gtfs, used_calendar_ids):
-    used_calendar_ids = used_calendar_ids.copy() # Make a copy to avoid modifying the original list
-    calendars = extract_calendar(gtfs, used_calendar_ids)
-    calendars.extend(extract_calendar_dates_only_calendar(gtfs, used_calendar_ids))
+    used_calendar_ids_copy = used_calendar_ids.copy() # Make a copy to avoid modifying the original list
+    calendars = extract_calendar(gtfs, used_calendar_ids_copy)
+    calendars.extend(extract_calendar_dates_only_calendar(gtfs, used_calendar_ids_copy))
 
     return GofsFile(FILENAME, created=True, data=calendars)
 
