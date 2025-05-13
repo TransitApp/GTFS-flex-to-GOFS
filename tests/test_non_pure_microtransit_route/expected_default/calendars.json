@@ -24,24 +24,6 @@
                     "sat"
                 ],
                 "excepted_dates": []
-            },
-            {
-                "calendar_id": "c_67306_b_77510_d_31",
-                "start_date": "20221001",
-                "end_date": "20231001",
-                "days": [
-                    "mon",
-                    "tue",
-                    "wed",
-                    "thu",
-                    "fri"
-                ],
-                "excepted_dates": [
-                    "20230904",
-                    "20230704",
-                    "20230529",
-                    "20221124"
-                ]
             }
         ]
     }

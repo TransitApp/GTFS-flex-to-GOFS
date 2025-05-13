@@ -15,10 +15,10 @@ def main(args):
 
     gofs_lite_dir.mkdir(parents=True, exist_ok=True)
 
-    gofs_data = convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.split_by_route, args.timestamp)
+    convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.split_by_route, args.timestamp)
 
     if args.out_gtfs_dir:
-        patch_gtfs(args, gtfs, gofs_data)
+        patch_gtfs(args, gtfs)
 
 
 def print_args_warnings(args):

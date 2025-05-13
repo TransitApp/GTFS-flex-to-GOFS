@@ -12,7 +12,9 @@
                 "--gtfs-dir",
                 "/Users/gcamp/Dev/UpdateStaticData/workspace/GTFSs/SITACRFR/191_extended",
                 "--gofs-lite-dir",
-                "${workspaceFolder}/gtfs_flex_to_gofs_lite/output"
+                "${workspaceFolder}/gtfs_flex_to_gofs_lite/output",
+                "--out-gtfs-dir",
+                "${workspaceFolder}/gtfs_flex_to_gofs_lite/output/gtfs",
             ]
         }
     ]
