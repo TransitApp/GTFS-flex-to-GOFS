@@ -126,5 +126,3 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=Fals
     register_created_file(files_created, file)
 
     save_files(files_created, gofs_lite_dir, ttl, creation_timestamp, split_by_route)
-
-    return gofs_data
