@@ -7,9 +7,15 @@ from ..gofs_data import GofsTransfer
 from gtfs_loader.schema import PickupType, DropOffType
 
 from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zones
+from enum import Enum
 
 FILENAME = 'operating_rules'
 
+class TripType(Enum):
+    REGULAR_SERVICE = "regular_service"
+    DEVIATED_SERVICE = "deviated_service"
+    PURE_MICROTRANSIT = "pure_microtransit"
+    OTHER = "other"
 
 @dataclass
 class OperationRule:
@@ -31,32 +37,70 @@ def create(gtfs):
         trip = gtfs.trips[trip_id]
 
         # Check if trip is a microtransit-like trip
-        is_pure_microtransit_trip = True
-        for stop_time in stop_times:
-            if stop_time.start_pickup_drop_off_window == -1 or stop_time.end_pickup_drop_off_window == -1:
-                is_pure_microtransit_trip = False
-                break
+        type_of_trip = get_type_of_trip(trip_id, stop_times)
 
-        prev_stop_time = None
-        for stop_time in stop_times:
-            if prev_stop_time is None:
-                prev_stop_time = stop_time
-                continue
+        if type_of_trip == TripType.PURE_MICROTRANSIT:
+            prev_stop_time = None
+            for stop_time in stop_times:
+                if prev_stop_time is None:
+                    prev_stop_time = stop_time
+                    continue
 
-            if prev_stop_time.pickup_type == PickupType.NO_PICKUP or stop_time.drop_off_type == DropOffType.NO_DROP_OFF:
-                prev_stop_time = stop_time
-                continue
+                if prev_stop_time.pickup_type == PickupType.NO_PICKUP or stop_time.drop_off_type == DropOffType.NO_DROP_OFF:
+                    prev_stop_time = stop_time
+                    continue
 
-            from_is_valid = prev_stop_time.start_pickup_drop_off_window != -1 and prev_stop_time.end_pickup_drop_off_window != -1
-            to_is_valid = stop_time.start_pickup_drop_off_window != -1 and stop_time.end_pickup_drop_off_window != -1
+                from_is_valid = prev_stop_time.start_pickup_drop_off_window != -1 and prev_stop_time.end_pickup_drop_off_window != -1
+                to_is_valid = stop_time.start_pickup_drop_off_window != -1 and stop_time.end_pickup_drop_off_window != -1
 
-            if from_is_valid and to_is_valid:
-                add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
-                register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id, is_pure_microtransit_trip), trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
+                if from_is_valid and to_is_valid:
+                    add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
+                    register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id), trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
+                
 
     operating_rules.sort(key=lambda x: (x.from_zone_id, x.to_zone_id, x.brand_id, x.vehicle_type_id, x.start_pickup_window, x.end_pickup_window, x.end_dropoff_window, x.calendars))
 
     return GofsFile(FILENAME, created=True, data=operating_rules), gofs_feed
+
+def get_type_of_trip(trip_id, stop_times):
+    class StopType(Enum):
+        REGION = "region"
+        STOP = "stop"
+
+    # Find which trips should be kept in GTFS
+    # By default, we don't keep it because we assume it's a microtransit trip
+    # If we have a deviated services, keep it (at least two stops and one region in the middle) 
+    # if it's a regular service, we keep it
+    regular_service = True
+    microtransit_only = True
+    deviated_service = len(stop_times) > 2 # at least two stops, otherwise it's not a deviated service
+    last_stop_type = None
+
+    for stop_time in stop_times:
+        is_a_region = stop_time.start_pickup_drop_off_window != -1 or stop_time.end_pickup_drop_off_window != -1
+
+        if is_a_region:
+            regular_service = False # either deviated or microtransit only
+        else:
+            microtransit_only = False
+            
+        if last_stop_type is None:
+            last_stop_type = StopType.REGION if is_a_region else StopType.STOP
+        else:
+            if last_stop_type == StopType.REGION and is_a_region:
+                deviated_service = False
+            elif last_stop_type == StopType.STOP and not is_a_region:
+                deviated_service = False
+
+    if regular_service:
+        return TripType.REGULAR_SERVICE
+    elif deviated_service:
+        return TripType.DEVIATED_SERVICE
+    elif microtransit_only:
+        return TripType.PURE_MICROTRANSIT 
+    else:
+        return TripType.OTHER
+  
 
 
 def register_data(transfer: GofsTransfer, trip, pickup_booking_rule_id, gofs_feed):
