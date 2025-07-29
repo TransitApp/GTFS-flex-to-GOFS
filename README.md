@@ -1,17 +1,17 @@
 Tool to convert GTFS-Flex data to the GOFS-lite format
 
 To install:
-* `python -m pip install -e .`
+* `uv sync`
 
 To run test:
-* `python -m pytest .`
+* `uv run python -m pytest .`
 
 You can use `createTests.sh` to regenerate the test.
 
 To deploy a new version, run:
 ```
 rm -r dist/
-python setup.py sdist bdist_wheel
+uv build
 TWINE_USERNAME=transit TWINE_REPOSITORY_URL=https://pypi.transitapp.com:443 TWINE_PASSWORD=[PASSWORD] twine upload dist/*
 ```
 
