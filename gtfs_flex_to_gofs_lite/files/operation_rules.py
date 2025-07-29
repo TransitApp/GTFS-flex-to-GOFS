@@ -67,13 +67,17 @@ def get_type_of_trip(trip_id, stop_times):
         REGION = "region"
         STOP = "stop"
 
+    # Invalid trips with fewer than 2 stops are marked as OTHER
+    if len(stop_times) < 2:
+        return TripType.OTHER
+
     # Find which trips should be kept in GTFS
     # By default, we don't keep it because we assume it's a microtransit trip
     # If we have a deviated services, keep it (at least two stops and one region in the middle) 
     # if it's a regular service, we keep it
     regular_service = True
     microtransit_only = True
-    deviated_service = len(stop_times) > 2 # at least two stops, otherwise it's not a deviated service
+    deviated_service = len(stop_times) > 2 # at least 3 stops, otherwise it's not a deviated service
     last_stop_type = None
 
     for stop_time in stop_times:
@@ -89,8 +93,8 @@ def get_type_of_trip(trip_id, stop_times):
         else:
             if last_stop_type == StopType.REGION and is_a_region:
                 deviated_service = False
-            elif last_stop_type == StopType.STOP and not is_a_region:
-                deviated_service = False
+        
+        last_stop_type = StopType.REGION if is_a_region else StopType.STOP
 
     if regular_service:
         return TripType.REGULAR_SERVICE
