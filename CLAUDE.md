@@ -36,7 +36,7 @@ Only `PURE_MICROTRANSIT` trips are converted to GOFS format.
 
 ### Installation
 ```bash
-python -m pip install -e .
+uv sync --extra dev
 ```
 
 ### Running Tests
