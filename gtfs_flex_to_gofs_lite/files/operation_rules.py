@@ -77,7 +77,7 @@ def get_type_of_trip(trip_id, stop_times):
     # if it's a regular service, we keep it
     regular_service = True
     microtransit_only = True
-    deviated_service = len(stop_times) > 2 # at least 3 stops, otherwise it's not a deviated service
+    deviated_service = len(stop_times) > 2 # at least 3 stop times, otherwise it's not a deviated service
     previous_stop_type = None
 
     for stop_time in stop_times:
@@ -87,12 +87,9 @@ def get_type_of_trip(trip_id, stop_times):
             regular_service = False # either deviated or microtransit only
         else:
             microtransit_only = False
-            
-        if previous_stop_type is None:
-            previous_stop_type = StopType.REGION if is_a_region else StopType.STOP
-        else:
-            if previous_stop_type == StopType.REGION and is_a_region:
-                deviated_service = False
+        
+        if previous_stop_type == StopType.REGION and is_a_region:
+            deviated_service = False
         
         previous_stop_type = StopType.REGION if is_a_region else StopType.STOP
 
