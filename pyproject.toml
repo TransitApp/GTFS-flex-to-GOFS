@@ -19,8 +19,13 @@ classifiers = [
 requires-python = ">=3.8"
 dependencies = [
     "py-gtfs-loader @ git+https://github.com/transitapp/py-gtfs-loader@v0.1.15",
-    "shapely>=2.0.4",
-    "pytest"
+    "shapely>=2.0.4"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "flake8"
 ]
 
 [project.urls]

@@ -36,7 +36,7 @@ Only `PURE_MICROTRANSIT` trips are converted to GOFS format.
 
 ### Installation
 ```bash
-uv sync
+uv sync --extra dev
 ```
 
 ### Running Tests

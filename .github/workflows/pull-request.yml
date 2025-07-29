@@ -27,8 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install libgeos-dev
-        uv sync
-        uv add --dev flake8
+        uv sync --extra dev
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names

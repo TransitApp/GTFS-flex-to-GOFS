@@ -1,7 +1,7 @@
 Tool to convert GTFS-Flex data to the GOFS-lite format
 
 To install:
-* `uv sync`
+* `uv sync --extra dev`
 
 To run test:
 * `uv run python -m pytest .`
