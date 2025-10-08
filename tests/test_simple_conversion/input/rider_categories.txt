@@ -1,3 +1,0 @@
-rider_category_id,rider_category_description
-2,Senior/Disabled/Child under 12
-3,Child under 5
