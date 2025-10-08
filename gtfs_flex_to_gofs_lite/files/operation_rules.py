@@ -34,11 +34,11 @@ def create(gtfs, itineraries=False):
     operating_rules = []
 
     if itineraries:
-        for trip in gtfs.trips.items():
+        for trip in gtfs.trips.values():
             # Check if trip is a microtransit-like trip
             type_of_trip = get_type_of_itinerary_trip(trip)
             if type_of_trip == TripType.PURE_MICROTRANSIT:
-                itin_cells = gtfs.itinerary_cells[trip.itinerary_index]
+                itin_cells = gtfs.itinerary_cells[trip.itinerary_index].values()
                 prev_itin_cell = None
                 for i, itin_cell in enumerate(itin_cells):
                     if prev_itin_cell is None:
@@ -53,8 +53,8 @@ def create(gtfs, itineraries=False):
                     to_is_valid = trip.start_pickup_drop_off_windows[i] != -1 and trip.end_pickup_drop_off_windows[i] != -1
 
                     if from_is_valid and to_is_valid:
-                        add_zone_to_zone_rule(trip.start_pickup_drop_off_windows[i - 1], trip.end_pickup_drop_off_windows[i - 1], prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
-                        register_data(GofsTransfer(trip_id, prev_itin_cell.stop_id, prev_itin_cell.stop_id), trip, prev_itin_cell.pickup_booking_rule_id, gofs_feed)
+                        add_zone_to_zone_rule(trip.start_pickup_drop_off_windows[i - 1], trip.end_pickup_drop_off_windows[i - 1], prev_itin_cell.stop_id, itin_cell.stop_id, trip, operating_rules, gofs_feed)
+                        register_data(GofsTransfer(trip.trip_id, prev_itin_cell.stop_id, prev_itin_cell.stop_id), trip, prev_itin_cell.pickup_booking_rule_id, gofs_feed)
                     
 
     else:

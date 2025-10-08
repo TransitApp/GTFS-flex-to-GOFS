@@ -17,7 +17,7 @@ def patch_gtfs(args, gtfs, itineraries=False):
 
 def clean_up_gtfs(gtfs, itineraries=False):
     if itineraries:
-        for trip in list(gtfs.trips.items()):
+        for trip in gtfs.trips.values():
             type_of_trip = operation_rules.get_type_of_itinerary_trip(trip)
             if type_of_trip == operation_rules.TripType.OTHER:
                 print(f"WARNING : Trip {trip.trip_id} is not a normal gtfs trip, not microtransit and not deviated service only. We are not supproting this yet, it will be removed from the GTFS and not shown anywhere")
