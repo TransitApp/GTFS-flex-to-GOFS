@@ -17,7 +17,7 @@ def test_regular_service_classification():
         MockStopTime(),  # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.REGULAR_SERVICE
 
 
@@ -29,7 +29,7 @@ def test_pure_microtransit_classification():
         MockStopTime(600, 900),  # Region
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.PURE_MICROTRANSIT
 
 
@@ -41,7 +41,7 @@ def test_deviated_service_classification():
         MockStopTime(),          # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
 
@@ -55,7 +55,7 @@ def test_deviated_service_with_multiple_stops_and_regions():
         MockStopTime(),          # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
 
@@ -68,7 +68,7 @@ def test_other_classification_consecutive_regions():
         MockStopTime(),          # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
 
@@ -80,7 +80,7 @@ def test_other_classification_mixed_with_insufficient_stops():
         MockStopTime(0, 300),    # Region
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
 
@@ -92,7 +92,7 @@ def test_region_detection_start_window_only():
         MockStopTime(),              # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
 
@@ -104,7 +104,7 @@ def test_region_detection_end_window_only():
         MockStopTime(),              # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
 
@@ -114,7 +114,7 @@ def test_invalid_single_stop_returns_other():
         MockStopTime(),  # Single stop - invalid
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
 
@@ -122,7 +122,7 @@ def test_invalid_empty_stops_returns_other():
     """Test that trips with no stops return OTHER"""
     stop_times = []
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
 
@@ -133,7 +133,7 @@ def test_minimum_valid_regular_service():
         MockStopTime(),  # Regular stop
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.REGULAR_SERVICE
 
 
@@ -144,5 +144,5 @@ def test_minimum_valid_microtransit():
         MockStopTime(300, 600),  # Region
     ]
     
-    result = get_type_of_trip("trip_1", stop_times)
+    result = get_type_of_trip(stop_times)
     assert result == TripType.PURE_MICROTRANSIT

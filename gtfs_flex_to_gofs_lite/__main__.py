@@ -10,15 +10,15 @@ DEFAULT_TTL = 86400
 
 
 def main(args):
-    gtfs = gtfs_loader.load(args.gtfs_dir)
+    gtfs = gtfs_loader.load(args.gtfs_dir, itineraries=args.itineraries)
     gofs_lite_dir = Path(args.gofs_lite_dir)
 
     gofs_lite_dir.mkdir(parents=True, exist_ok=True)
 
-    convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.split_by_route, args.timestamp)
+    convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.split_by_route, args.timestamp, itineraries=args.itineraries)
 
     if args.out_gtfs_dir:
-        patch_gtfs(args, gtfs)
+        patch_gtfs(args, gtfs, itineraries=args.itineraries)
 
 
 def print_args_warnings(args):
@@ -51,6 +51,9 @@ if __name__ == '__main__':
         '--timestamp', help='timestamp for files creation', type=int, default=None)
     parser.add_argument(
         '--split-by-route', help='Split gofs by route', action='store_true')
+    parser.add_argument(
+        '--itineraries', help='read from transit\'s itinerary_cells format', type=bool, default=False)
+
 
     args = parser.parse_args()
 
