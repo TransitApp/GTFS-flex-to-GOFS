@@ -71,10 +71,6 @@ class StopType(Enum):
     STOP = "stop"
 
 def get_type_of_trip(stop_times):
-    class StopType(Enum):
-        REGION = "region"
-        STOP = "stop"
-
     # Invalid trips with fewer than 2 stops are marked as OTHER
     if len(stop_times) < 2:
         return TripType.OTHER
