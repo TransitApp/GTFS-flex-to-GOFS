@@ -33,8 +33,8 @@ def create(gtfs):
     gofs_feed = GofsData()
     operating_rules = []
 
-    for trip_id, stop_times in gtfs.stop_times.items():
-        trip = gtfs.trips[trip_id]
+    for trip_id, trip in gtfs.trips.items():
+        stop_times = gtfs.stop_times[trip_id]
 
         # Check if trip is a microtransit-like trip
         type_of_trip = get_type_of_trip(trip_id, stop_times)
