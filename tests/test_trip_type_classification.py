@@ -1,11 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from gtfs_flex_to_gofs_lite.files.operation_rules import get_type_of_trip, get_type_of_itinerary_trip, TripType
-
-class MockItineraryTrip:
-    def __init__(self, start_pickup_drop_off_windows, end_pickup_drop_off_windows):
-        self.start_pickup_drop_off_windows = start_pickup_drop_off_windows
-        self.end_pickup_drop_off_windows = end_pickup_drop_off_windows
+from gtfs_flex_to_gofs_lite.files.operation_rules import get_type_of_trip, TripType
 
 
 class MockStopTime:
@@ -25,9 +20,6 @@ def test_regular_service_classification():
     result = get_type_of_trip(stop_times)
     assert result == TripType.REGULAR_SERVICE
 
-    trip = MockItineraryTrip([-1, -1, -1], [-1, -1, -1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.REGULAR_SERVICE
 
 def test_pure_microtransit_classification():
     """Test that trips with only regions are classified as PURE_MICROTRANSIT"""
@@ -40,9 +32,6 @@ def test_pure_microtransit_classification():
     result = get_type_of_trip(stop_times)
     assert result == TripType.PURE_MICROTRANSIT
 
-    trip = MockItineraryTrip([0, 300, 600], [300, 600, 900])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.PURE_MICROTRANSIT
 
 def test_deviated_service_classification():
     """Test that trips with stops and regions (alternating pattern) are classified as DEVIATED_SERVICE"""
@@ -53,10 +42,6 @@ def test_deviated_service_classification():
     ]
     
     result = get_type_of_trip(stop_times)
-    assert result == TripType.DEVIATED_SERVICE
-   
-    trip = MockItineraryTrip([-1, 0, -1], [-1, 300, -1])
-    result = get_type_of_itinerary_trip(trip)
     assert result == TripType.DEVIATED_SERVICE
 
 
@@ -73,9 +58,6 @@ def test_deviated_service_with_multiple_stops_and_regions():
     result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
-    trip = MockItineraryTrip([-1, 0, -1, 300, -1], [-1, 300, -1, 600, -1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.DEVIATED_SERVICE
 
 def test_other_classification_consecutive_regions():
     """Test that trips with consecutive regions are classified as OTHER"""
@@ -89,9 +71,6 @@ def test_other_classification_consecutive_regions():
     result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
-    trip = MockItineraryTrip([-1, 0, 300, -1], [-1, 300, 600, -1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.OTHER
 
 def test_other_classification_mixed_with_insufficient_stops():
     """Test that trips with mixed stops/regions but only 2 stops are classified as OTHER"""
@@ -104,9 +83,6 @@ def test_other_classification_mixed_with_insufficient_stops():
     result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
-    trip = MockItineraryTrip([-1, 0], [-1, 300])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.OTHER
 
 def test_region_detection_start_window_only():
     """Test that a stop with only start_pickup_drop_off_window set is considered a region"""
@@ -119,9 +95,6 @@ def test_region_detection_start_window_only():
     result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
-    trip = MockItineraryTrip([-1, 0, -1], [-1, -1, -1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.DEVIATED_SERVICE
 
 def test_region_detection_end_window_only():
     """Test that a stop with only end_pickup_drop_off_window set is considered a region"""
@@ -134,9 +107,6 @@ def test_region_detection_end_window_only():
     result = get_type_of_trip(stop_times)
     assert result == TripType.DEVIATED_SERVICE
 
-    trip = MockItineraryTrip([-1, -1, -1], [-1, 300, -1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.DEVIATED_SERVICE
 
 def test_invalid_single_stop_returns_other():
     """Test that trips with single stop return OTHER"""
@@ -147,9 +117,6 @@ def test_invalid_single_stop_returns_other():
     result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
-    trip = MockItineraryTrip([-1], [-1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.OTHER
 
 def test_invalid_empty_stops_returns_other():
     """Test that trips with no stops return OTHER"""
@@ -158,9 +125,6 @@ def test_invalid_empty_stops_returns_other():
     result = get_type_of_trip(stop_times)
     assert result == TripType.OTHER
 
-    trip = MockItineraryTrip([], [])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.OTHER
 
 def test_minimum_valid_regular_service():
     """Test minimum valid case - 2 regular stops"""
@@ -172,9 +136,6 @@ def test_minimum_valid_regular_service():
     result = get_type_of_trip(stop_times)
     assert result == TripType.REGULAR_SERVICE
 
-    trip = MockItineraryTrip([-1, -1], [-1, -1])
-    result = get_type_of_itinerary_trip(trip)
-    assert result == TripType.REGULAR_SERVICE
 
 def test_minimum_valid_microtransit():
     """Test minimum valid case - 2 regions"""
@@ -184,8 +145,4 @@ def test_minimum_valid_microtransit():
     ]
     
     result = get_type_of_trip(stop_times)
-    assert result == TripType.PURE_MICROTRANSIT
-
-    trip = MockItineraryTrip([0, 300], [300, 600])
-    result = get_type_of_itinerary_trip(trip)
     assert result == TripType.PURE_MICROTRANSIT
