@@ -7,6 +7,6 @@
 .vscode/
 tests/.work/
 build/
-gtfs_flex_to_gofs/output
+gtfs_flex_to_gofs_lite/output
 dist/
 .claude/

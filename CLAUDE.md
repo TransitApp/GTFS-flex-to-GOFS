@@ -4,19 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Python tool that converts GTFS-Flex (General Transit Feed Specification - Flexible services) data to the GOFS (General On-demand Feed Specification) format. It processes on-demand/flexible transit services data and outputs standardized GOFS files.
+This is a Python tool that converts GTFS-Flex (General Transit Feed Specification - Flexible services) data to the GOFS-lite (General On-demand Feed Specification - lite) format. It processes on-demand/flexible transit services data and outputs standardized GOFS files.
 
 ## Core Architecture
 
 The conversion process follows this flow:
-1. Load GTFS data using `gtfs_loader`
+1. Load GTFS data using `gtfs_loader` 
 2. Extract relevant data through `operation_rules.py` which analyzes trip types and creates `GofsData`
-3. Generate individual GOFS files via modules in `gtfs_flex_to_gofs/files/`
-4. Output structured GOFS format files
+3. Generate individual GOFS files via modules in `gtfs_flex_to_gofs_lite/files/`
+4. Output structured GOFS-lite format files
 
 ### Key Components
 
-- **`gofs_converter.py`**: Main conversion orchestrator that coordinates all file generation
+- **`gofs_lite_converter.py`**: Main conversion orchestrator that coordinates all file generation
 - **`gofs_data.py`**: Contains `GofsData` class that tracks extracted IDs and transfers from GTFS-Flex
 - **`files/operation_rules.py`**: Core logic for classifying trip types (regular_service, deviated_service, pure_microtransit, other) and extracting zone-to-zone transfers
 - **`files/` directory**: Individual modules for generating each GOFS file type (zones, calendars, fares, etc.)
@@ -40,12 +40,12 @@ Only `PURE_MICROTRANSIT` trips are converted to GOFS format.
    - For `PURE_MICROTRANSIT` trips, extracts zone-to-zone transfers
    - Populates `GofsData` with extracted IDs (routes, calendars, zones, booking rules)
 
-2. **File Generation** (`gofs_converter.py:convert_to_gofs()`):
+2. **File Generation** (`gofs_lite_converter.py:convert_to_gofs_lite()`):
    - Creates individual GOFS files using `GofsData` to filter relevant GTFS entities
    - Files generated in order: operation_rules, zones, system_information, service_brands, vehicle_types, calendars, fares, wait_times, wait_time, booking_rules, gofs_versions, gofs
    - Each file module has a `create()` function that returns a `GofsFile` object
 
-3. **Output** (`gofs_converter.py:save_files()`):
+3. **Output** (`gofs_lite_converter.py:save_files()`):
    - Single folder mode: All GOFS files in one directory
    - Split-by-route mode: Creates one folder per route_id, with filtered operation_rules per folder
 
@@ -64,7 +64,7 @@ python -m pytest tests/ -v            # Verbose output
 
 ### Running the Tool
 ```bash
-python -m gtfs_flex_to_gofs --gtfs-dir <input_dir> --gofs-dir <output_dir> --url <base_url>
+python -m gtfs_flex_to_gofs_lite --gtfs-dir <input_dir> --gofs-lite-dir <output_dir> --url <base_url>
 
 # With optional parameters:
 --ttl <seconds>              # Time-to-live for GOFS files (default: 86400)

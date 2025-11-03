@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "GTFS-flex-to-GOFS"
+name = "GTFS-flex-to-GOFS-lite"
 version = "0.5.0"
-description = "Convert GTFS Flex to GOFS"
+description = "Convert GTFS Flex to GOFS lite"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
@@ -29,11 +29,11 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/TransitApp/GTFS-flex-to-GOFS"
-Repository = "https://github.com/TransitApp/GTFS-flex-to-GOFS"
+Homepage = "https://github.com/TransitApp/GTFS-flex-to-GOFS-lite"
+Repository = "https://github.com/TransitApp/GTFS-flex-to-GOFS-lite"
 
 [tool.setuptools.packages.find]
-include = ["gtfs_flex_to_gofs*"]
+include = ["gtfs_flex_to_gofs_lite*"]
 
 [project.scripts]
-gtfs-flex-to-gofs = "gtfs_flex_to_gofs.__main__:main"
+gtfs-flex-to-gofs-lite = "gtfs_flex_to_gofs_lite.__main__:main"

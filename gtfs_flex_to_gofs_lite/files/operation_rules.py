@@ -6,7 +6,7 @@ from ..gofs_data import GofsData
 from ..gofs_data import GofsTransfer
 from gtfs_loader.schema import PickupType, DropOffType
 
-from gtfs_flex_to_gofs.utils import get_locations_group, get_zones
+from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zones
 from enum import Enum
 
 FILENAME = 'operating_rules'

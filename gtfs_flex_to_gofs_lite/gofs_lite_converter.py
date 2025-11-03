@@ -75,7 +75,7 @@ def has_convertable_data(gtfs):
     return gtfs.locations != {}
 
 
-def convert_to_gofs(gtfs, gofs_dir, ttl, base_url, split_by_route=False, timestamp=None):
+def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=False, timestamp=None):
     if not has_convertable_data(gtfs):
         return GofsData()
 
@@ -125,4 +125,4 @@ def convert_to_gofs(gtfs, gofs_dir, ttl, base_url, split_by_route=False, timesta
     file = gofs.create(gtfs, base_url, files_created)
     register_created_file(files_created, file)
 
-    save_files(files_created, gofs_dir, ttl, creation_timestamp, split_by_route)
+    save_files(files_created, gofs_lite_dir, ttl, creation_timestamp, split_by_route)
