@@ -85,7 +85,7 @@ wheels = [
 ]
 
 [[package]]
-name = "gtfs-flex-to-gofs-lite"
+name = "GTFS-flex-to-GOFS"
 version = "0.4.1"
 source = { editable = "." }
 dependencies = [

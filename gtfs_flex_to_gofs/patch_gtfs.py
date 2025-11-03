@@ -1,4 +1,4 @@
-from gtfs_flex_to_gofs_lite.gofs_data import GofsData
+from gtfs_flex_to_gofs.gofs_data import GofsData
 import gtfs_loader
 from .files import operation_rules
 

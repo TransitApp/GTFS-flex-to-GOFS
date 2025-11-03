@@ -2,7 +2,7 @@ import argparse
 import gtfs_loader
 from pathlib import Path
 
-from .gofs_lite_converter import convert_to_gofs_lite
+from .gofs_converter import convert_to_gofs
 from .patch_gtfs import patch_gtfs
 from .utils import yellow_text
 
@@ -11,11 +11,11 @@ DEFAULT_TTL = 86400
 
 def main(args):
     gtfs = gtfs_loader.load(args.gtfs_dir)
-    gofs_lite_dir = Path(args.gofs_lite_dir)
+    gofs_dir = Path(args.gofs_dir)
 
-    gofs_lite_dir.mkdir(parents=True, exist_ok=True)
+    gofs_dir.mkdir(parents=True, exist_ok=True)
 
-    convert_to_gofs_lite(gtfs, gofs_lite_dir, args.ttl, args.url, args.split_by_route, args.timestamp)
+    convert_to_gofs(gtfs, gofs_dir, args.ttl, args.url, args.split_by_route, args.timestamp)
 
     if args.out_gtfs_dir:
         patch_gtfs(args, gtfs)
@@ -34,11 +34,11 @@ def print_args_warnings(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description='Convert GTFS-flex on-demand format to GOFS-lite')
+        description='Convert GTFS-flex on-demand format to GOFS')
     parser.add_argument(
         '--gtfs-dir', help='input gtfs directory', metavar='Dir', required=True)
     parser.add_argument(
-        '--gofs-lite-dir', help='output gofs directory', metavar='Dir', required=True)
+        '--gofs-dir', help='output gofs directory', metavar='Dir', required=True)
     parser.add_argument(
         '--out-gtfs-dir', help='output directory of patched gtfs', metavar='Dir', required=False)
     parser.add_argument(
