@@ -18,7 +18,7 @@ classifiers = [
 ]
 requires-python = ">=3.8"
 dependencies = [
-    "py-gtfs-loader @ git+https://github.com/transitapp/py-gtfs-loader@v0.1.15",
+    "py-gtfs-loader @ git+https://github.com/transitapp/py-gtfs-loader@v0.2.0",
     "shapely>=2.0.4"
 ]
 

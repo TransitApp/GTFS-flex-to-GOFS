@@ -29,7 +29,7 @@ def do_test(feed_dir):
     
     # Each folder contains both stop_times.txt and itinerary_cells.txt and should produce identical output
     # converting either
-    # Path.mkdir(dest_dir)
-    # gtfs = gtfs_loader.load(work_dir, itineraries=True)
-    # gofs_lite_converter.convert_to_gofs_lite(gtfs, dest_dir, 24 * 60 * 60, '', ("split_by_route" in str(feed_dir)), itineraries=True)
-    # test_support.check_expected_output(feed_dir, dest_dir)
+    Path.mkdir(dest_dir)
+    gtfs = gtfs_loader.load(work_dir, itineraries=True)
+    gofs_lite_converter.convert_to_gofs_lite(gtfs, dest_dir, 24 * 60 * 60, '', ("split_by_route" in str(feed_dir)), itineraries=True)
+    test_support.check_expected_output(feed_dir, dest_dir)

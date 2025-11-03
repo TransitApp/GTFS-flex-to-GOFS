@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.8"
 resolution-markers = [
     "python_full_version >= '3.11'",
@@ -106,7 +106,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "flake8", marker = "extra == 'dev'" },
-    { name = "py-gtfs-loader", git = "https://github.com/transitapp/py-gtfs-loader?rev=v0.1.15" },
+    { name = "py-gtfs-loader", git = "https://github.com/transitapp/py-gtfs-loader?rev=v0.2.0" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "shapely", specifier = ">=2.0.4" },
 ]
@@ -411,8 +411,8 @@ wheels = [
 
 [[package]]
 name = "py-gtfs-loader"
-version = "0.1.15"
-source = { git = "https://github.com/transitapp/py-gtfs-loader?rev=v0.1.15#51be240e619fd6aede13a41dc3aae4669b8cd7d1" }
+version = "0.2.0"
+source = { git = "https://github.com/transitapp/py-gtfs-loader?rev=v0.2.0#bb8a32590431da0715794e0dbe6a53ace96dd935" }
 
 [[package]]
 name = "pycodestyle"
