@@ -29,15 +29,19 @@ class OperationRule:
     vehicle_type_id: str
 
 
-def create(gtfs):
+def create(gtfs, itineraries=False):
     gofs_feed = GofsData()
     operating_rules = []
 
-    for trip_id, stop_times in gtfs.stop_times.items():
-        trip = gtfs.trips[trip_id]
+    for trip in gtfs.trips.values():
+        stop_times = gtfs.itinerary_cells[trip.itinerary_index] if itineraries else gtfs.stop_times[trip.trip_id]
+        if itineraries:
+            for i, st in enumerate(stop_times):
+                st.start_pickup_drop_off_window = trip.start_pickup_drop_off_windows[i]
+                st.end_pickup_drop_off_window = trip.end_pickup_drop_off_windows[i]
 
         # Check if trip is a microtransit-like trip
-        type_of_trip = get_type_of_trip(trip_id, stop_times)
+        type_of_trip = get_type_of_trip(stop_times)
 
         if type_of_trip == TripType.PURE_MICROTRANSIT:
             prev_stop_time = None
@@ -55,18 +59,18 @@ def create(gtfs):
 
                 if from_is_valid and to_is_valid:
                     add_zone_to_zone_rule(prev_stop_time, prev_stop_time.stop_id, stop_time.stop_id, trip, operating_rules, gofs_feed)
-                    register_data(GofsTransfer(trip_id, prev_stop_time.stop_id, stop_time.stop_id), trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
+                    register_data(GofsTransfer(trip.trip_id, prev_stop_time.stop_id, stop_time.stop_id), trip, prev_stop_time.pickup_booking_rule_id, gofs_feed)
                 
 
     operating_rules.sort(key=lambda x: (x.from_zone_id, x.to_zone_id, x.brand_id, x.vehicle_type_id, x.start_pickup_window, x.end_pickup_window, x.end_dropoff_window, x.calendars))
 
     return GofsFile(FILENAME, created=True, data=operating_rules), gofs_feed
 
-def get_type_of_trip(trip_id, stop_times):
-    class StopType(Enum):
-        REGION = "region"
-        STOP = "stop"
+class StopType(Enum):
+    REGION = "region"
+    STOP = "stop"
 
+def get_type_of_trip(stop_times):
     # Invalid trips with fewer than 2 stops are marked as OTHER
     if len(stop_times) < 2:
         return TripType.OTHER

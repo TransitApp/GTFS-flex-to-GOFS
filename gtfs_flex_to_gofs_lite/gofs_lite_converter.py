@@ -75,7 +75,7 @@ def has_convertable_data(gtfs):
     return gtfs.locations != {}
 
 
-def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=False, timestamp=None):
+def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=False, timestamp=None, itineraries=False):
     if not has_convertable_data(gtfs):
         return GofsData()
 
@@ -89,7 +89,7 @@ def convert_to_gofs_lite(gtfs, gofs_lite_dir, ttl, base_url, split_by_route=Fals
 
     files_created = {}
 
-    file, gofs_data = operation_rules.create(gtfs)
+    file, gofs_data = operation_rules.create(gtfs, itineraries=itineraries)
     register_created_file(files_created, file)
 
     file = zones.create(gtfs, gofs_data)

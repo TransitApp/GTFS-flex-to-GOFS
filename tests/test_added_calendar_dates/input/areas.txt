@@ -1,1 +1,0 @@
-area_id,area_name
