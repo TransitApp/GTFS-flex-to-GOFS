@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from gtfs_flex_to_gofs_lite.files.operation_rules import get_type_of_trip, TripType
+from gtfs_flex_to_gofs.files.operation_rules import get_type_of_trip, TripType
 
 
 class MockStopTime:
