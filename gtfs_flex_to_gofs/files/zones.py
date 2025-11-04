@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 from typing import Any, List
 
-from gtfs_flex_to_gofs_lite.gofs_data import GofsData
+from gtfs_flex_to_gofs.gofs_data import GofsData
 
 from ..gofs_file import GofsFile
-from gtfs_flex_to_gofs_lite.utils import get_locations_group, get_zones
+from gtfs_flex_to_gofs.utils import get_locations_group, get_zones
 import math
 import shapely.ops
 import json
@@ -163,7 +163,7 @@ class PolygonCreator:
             return polygon_object
 
         if stop_id not in self.gtfs.stops:
-            print(f"[GTFS-Flex-To-GOFS-Lite] - Missing {stop_id} from stops.txt")
+            print(f"[GTFS-Flex-To-GOFS] - Missing {stop_id} from stops.txt")
             return None
         
         stop = self.gtfs.stops[stop_id]

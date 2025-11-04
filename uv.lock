@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 2
 requires-python = ">=3.8"
 resolution-markers = [
     "python_full_version >= '3.11'",
@@ -85,7 +85,7 @@ wheels = [
 ]
 
 [[package]]
-name = "gtfs-flex-to-gofs-lite"
+name = "gtfs-flex-to-gofs"
 version = "0.5.0"
 source = { editable = "." }
 dependencies = [

@@ -120,7 +120,7 @@ def extract_calendar_dates_only_calendar(gtfs, used_calendar_ids):
 
 def create_calendar_with_list_dates(calendar_id, active_dates_calendar):
     # take a list of dates, and create a calendar with all the dates with a list of exception for all the missing dates
-    # workaround for the lack of support for a list of supported dates in GOFS-lite
+    # workaround for the lack of support for a list of supported dates in GOFS
     active_dates_calendar.sort()
     start_date = active_dates_calendar[0]
     end_date = active_dates_calendar[-1]
