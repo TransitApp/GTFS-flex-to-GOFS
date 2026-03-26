@@ -58,7 +58,7 @@ def create_zone(new_zone_id, new_zone_name, new_zone_geometry):
 
 def create_zones_from_geojson(gtfs, gofs_data: GofsData):
     zones = []
-    for zone in gtfs.locations["features"]:
+    for zone in gtfs.locations.get("features", []):
 
         if zone["id"] not in gofs_data.zones_ids:
             continue
