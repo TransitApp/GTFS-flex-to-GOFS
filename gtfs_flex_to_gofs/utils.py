@@ -26,7 +26,7 @@ def concat_url(*args):
 
 def get_zones(gtfs):
     zones = dict()
-    for zone in gtfs.locations["features"]:
+    for zone in gtfs.locations.get("features", []):
         zones[zone["id"]] = zone
     return zones
 

@@ -71,8 +71,8 @@ def register_created_file(files_created, file):
 
 
 def has_convertable_data(gtfs):
-    """Check if a valid locations.geojson file was loaded."""
-    return gtfs.locations != {}
+    """Check if location data exists (locations.geojson or location_groups)."""
+    return gtfs.locations != {} or gtfs.location_groups != {}
 
 
 def convert_to_gofs(gtfs, gofs_dir, ttl, base_url, split_by_route=False, timestamp=None, itineraries=False):
