@@ -9,6 +9,7 @@ from gtfs_loader.schema import PickupType, DropOffType
 from enum import Enum
 
 FILENAME = 'operating_rules'
+DEFAULT_VEHICLE_TYPE = 'large_van'
 
 class TripType(Enum):
     REGULAR_SERVICE = "regular_service"
@@ -63,7 +64,7 @@ def create(gtfs, itineraries=False):
 
     operating_rules = list(rules_by_key.values())
     for rule in operating_rules:
-        rule.calendars.sort()
+        rule.calendars = sorted(rule.calendars)
     operating_rules.sort(key=lambda x: (x.from_zone_id, x.to_zone_id, x.brand_id, x.vehicle_type_id, x.start_pickup_window, x.end_pickup_window, x.end_dropoff_window, x.calendars))
 
     return GofsFile(FILENAME, created=True, data=operating_rules), gofs_feed
@@ -121,11 +122,10 @@ def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, rules_
     gofs_feed.register_zone_id(from_stop_id)
     gofs_feed.register_zone_id(to_stop_id)
 
-    key = (from_stop_id, to_stop_id, prev_stop_time.start_pickup_drop_off_window, prev_stop_time.end_pickup_drop_off_window, trip.route_id, 'large_van')
+    key = (from_stop_id, to_stop_id, prev_stop_time.start_pickup_drop_off_window, prev_stop_time.end_pickup_drop_off_window, trip.route_id, DEFAULT_VEHICLE_TYPE)
 
     if key in rules_by_key:
-        if trip.service_id not in rules_by_key[key].calendars:
-            rules_by_key[key].calendars.append(trip.service_id)
+        rules_by_key[key].calendars.add(trip.service_id)
     else:
         rules_by_key[key] = OperationRule(
             from_zone_id=from_stop_id,
@@ -133,7 +133,7 @@ def add_zone_to_zone_rule(prev_stop_time, from_stop_id, to_stop_id, trip, rules_
             start_pickup_window=prev_stop_time.start_pickup_drop_off_window,
             end_pickup_window=prev_stop_time.end_pickup_drop_off_window,
             end_dropoff_window=-1,
-            calendars=[trip.service_id],
+            calendars={trip.service_id},
             brand_id=trip.route_id,
-            vehicle_type_id='large_van'
+            vehicle_type_id=DEFAULT_VEHICLE_TYPE
         )

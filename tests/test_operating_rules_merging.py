@@ -37,7 +37,7 @@ def test_duplicate_calendar_not_added_twice():
     add_zone_to_zone_rule(stop_time, "zone_a", "zone_b", MockTrip("cal_1", "route_1"), rules_by_key, gofs_feed)
 
     assert len(rules_by_key) == 1
-    assert list(rules_by_key.values())[0].calendars == ["cal_1"]
+    assert list(rules_by_key.values())[0].calendars == {"cal_1"}
 
 
 def test_different_zones_create_separate_rules():
